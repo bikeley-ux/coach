@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bikeley 8-Wochen-Coach</title>
+<title>Bikeley · Master-Atlas · Strategischer Wegweiser 2026–2032</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
   --ink: #1a1a1a;
@@ -19,1304 +20,2436 @@
   --accent-soft: #e8d5cb;
   --teal: #2d5f56;
   --teal-soft: #d8e5e1;
+  --sand: #c4b896;
+  --gold: #8a7332;
   --green: #4a7c3f;
   --green-soft: #d6e3d0;
-  --gold: #8a7332;
   --yellow-soft: #f0e3c0;
   --pink-soft: #f0d4d8;
+  --blue: #2d4a7c;
+  --blue-soft: #d8def0;
   --border: rgba(26,26,26,0.12);
   --border-strong: rgba(26,26,26,0.25);
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+- { box-sizing: border-box; margin: 0; padding: 0; }
 
-html, body {
-  background: var(--paper);
-  color: var(--ink);
-  font-family: 'Inter', system-ui, sans-serif;
-  font-size: 15px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  min-height: 100vh;
+html { scroll-behavior: smooth; }
+
+body {
+background: var(–paper);
+color: var(–ink);
+font-family: ‘Fraunces’, Georgia, serif;
+font-size: 16px;
+line-height: 1.7;
+-webkit-font-smoothing: antialiased;
 }
 
-.app {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 1.5rem 1.5rem 4rem;
+/* TOP NAVIGATION */
+.topnav {
+position: sticky;
+top: 0;
+z-index: 100;
+background: var(–paper);
+border-bottom: 1px solid var(–border);
+padding: 0.75rem 0;
 }
 
-/* HEADER */
-.header {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 0.5rem;
-  padding-bottom: 0.25rem;
+.topnav-inner {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 1.5rem;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+flex-wrap: wrap;
 }
 
-.header h1 {
-  font-family: 'Fraunces', serif;
-  font-size: 32px;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  font-variation-settings: "opsz" 144;
+.topnav-logo {
+font-family: ‘Fraunces’, serif;
+font-size: 18px;
+font-weight: 500;
+letter-spacing: -0.01em;
+margin-right: 1rem;
 }
 
-.header h1 em { font-style: italic; color: var(--accent); }
-
-.header .meta {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-}
-
-.subtitle {
-  font-size: 14px;
-  color: var(--ink-soft);
-  margin-bottom: 1.5rem;
-  font-style: italic;
-}
-
-/* METRIC CARDS */
-.metrics {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
-  margin-bottom: 2rem;
-}
-
-.metric {
-  background: var(--paper-card);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 14px 16px;
-}
-
-.metric .label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-  margin-bottom: 4px;
-}
-
-.metric .value {
-  font-family: 'Fraunces', serif;
-  font-size: 28px;
-  font-weight: 400;
-  font-variation-settings: "opsz" 144;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
-}
-
-.metric .value .small { font-size: 18px; color: var(--ink-muted); }
-
-/* TABS */
-.tabs {
-  display: flex;
-  gap: 0;
-  margin-bottom: 1.5rem;
-  border-bottom: 1px solid var(--border);
-  flex-wrap: wrap;
-}
+.topnav-logo em { font-style: italic; color: var(–accent); }
 
 .tab-btn {
-  background: transparent;
-  border: none;
-  border-bottom: 2px solid transparent;
-  padding: 10px 18px;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--ink-soft);
-  cursor: pointer;
-  margin-bottom: -1px;
-  transition: color 0.15s;
+background: transparent;
+border: 1px solid transparent;
+padding: 6px 11px;
+font-family: ‘Inter’, sans-serif;
+font-size: 12px;
+font-weight: 400;
+color: var(–ink-soft);
+cursor: pointer;
+border-radius: 4px;
+transition: all 0.15s;
 }
 
-.tab-btn:hover { color: var(--ink); }
-.tab-btn.active {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
-  font-weight: 500;
+.tab-btn:hover { background: var(–paper-warm); color: var(–ink); }
+.tab-btn.active { background: var(–ink); color: var(–paper); font-weight: 500; }
+
+.tab-num {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 9px;
+margin-right: 4px;
+opacity: 0.7;
 }
 
-.tab-panel { display: none; }
-.tab-panel.active { display: block; }
-
-/* SECTION HEADERS */
-.section-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+/* CONTENT */
+.content {
+max-width: 880px;
+margin: 0 auto;
+padding: 3rem 2rem 5rem;
 }
 
-.section-head h2 {
-  font-family: 'Fraunces', serif;
-  font-size: 22px;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-  font-variation-settings: "opsz" 96;
+.section { display: none; }
+.section.active { display: block; }
+
+/* COVER PAGE */
+.cover {
+padding: 2rem 0 3rem;
+border-bottom: 1px solid var(–border);
+margin-bottom: 3rem;
 }
 
-.section-head .progress {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  color: var(--ink-muted);
-  letter-spacing: 0.05em;
+.cover .meta {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 11px;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: var(–ink-muted);
+margin-bottom: 1.5rem;
 }
 
-/* TASKS */
-.tasks {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+.cover h1 {
+font-family: ‘Fraunces’, serif;
+font-size: 84px;
+line-height: 0.95;
+font-weight: 300;
+letter-spacing: -0.04em;
+font-variation-settings: “opsz” 144;
+margin-bottom: 1.5rem;
 }
 
-.task {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 12px 14px;
-  background: var(--paper-card);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.15s;
+.cover h1 em { font-style: italic; color: var(–accent); }
+
+.cover .subtitle {
+font-family: ‘Fraunces’, serif;
+font-size: 22px;
+font-style: italic;
+font-weight: 300;
+color: var(–ink-soft);
+max-width: 55ch;
+line-height: 1.4;
+margin-bottom: 2.5rem;
 }
 
-.task:hover { border-color: var(--border-strong); }
-.task.done { opacity: 0.5; background: var(--paper-warm); }
-.task.done .task-text { text-decoration: line-through; }
-
-.task-checkbox {
-  width: 18px;
-  height: 18px;
-  border-radius: 4px;
-  border: 1.5px solid var(--border-strong);
-  flex-shrink: 0;
-  margin-top: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--paper-card);
+.cover .author-line {
+font-size: 14px;
+color: var(–ink-muted);
+font-family: ‘Inter’, sans-serif;
 }
 
-.task.done .task-checkbox {
-  background: var(--accent);
-  border-color: var(--accent);
+/* LIVE STATUS DASHBOARD */
+.dashboard {
+background: var(–paper-card);
+border: 1px solid var(–border);
+border-radius: 12px;
+padding: 1.75rem;
+margin: 2.5rem 0;
 }
 
-.task.done .task-checkbox::after {
-  content: "✓";
-  color: white;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1;
+.dashboard h2 {
+font-family: ‘Fraunces’, serif;
+font-size: 22px;
+font-weight: 500;
+margin-bottom: 0.4rem;
+letter-spacing: -0.01em;
 }
 
-.task-text { font-size: 14px; line-height: 1.5; flex: 1; }
-
-.task-tag {
-  display: inline-block;
-  font-size: 10px;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 10px;
-  margin-right: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-family: 'JetBrains Mono', monospace;
+.dashboard-sub {
+font-size: 13px;
+color: var(–ink-muted);
+font-family: ‘Inter’, sans-serif;
+margin-bottom: 1.5rem;
+font-style: italic;
 }
 
-.tag-coding { background: var(--teal-soft); color: var(--teal); }
-.tag-insta { background: var(--pink-soft); color: #8a3a4d; }
-.tag-linkedin { background: var(--paper-warm); color: var(--ink-soft); }
-.tag-strategy { background: var(--yellow-soft); color: var(--gold); }
-
-/* FOCUS QUESTION */
-.focus-box {
-  background: var(--accent-soft);
-  border-left: 3px solid var(--accent);
-  padding: 14px 18px;
-  border-radius: 4px;
-  margin-top: 1.5rem;
+.kpi-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+gap: 12px;
+margin-bottom: 1.5rem;
 }
 
-.focus-box .label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--accent);
-  font-weight: 600;
-  margin-bottom: 6px;
+.kpi-cell {
+background: var(–paper);
+border: 1px solid var(–border);
+border-radius: 8px;
+padding: 14px 16px;
+position: relative;
 }
 
-.focus-box .question {
-  font-family: 'Fraunces', serif;
-  font-size: 17px;
-  font-style: italic;
-  color: var(--ink);
+.kpi-cell .kpi-label {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 10px;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+color: var(–ink-muted);
+margin-bottom: 8px;
+font-weight: 500;
 }
 
-/* WEEK NAVIGATION */
-.week-nav {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 1.5rem;
+.kpi-cell input {
+width: 100%;
+background: transparent;
+border: none;
+font-family: ‘Fraunces’, serif;
+font-size: 26px;
+font-weight: 400;
+font-variation-settings: “opsz” 144;
+color: var(–ink);
+letter-spacing: -0.01em;
+padding: 0;
+outline: none;
 }
 
-.week-nav button {
-  padding: 8px 14px;
-  border: 1px solid var(--border);
-  background: var(--paper-card);
-  border-radius: 6px;
-  cursor: pointer;
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  color: var(--ink);
+.kpi-cell input:focus {
+color: var(–accent);
 }
 
-.week-nav button:hover { border-color: var(--border-strong); }
-.week-nav button:disabled { opacity: 0.4; cursor: not-allowed; }
-
-.week-nav select {
-  flex: 1;
-  padding: 8px 12px;
-  border: 1px solid var(--border);
-  background: var(--paper-card);
-  border-radius: 6px;
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
+.kpi-cell .kpi-target {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 10px;
+color: var(–ink-muted);
+margin-top: 4px;
+letter-spacing: 0.05em;
 }
 
-/* WEEK CARD */
-.week-card {
-  background: var(--paper-card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.75rem;
-  margin-bottom: 1rem;
+.kpi-cell .kpi-target.reached {
+color: var(–green);
+font-weight: 500;
 }
 
-.week-card.current {
-  border-color: var(--accent);
-  border-width: 2px;
-  background: linear-gradient(to bottom, var(--accent-soft) 0%, var(--paper-card) 80px);
+.dashboard-actions {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 0.75rem;
+margin-top: 1rem;
+padding-top: 1.25rem;
+border-top: 1px solid var(–border);
 }
 
-.week-card-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1.5rem;
-  flex-wrap: wrap;
-  gap: 1rem;
+.dashboard-actions .saved {
+font-size: 12px;
+color: var(–green);
+font-style: italic;
+font-family: ‘Inter’, sans-serif;
 }
 
-.week-card h3 {
-  font-family: 'Fraunces', serif;
-  font-size: 22px;
-  font-weight: 500;
-  letter-spacing: -0.01em;
+.btn {
+padding: 8px 16px;
+background: var(–accent);
+color: white;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+font-family: ‘Inter’, sans-serif;
+font-size: 13px;
+font-weight: 500;
 }
 
-.week-card .dates {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  color: var(--ink-muted);
-  text-transform: uppercase;
-  margin-top: 4px;
-}
-
-.week-card .target {
-  text-align: right;
-}
-
-.week-card .target .label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-  margin-bottom: 2px;
-}
-
-.week-card .target .value {
-  font-family: 'Fraunces', serif;
-  font-size: 28px;
-  font-weight: 400;
-  color: var(--accent);
-  font-variation-settings: "opsz" 144;
-  line-height: 1;
-}
-
-.week-card .focus {
-  font-style: italic;
-  color: var(--ink-soft);
-  margin-bottom: 1.25rem;
-  padding: 12px 14px;
-  background: var(--paper-warm);
-  border-radius: 6px;
-  font-size: 14px;
-}
-
-/* KPI FORM */
-.kpi-form {
-  background: var(--paper-card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.75rem;
-  margin-bottom: 2rem;
-}
-
-.kpi-form h3 {
-  font-family: 'Fraunces', serif;
-  font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 1.25rem;
-  letter-spacing: -0.01em;
-}
-
-.form-group { margin-bottom: 1rem; }
-.form-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 12px;
-}
-
-.kpi-form label {
-  display: block;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-  margin-bottom: 5px;
-  font-weight: 500;
-}
-
-.kpi-form input, .kpi-form select, .kpi-form textarea {
-  width: 100%;
-  padding: 8px 12px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--paper);
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  color: var(--ink);
-  transition: border-color 0.15s;
-}
-
-.kpi-form input:focus, .kpi-form select:focus, .kpi-form textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-}
-
-.kpi-form textarea {
-  resize: vertical;
-  min-height: 60px;
-  font-family: 'Inter', sans-serif;
-}
-
-.kpi-form h4 {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin: 1.5rem 0 0.75rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border);
-  font-weight: 600;
-}
-
-.kpi-form h4:first-of-type { margin-top: 0.5rem; padding-top: 0; border-top: none; }
-
-.btn-primary {
-  background: var(--accent);
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  width: 100%;
-  margin-top: 1rem;
-}
-
-.btn-primary:hover { background: #973d18; }
-
-/* KPI HISTORY */
-.kpi-history {
-  background: var(--paper-card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.5rem;
-}
-
-.kpi-history h3 {
-  font-family: 'Fraunces', serif;
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
-
-.kpi-row {
-  display: grid;
-  grid-template-columns: 60px 100px 1fr 120px;
-  gap: 12px;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 13px;
-  align-items: center;
-}
-
-.kpi-row:last-child { border-bottom: none; }
-.kpi-row.head {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-  font-weight: 500;
-}
-
-.kpi-row .week-num {
-  font-family: 'Fraunces', serif;
-  font-size: 18px;
-  font-weight: 500;
-  color: var(--accent);
-}
-
-/* RITUALS */
-.ritual {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  padding: 14px 16px;
-  background: var(--paper-card);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  cursor: pointer;
-  margin-bottom: 8px;
-  transition: all 0.15s;
-}
-
-.ritual:hover { border-color: var(--border-strong); }
-.ritual.done { opacity: 0.55; background: var(--paper-warm); }
-.ritual.done .ritual-checkbox {
-  background: var(--accent);
-  border-color: var(--accent);
-}
-.ritual.done .ritual-checkbox::after {
-  content: "✓";
-  color: white;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.ritual-time {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  width: 80px;
-  flex-shrink: 0;
-  padding-top: 2px;
-}
-
-.ritual-checkbox {
-  width: 18px;
-  height: 18px;
-  border-radius: 4px;
-  border: 1.5px solid var(--border-strong);
-  flex-shrink: 0;
-  margin-top: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--paper-card);
-}
-
-.ritual-content { flex: 1; }
-.ritual-title {
-  font-size: 15px;
-  font-weight: 500;
-  margin-bottom: 3px;
-}
-.ritual-title .dur {
-  font-size: 11px;
-  font-weight: 400;
-  color: var(--ink-muted);
-  font-family: 'JetBrains Mono', monospace;
-}
-.ritual-desc {
-  font-size: 13px;
-  color: var(--ink-soft);
-  line-height: 1.5;
-}
-
-/* NOTES */
-.notes-textarea {
-  width: 100%;
-  min-height: 280px;
-  padding: 16px 18px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--paper-card);
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  line-height: 1.6;
-  color: var(--ink);
-  resize: vertical;
-}
-
-.notes-textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-}
-
-.notes-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 0.75rem;
-}
+.btn:hover { background: #973d18; }
 
 .btn-secondary {
-  padding: 8px 18px;
-  background: var(--paper-card);
-  color: var(--ink);
-  border: 1px solid var(--border-strong);
-  border-radius: 6px;
-  cursor: pointer;
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
+background: transparent;
+color: var(–ink-soft);
+border: 1px solid var(–border-strong);
 }
 
-.btn-secondary:hover { background: var(--paper-warm); }
+.btn-secondary:hover { background: var(–paper-warm); color: var(–ink); }
+
+/* PHASE INDICATOR */
+.current-phase {
+background: var(–accent-soft);
+border-left: 4px solid var(–accent);
+padding: 1.25rem 1.5rem;
+border-radius: 4px;
+margin: 1.5rem 0;
+}
+
+.current-phase .phase-label {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 10px;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: var(–accent);
+font-weight: 600;
+margin-bottom: 6px;
+}
+
+.current-phase .phase-name {
+font-family: ‘Fraunces’, serif;
+font-size: 22px;
+font-weight: 500;
+margin-bottom: 0.5rem;
+letter-spacing: -0.01em;
+}
+
+.current-phase p {
+font-size: 14px;
+color: var(–ink-soft);
+margin: 0;
+font-family: ‘Inter’, sans-serif;
+line-height: 1.6;
+}
+
+/* TYPOGRAPHY */
+.section h1 {
+font-family: ‘Fraunces’, serif;
+font-size: 44px;
+line-height: 1.05;
+font-weight: 400;
+letter-spacing: -0.02em;
+margin: 0 0 1rem;
+font-variation-settings: “opsz” 96;
+}
+
+.section h1 .num {
+display: block;
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 11px;
+letter-spacing: 0.18em;
+color: var(–accent);
+font-weight: 500;
+margin-bottom: 1rem;
+text-transform: uppercase;
+}
+
+.section h2 {
+font-family: ‘Fraunces’, serif;
+font-size: 28px;
+font-weight: 500;
+letter-spacing: -0.01em;
+margin: 3rem 0 1rem;
+line-height: 1.2;
+}
+
+.section h3 {
+font-family: ‘Inter’, sans-serif;
+font-size: 13px;
+font-weight: 600;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+margin: 1.75rem 0 0.6rem;
+color: var(–ink);
+}
+
+.section h4 {
+font-family: ‘Fraunces’, serif;
+font-size: 19px;
+font-weight: 500;
+letter-spacing: -0.01em;
+margin: 1.5rem 0 0.5rem;
+}
+
+.section p {
+margin: 0 0 1.1rem;
+max-width: 68ch;
+}
+
+.section .lead {
+font-size: 21px;
+line-height: 1.5;
+font-weight: 300;
+color: var(–ink-soft);
+margin: 1rem 0 2rem;
+font-style: italic;
+font-variation-settings: “opsz” 96;
+max-width: 60ch;
+}
+
+.section em { font-style: italic; }
+.section strong { font-weight: 500; color: var(–ink); }
+
+.section a { color: var(–accent); text-decoration: none; border-bottom: 1px solid var(–accent-soft); }
+
+code {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 13px;
+background: var(–paper-warm);
+padding: 1px 6px;
+border-radius: 2px;
+}
+
+/* HERO STATEMENT */
+.hero-statement {
+background: var(–ink);
+color: var(–paper);
+padding: 2.5rem 2.5rem;
+margin: 2.5rem 0;
+border-radius: 8px;
+}
+
+.hero-statement .label {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 11px;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: var(–sand);
+margin-bottom: 1.25rem;
+display: block;
+}
+
+.hero-statement .text {
+font-family: ‘Fraunces’, serif;
+font-size: 28px;
+line-height: 1.3;
+font-weight: 300;
+color: var(–paper);
+}
+
+.hero-statement .text em { color: var(–sand); font-style: italic; }
+
+/* PULL QUOTE */
+.pullquote {
+font-family: ‘Fraunces’, serif;
+font-size: 24px;
+line-height: 1.35;
+font-weight: 300;
+font-style: italic;
+color: var(–ink);
+margin: 2.5rem 0;
+padding: 1.5rem 0 1.5rem 2rem;
+border-left: 3px solid var(–accent);
+font-variation-settings: “opsz” 144;
+max-width: 60ch;
+}
+
+.pullquote .attr {
+display: block;
+font-style: normal;
+font-size: 11px;
+font-family: ‘JetBrains Mono’, monospace;
+color: var(–ink-muted);
+margin-top: 0.75rem;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+}
+
+/* TOC GRID */
+.toc-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 0;
+margin: 1.5rem 0;
+border: 1px solid var(–border);
+border-radius: 8px;
+overflow: hidden;
+background: var(–paper-card);
+}
+
+.toc-item {
+padding: 1rem 1.25rem;
+border-bottom: 1px solid var(–border);
+border-right: 1px solid var(–border);
+cursor: pointer;
+display: flex;
+gap: 0.75rem;
+align-items: flex-start;
+transition: background 0.15s;
+text-decoration: none;
+color: var(–ink);
+}
+
+.toc-item:hover { background: var(–paper-warm); }
+
+.toc-num {
+font-family: ‘Fraunces’, serif;
+font-size: 22px;
+font-weight: 300;
+color: var(–accent);
+width: 32px;
+flex-shrink: 0;
+font-variation-settings: “opsz” 144;
+line-height: 1;
+}
+
+.toc-content { flex: 1; }
+
+.toc-content .title {
+font-family: ‘Fraunces’, serif;
+font-size: 15px;
+font-weight: 500;
+margin-bottom: 2px;
+letter-spacing: -0.01em;
+}
+
+.toc-content .desc {
+font-size: 12px;
+color: var(–ink-muted);
+font-family: ‘Inter’, sans-serif;
+line-height: 1.4;
+}
+
+/* STATS */
+.stats-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+gap: 0;
+margin: 1.5rem 0;
+border: 1px solid var(–ink);
+border-radius: 4px;
+overflow: hidden;
+}
+
+.stat-cell {
+padding: 1.25rem 1rem;
+border-right: 1px solid var(–ink);
+}
+
+.stat-cell:last-child { border-right: none; }
+
+.stat-cell .num {
+font-family: ‘Fraunces’, serif;
+font-size: 30px;
+line-height: 1;
+font-weight: 400;
+color: var(–accent);
+display: block;
+margin-bottom: 0.4rem;
+font-variation-settings: “opsz” 144;
+}
+
+.stat-cell .lab {
+font-family: ‘Inter’, sans-serif;
+font-size: 12px;
+color: var(–ink-soft);
+line-height: 1.4;
+}
+
+/* PERSONA */
+.persona {
+margin: 2rem 0;
+border: 1px solid var(–ink);
+border-radius: 6px;
+overflow: hidden;
+}
+
+.persona-head {
+background: var(–ink);
+color: var(–paper);
+padding: 1rem 1.5rem;
+display: flex;
+align-items: center;
+gap: 1rem;
+flex-wrap: wrap;
+}
+
+.persona-icon {
+width: 50px;
+height: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: ‘Fraunces’, serif;
+font-size: 28px;
+color: var(–sand);
+flex-shrink: 0;
+}
+
+.persona-id { flex: 1; min-width: 200px; }
+
+.persona-id .name {
+font-family: ‘Fraunces’, serif;
+font-size: 20px;
+font-weight: 500;
+}
+
+.persona-id .meta {
+font-size: 12px;
+color: rgba(245,241,232,0.75);
+font-family: ‘Inter’, sans-serif;
+margin-top: 2px;
+}
+
+.persona-tier {
+background: var(–accent);
+padding: 0.4rem 0.85rem;
+border-radius: 4px;
+font-family: ‘Fraunces’, serif;
+font-size: 13px;
+font-weight: 500;
+color: var(–paper);
+}
+
+.persona-tier.b2b { background: var(–teal); }
+.persona-tier.brand { background: var(–gold); }
+
+.persona-body { padding: 1.5rem 1.75rem; }
+
+.persona-body p { font-size: 14px; line-height: 1.65; }
+
+/* PRICING TABLE */
+.pricing-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 0;
+margin: 1.5rem 0;
+border: 1px solid var(–ink);
+border-radius: 4px;
+overflow: hidden;
+}
+
+.pricing-cell {
+padding: 1.5rem 1.25rem;
+border-right: 1px solid var(–ink);
+border-bottom: 1px solid var(–ink);
+background: var(–paper-card);
+}
+
+.pricing-cell:last-child { border-right: none; }
+.pricing-cell.featured { background: var(–paper-warm); }
+
+.pricing-cell .name {
+font-family: ‘Fraunces’, serif;
+font-size: 18px;
+font-weight: 500;
+margin-bottom: 0.25rem;
+}
+
+.pricing-cell .price {
+font-family: ‘Fraunces’, serif;
+font-size: 24px;
+font-weight: 400;
+color: var(–accent);
+margin-bottom: 0.75rem;
+font-variation-settings: “opsz” 144;
+}
+
+.pricing-cell .price .unit { font-size: 12px; color: var(–ink-muted); }
+
+.pricing-cell ul { list-style: none; padding: 0; }
+.pricing-cell ul li {
+padding: 0.3rem 0 0.3rem 1.25rem;
+position: relative;
+font-size: 12px;
+line-height: 1.5;
+}
+.pricing-cell ul li::before {
+content: “✓”;
+position: absolute;
+left: 0;
+color: var(–accent);
+}
+
+/* COMPACT TABLE */
+.compact-table {
+width: 100%;
+border-collapse: collapse;
+margin: 1.5rem 0;
+font-size: 13px;
+border: 1px solid var(–ink);
+border-radius: 4px;
+overflow: hidden;
+}
+
+.compact-table thead { background: var(–ink); color: var(–paper); }
+
+.compact-table th {
+text-align: left;
+padding: 0.75rem 1rem;
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 10px;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+font-weight: 500;
+}
+
+.compact-table td {
+padding: 0.75rem 1rem;
+border-top: 1px solid var(–border);
+vertical-align: top;
+}
+
+.compact-table tr:nth-child(even) td { background: rgba(0,0,0,0.02); }
+
+/* CHESS GRID */
+.chess-grid {
+margin: 1.5rem 0;
+border: 1px solid var(–ink);
+border-radius: 4px;
+overflow: hidden;
+}
+
+.chess-row {
+display: grid;
+grid-template-columns: 80px 1fr;
+border-bottom: 1px solid var(–ink);
+}
+
+.chess-row:last-child { border-bottom: none; }
+
+.chess-num {
+background: var(–ink);
+color: var(–paper);
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: ‘Fraunces’, serif;
+font-size: 32px;
+font-weight: 300;
+font-variation-settings: “opsz” 144;
+}
+
+.chess-content { padding: 1rem 1.5rem; }
+
+.chess-content h4 { margin-top: 0; margin-bottom: 0.4rem; font-size: 17px; }
+
+.chess-content p { font-size: 13px; margin-bottom: 0.3rem; line-height: 1.55; }
+
+.chess-content .when {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 10px;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: var(–accent);
+font-weight: 500;
+margin-top: 0.4rem;
+display: inline-block;
+}
+
+/* PHASE BLOCK */
+.phase {
+margin: 1.25rem 0;
+border: 1px solid var(–ink);
+border-radius: 4px;
+overflow: hidden;
+}
+
+.phase-head {
+background: var(–ink);
+color: var(–paper);
+padding: 0.85rem 1.5rem;
+display: flex;
+justify-content: space-between;
+align-items: baseline;
+flex-wrap: wrap;
+gap: 0.5rem;
+}
+
+.phase-head .when {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 10px;
+letter-spacing: 0.15em;
+text-transform: uppercase;
+color: var(–sand);
+}
+
+.phase-head .name {
+font-family: ‘Fraunces’, serif;
+font-size: 17px;
+font-weight: 500;
+}
+
+.phase-body { padding: 1rem 1.5rem; }
+
+.phase-body p { font-size: 13px; line-height: 1.6; margin-bottom: 0.5rem; }
+
+/* LIST CLEAN */
+.list-clean { list-style: none; padding: 0; margin: 1rem 0; }
+.list-clean li {
+padding: 0.4rem 0 0.4rem 1.5rem;
+position: relative;
+font-size: 14px;
+line-height: 1.6;
+}
+.list-clean li::before {
+content: “→”;
+position: absolute;
+left: 0;
+color: var(–accent);
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 11px;
+}
 
 /* INFO BOXES */
-.info-box {
-  background: var(--teal-soft);
-  border-left: 3px solid var(--teal);
-  padding: 14px 18px;
-  border-radius: 4px;
-  margin-top: 1.5rem;
+.note {
+background: var(–teal-soft);
+border-left: 4px solid var(–teal);
+padding: 1.25rem 1.5rem;
+margin: 1.5rem 0;
+border-radius: 4px;
 }
 
-.info-box .label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--teal);
-  font-weight: 600;
-  margin-bottom: 6px;
+.note h3 { margin-top: 0; color: var(–teal); margin-bottom: 0.5rem; }
+.note p { font-size: 14px; margin-bottom: 0; }
+
+.warn {
+background: var(–accent-soft);
+border-left: 4px solid var(–accent);
+padding: 1.5rem 1.75rem;
+margin: 2rem 0;
+border-radius: 4px;
 }
 
-.info-box ul {
-  margin: 8px 0 0 18px;
-  font-size: 13px;
-  line-height: 1.7;
-  color: var(--ink-soft);
+.warn h3 { margin-top: 0; color: var(–accent); margin-bottom: 0.75rem; }
+
+.success {
+background: var(–green-soft);
+border-left: 4px solid var(–green);
+padding: 1.25rem 1.5rem;
+margin: 1.5rem 0;
+border-radius: 4px;
 }
 
-.warn-box {
-  background: var(--yellow-soft);
-  border-left: 3px solid var(--gold);
-  padding: 14px 18px;
-  border-radius: 4px;
-  margin-top: 1.5rem;
+.success h3 { margin-top: 0; color: var(–green); margin-bottom: 0.5rem; }
+
+/* MILESTONE TABLE */
+.milestones {
+margin: 1.5rem 0;
+border: 1px solid var(–ink);
+border-radius: 4px;
+overflow: hidden;
 }
 
-.warn-box .label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--gold);
-  font-weight: 600;
-  margin-bottom: 6px;
+.ms-row {
+display: grid;
+grid-template-columns: 100px 110px 1fr;
+border-bottom: 1px solid var(–ink);
 }
 
-.warn-box .text {
-  font-size: 13px;
-  color: var(--ink-soft);
-  line-height: 1.6;
+.ms-row:last-child { border-bottom: none; }
+
+.ms-row.head { background: var(–ink); color: var(–paper); }
+
+.ms-row.head .cell {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 10px;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+padding: 0.85rem 1rem;
+border-right: 1px solid var(–ink);
 }
 
-/* SAVE FEEDBACK */
-.save-msg {
-  font-size: 12px;
-  color: var(--green);
-  font-style: italic;
+.ms-row .cell {
+padding: 0.9rem 1rem;
+border-right: 1px solid var(–ink);
+font-size: 13px;
+display: flex;
+align-items: center;
 }
 
-/* EXPORT BUTTON */
-.export-bar {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--border);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  font-size: 12px;
-  color: var(--ink-muted);
+.ms-row.head .cell:last-child,
+.ms-row .cell:last-child { border-right: none; }
+
+.ms-row .when {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 12px;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+font-weight: 500;
+color: var(–accent);
 }
 
-.export-bar button {
-  padding: 8px 16px;
-  background: transparent;
-  border: 1px solid var(--border-strong);
-  border-radius: 6px;
-  cursor: pointer;
-  font-family: 'Inter', sans-serif;
-  font-size: 12px;
-  color: var(--ink-soft);
+.ms-row .target {
+font-family: ‘Fraunces’, serif;
+font-size: 22px;
+font-weight: 500;
+font-variation-settings: “opsz” 144;
 }
 
-.export-bar button:hover { background: var(--paper-warm); color: var(--ink); }
+.ms-row.current { background: var(–accent-soft); }
 
-@media (max-width: 640px) {
-  .app { padding: 1rem 1rem 3rem; }
-  .header h1 { font-size: 24px; }
-  .metric .value { font-size: 22px; }
-  .week-card { padding: 1.25rem; }
-  .kpi-form { padding: 1.25rem; }
-  .kpi-row { grid-template-columns: 50px 1fr 1fr; }
-  .kpi-row .col-coding { display: none; }
-  .ritual-time { width: 60px; font-size: 10px; }
-  .tab-btn { padding: 8px 12px; font-size: 13px; }
+/* PRINCIPLE */
+.principles { margin: 1.5rem 0; counter-reset: principle; }
+
+.principle {
+display: grid;
+grid-template-columns: 50px 1fr;
+border-bottom: 1px solid var(–border);
+padding: 1rem 0;
+}
+
+.principle:last-child { border-bottom: none; }
+
+.principle-num {
+font-family: ‘Fraunces’, serif;
+font-size: 32px;
+font-weight: 300;
+color: var(–accent);
+font-variation-settings: “opsz” 144;
+counter-increment: principle;
+line-height: 0.9;
+}
+
+.principle-num::before { content: counter(principle, decimal-leading-zero); }
+
+.principle-content h4 { margin: 0 0 0.4rem; font-size: 16px; }
+.principle-content p { font-size: 13px; line-height: 1.6; margin: 0; }
+
+/* COMPETITION */
+.comp-row {
+display: grid;
+grid-template-columns: 200px 1fr;
+border-bottom: 1px solid var(–border);
+padding: 1.1rem 0;
+gap: 1.5rem;
+}
+
+.comp-row:last-child { border-bottom: none; }
+
+.comp-threat {
+font-family: ‘Fraunces’, serif;
+font-size: 16px;
+font-weight: 500;
+color: var(–accent);
+}
+
+.comp-response { font-size: 13px; line-height: 1.6; }
+
+/* DEMO GRID */
+.demo-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 0;
+margin: 1.5rem 0;
+border: 1px solid var(–ink);
+border-radius: 4px;
+overflow: hidden;
+}
+
+.demo-cell {
+padding: 1.25rem 1.5rem;
+border-right: 1px solid var(–ink);
+}
+
+.demo-cell:last-child { border-right: none; }
+
+.demo-cell h4 {
+font-family: ‘Fraunces’, serif;
+font-size: 16px;
+font-weight: 500;
+margin-bottom: 0.4rem;
+}
+
+.demo-cell .size {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 10px;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: var(–accent);
+margin-bottom: 0.6rem;
+font-weight: 500;
+}
+
+.demo-cell p { font-size: 12px; line-height: 1.55; margin: 0; }
+
+/* FLOW */
+.flow-step {
+display: grid;
+grid-template-columns: 50px 1fr;
+margin: 1rem 0;
+align-items: flex-start;
+padding-bottom: 1rem;
+border-bottom: 1px dashed var(–border);
+}
+
+.flow-step:last-of-type { border-bottom: none; }
+
+.flow-num {
+font-family: ‘Fraunces’, serif;
+font-size: 28px;
+font-weight: 400;
+color: var(–accent);
+font-variation-settings: “opsz” 144;
+line-height: 1;
+}
+
+.flow-content h4 { font-family: ‘Fraunces’, serif; font-size: 16px; font-weight: 500; margin-bottom: 0.3rem; }
+.flow-content p { font-size: 13px; line-height: 1.55; margin: 0; }
+
+/* FOOTER */
+.atlas-footer {
+margin-top: 4rem;
+padding: 2rem 0;
+border-top: 1px solid var(–border);
+text-align: center;
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 11px;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: var(–ink-muted);
+}
+
+.atlas-footer .signature {
+font-family: ‘Fraunces’, serif;
+font-size: 14px;
+font-style: italic;
+text-transform: none;
+letter-spacing: 0;
+color: var(–ink);
+display: block;
+margin-bottom: 0.5rem;
+}
+
+@media print {
+.topnav, .dashboard-actions { display: none; }
+.section { display: block !important; page-break-before: always; }
+.section:first-of-type { page-break-before: avoid; }
+}
+
+@media (max-width: 720px) {
+.content { padding: 2rem 1.25rem 3rem; }
+.cover h1 { font-size: 52px; }
+.section h1 { font-size: 32px; }
+.section h2 { font-size: 24px; }
+.topnav-inner { padding: 0 1rem; }
+.tab-btn { font-size: 11px; padding: 5px 9px; }
+.pricing-grid { grid-template-columns: 1fr; }
+.pricing-cell { border-right: none; }
+.ms-row { grid-template-columns: 80px 90px 1fr; }
+.ms-row .cell { padding: 0.6rem 0.6rem; font-size: 12px; }
+.comp-row { grid-template-columns: 1fr; gap: 0.5rem; }
+.hero-statement .text { font-size: 22px; }
+.stats-grid { grid-template-columns: repeat(2, 1fr); }
+.kpi-grid { grid-template-columns: 1fr 1fr; }
 }
 </style>
+
 </head>
 <body>
 
-<div class="app">
-
-<header class="header">
-  <div>
-    <h1>Bikeley <em>8-Wochen-Coach</em></h1>
-    <p class="subtitle" id="today-display">28. April – 22. Juni 2026 · dein operativer Begleiter</p>
-  </div>
-  <div class="meta" id="header-meta">v1.0 · Daten lokal gespeichert</div>
-</header>
-
-<div class="metrics">
-  <div class="metric">
-    <div class="label">Aktuelle Woche</div>
-    <div class="value" id="current-week">— <span class="small">/ 8</span></div>
-  </div>
-  <div class="metric">
-    <div class="label">Insta-Follower</div>
-    <div class="value" id="current-followers">540</div>
-  </div>
-  <div class="metric">
-    <div class="label">Tasks erledigt</div>
-    <div class="value" id="tasks-done">0 <span class="small">/ 64</span></div>
-  </div>
-  <div class="metric">
-    <div class="label">Rituals heute</div>
-    <div class="value" id="rituals-today">0 <span class="small">/ 5</span></div>
-  </div>
+<nav class="topnav">
+<div class="topnav-inner">
+<span class="topnav-logo">Bikeley <em>Atlas</em></span>
+<button class="tab-btn active" data-tab="overview"><span class="tab-num">00</span>Übersicht</button>
+<button class="tab-btn" data-tab="vision"><span class="tab-num">01</span>Vision</button>
+<button class="tab-btn" data-tab="market"><span class="tab-num">02</span>Markt</button>
+<button class="tab-btn" data-tab="product"><span class="tab-num">03</span>Produkt</button>
+<button class="tab-btn" data-tab="personas"><span class="tab-num">04</span>Personas</button>
+<button class="tab-btn" data-tab="pricing"><span class="tab-num">05</span>Geschäftsmodell</button>
+<button class="tab-btn" data-tab="strategy"><span class="tab-num">06</span>Strategie</button>
+<button class="tab-btn" data-tab="competition"><span class="tab-num">07</span>Wettbewerb</button>
+<button class="tab-btn" data-tab="distribution"><span class="tab-num">08</span>Distribution</button>
+<button class="tab-btn" data-tab="behoerden"><span class="tab-num">09</span>Behörden</button>
+<button class="tab-btn" data-tab="roadmap"><span class="tab-num">10</span>Roadmap</button>
+<button class="tab-btn" data-tab="risks"><span class="tab-num">11</span>Risiken</button>
 </div>
-
-<nav class="tabs">
-  <button class="tab-btn active" data-tab="today">Heute</button>
-  <button class="tab-btn" data-tab="weeks">8 Wochen</button>
-  <button class="tab-btn" data-tab="kpi">KPI-Tracking</button>
-  <button class="tab-btn" data-tab="rituals">Tagesrhythmus</button>
-  <button class="tab-btn" data-tab="notes">Notizen</button>
 </nav>
 
-<div id="tab-today" class="tab-panel active">
-  <div class="section-head">
-    <h2>Was diese Woche zählt</h2>
-    <div class="progress" id="today-progress">— erledigt</div>
-  </div>
-  <div id="today-tasks" class="tasks"></div>
-  <div class="focus-box">
-    <div class="label">Fokus-Frage des Tages</div>
-    <div class="question" id="focus-question"></div>
-  </div>
+<div class="content">
+
+<!-- COVER + DASHBOARD + TOC -->
+
+<section id="overview" class="section active">
+
+<div class="cover">
+<p class="meta">Strategischer Wegweiser · April 2026</p>
+<h1>Bikeley<br><em>Master-Atlas.</em></h1>
+<p class="subtitle">Die digitale Heimat für die DACH-Bike-Welt. Vision, Geschäftsmodell, strategischer Plan und operativer Status auf einen Blick.</p>
+<p class="author-line">Verfasst von Julius Gebler · Gründer Bikeley GmbH · München</p>
 </div>
 
-<div id="tab-weeks" class="tab-panel">
-  <div class="week-nav">
-    <button id="prev-week">← Vorherige</button>
-    <select id="week-selector"></select>
-    <button id="next-week">Nächste →</button>
-  </div>
-  <div id="week-detail"></div>
+<div class="dashboard">
+<h2>Aktueller Status</h2>
+<p class="dashboard-sub">Diese Werte werden lokal in deinem Browser gespeichert und können jederzeit aktualisiert werden. Sie steuern, in welcher strategischen Phase Bikeley sich befindet.</p>
+
+<div class="kpi-grid">
+
+<div class="kpi-cell">
+<div class="kpi-label">Insta-Follower</div>
+<input type="number" id="kpi-followers" placeholder="540" />
+<div class="kpi-target" data-kpi="followers" data-target="2200">Phase-1-Ziel: 2.200</div>
 </div>
 
-<div id="tab-kpi" class="tab-panel">
-  <div class="section-head">
-    <h2>Wöchentliche KPIs</h2>
-    <div class="progress">Sonntag, 30 Min</div>
-  </div>
-
-  <div class="kpi-form">
-    <h3>Diese Woche eintragen</h3>
-
-    <div class="form-row">
-      <div class="form-group">
-        <label>Woche</label>
-        <select id="kpi-week"></select>
-      </div>
-      <div class="form-group">
-        <label>Datum</label>
-        <input type="date" id="kpi-date" />
-      </div>
-    </div>
-
-    <h4>Instagram</h4>
-    <div class="form-row">
-      <div class="form-group">
-        <label>Follower</label>
-        <input type="number" id="kpi-followers" placeholder="z.B. 720" />
-      </div>
-      <div class="form-group">
-        <label>Profil-Klick-Rate %</label>
-        <input type="number" id="kpi-click-rate" step="0.1" placeholder="z.B. 3.5" />
-      </div>
-      <div class="form-group">
-        <label>Save-Rate %</label>
-        <input type="number" id="kpi-save-rate" step="0.1" placeholder="z.B. 2.1" />
-      </div>
-    </div>
-
-    <h4>Coding</h4>
-    <div class="form-row">
-      <div class="form-group" style="flex: 2;">
-        <label>Hauptaufgabe</label>
-        <input type="text" id="kpi-coding-task" placeholder="z.B. PDF-Generator fertig" />
-      </div>
-      <div class="form-group">
-        <label>Status %</label>
-        <input type="number" id="kpi-coding-pct" placeholder="z.B. 80" />
-      </div>
-    </div>
-
-    <h4>LinkedIn</h4>
-    <div class="form-row">
-      <div class="form-group">
-        <label>Requests gesendet</label>
-        <input type="number" id="kpi-li-sent" placeholder="0" />
-      </div>
-      <div class="form-group">
-        <label>Akzeptiert</label>
-        <input type="number" id="kpi-li-accepted" placeholder="0" />
-      </div>
-      <div class="form-group">
-        <label>Antworten</label>
-        <input type="number" id="kpi-li-replies" placeholder="0" />
-      </div>
-    </div>
-
-    <h4>Reflexion</h4>
-    <div class="form-group">
-      <label>Größter Hebel diese Woche</label>
-      <textarea id="kpi-leverage" rows="2" placeholder="Was hat diese Woche am meisten gebracht?"></textarea>
-    </div>
-    <div class="form-group">
-      <label>Größter Blocker</label>
-      <textarea id="kpi-blocker" rows="2" placeholder="Wo hänge ich, was bremst mich?"></textarea>
-    </div>
-    <div class="form-group">
-      <label>Hauptziel nächste Woche</label>
-      <input type="text" id="kpi-next-goal" placeholder="Eine Sache, die nächste Woche fertig sein muss" />
-    </div>
-
-    <button class="btn-primary" id="save-kpi">KPIs speichern</button>
-  </div>
-
-  <div class="kpi-history">
-    <h3>Verlauf</h3>
-    <div id="kpi-list"></div>
-  </div>
+<div class="kpi-cell">
+<div class="kpi-label">Aktive User</div>
+<input type="number" id="kpi-users" placeholder="0" />
+<div class="kpi-target" data-kpi="users" data-target="5000">Phase-1-Ziel: 5.000</div>
 </div>
 
-<div id="tab-rituals" class="tab-panel">
-  <div class="section-head">
-    <h2>Dein Tagesrhythmus</h2>
-    <div class="progress" id="rituals-date"></div>
-  </div>
-  <p class="subtitle">5 feste Zeiten pro Tag. Hak ab, was du gemacht hast. Reset um Mitternacht.</p>
-  <div id="rituals-container"></div>
-  <div class="warn-box">
-    <div class="label">Sonntags-Ritus</div>
-    <div class="text">30 Minuten Wochenrückblick im KPI-Tab. Nicht skippen, auch wenn die Woche schlecht lief — gerade dann.</div>
-  </div>
+<div class="kpi-cell">
+<div class="kpi-label">Werkstatt-Provider</div>
+<input type="number" id="kpi-providers" placeholder="0" />
+<div class="kpi-target" data-kpi="providers" data-target="25">Phase-1-Ziel: 25</div>
 </div>
 
-<div id="tab-notes" class="tab-panel">
-  <div class="section-head">
-    <h2>Schnellnotizen</h2>
-    <span class="save-msg" id="notes-saved"></span>
-  </div>
-  <p class="subtitle">Ideen, Beobachtungen, Erkenntnisse — bleiben gespeichert.</p>
-  <textarea class="notes-textarea" id="quick-notes" placeholder="Werkstatt-Idee aus Sendling, Insta-Hook der bei Marco gut lief, Fragestellung für nächsten Claude-Chat..."></textarea>
-  <div class="notes-bar">
-    <span style="font-size: 12px; color: var(--ink-muted);">Auto-Save alle 30 Sek</span>
-    <button class="btn-secondary" id="save-notes">Jetzt speichern</button>
-  </div>
-  <div class="info-box">
-    <div class="label">Was Bikeley NICHT in den nächsten 8 Wochen ist</div>
-    <ul>
-      <li>Kein Werkstatt-Outreach (ab 5.000 Usern)</li>
-      <li>Keine Polizei-Kontakte (ab Q2 2027)</li>
-      <li>Keine Versicherungs-Anfragen (ab Q4 2026)</li>
-      <li>Keine Eurobike-Pläne (zu teuer)</li>
-      <li>Kein TikTok (ab 10k Insta)</li>
-      <li>Kein YouTube (Aufwand zu hoch)</li>
-    </ul>
-  </div>
+<div class="kpi-cell">
+<div class="kpi-label">Plus-Subscribers</div>
+<input type="number" id="kpi-plus" placeholder="0" />
+<div class="kpi-target" data-kpi="plus" data-target="200">Phase-1-Ziel: 200</div>
 </div>
 
-<div class="export-bar">
-  <span>Daten werden im Browser gespeichert (LocalStorage). Nicht in der Cloud.</span>
-  <div style="display: flex; gap: 8px;">
-    <button id="export-btn">Backup exportieren (JSON)</button>
-    <button id="import-btn">Backup importieren</button>
-    <input type="file" id="import-file" accept=".json" style="display: none;" />
-  </div>
+<div class="kpi-cell">
+<div class="kpi-label">Pro-Subscribers</div>
+<input type="number" id="kpi-pro" placeholder="0" />
+<div class="kpi-target" data-kpi="pro" data-target="50">Phase-1-Ziel: 50</div>
 </div>
+
+<div class="kpi-cell">
+<div class="kpi-label">MRR (EUR)</div>
+<input type="number" id="kpi-mrr" placeholder="0" />
+<div class="kpi-target" data-kpi="mrr" data-target="3000">Phase-1-Ziel: 3.000</div>
+</div>
+
+<div class="kpi-cell">
+<div class="kpi-label">Hersteller-Pilots aktiv</div>
+<input type="number" id="kpi-pilots" placeholder="0" />
+<div class="kpi-target" data-kpi="pilots" data-target="1">Phase-2-Ziel: 1</div>
+</div>
+
+<div class="kpi-cell">
+<div class="kpi-label">Diebstahl-Flow %</div>
+<input type="number" id="kpi-buildstatus" placeholder="0" max="100" />
+<div class="kpi-target" data-kpi="buildstatus" data-target="100">Phase-1-Ziel: 100%</div>
+</div>
+
+</div>
+
+<div id="phase-indicator" class="current-phase">
+<div class="phase-label">Aktuelle Phase</div>
+<div class="phase-name" id="phase-name">Phase 0 · Foundation</div>
+<p id="phase-desc">Insta-Foundation aufbauen, Diebstahl-Flow fertigstellen, erste Plus-Tier-Conversion vorbereiten.</p>
+</div>
+
+<div class="dashboard-actions">
+<span class="saved" id="saved-msg"></span>
+<div style="display: flex; gap: 8px;">
+<button class="btn btn-secondary" id="export-btn">Backup exportieren</button>
+<button class="btn btn-secondary" id="import-btn">Backup importieren</button>
+<input type="file" id="import-file" accept=".json" style="display: none;" />
+<button class="btn" id="save-btn">Werte speichern</button>
+</div>
+</div>
+</div>
+
+<h2>Inhalt des Atlas</h2>
+
+<div class="toc-grid">
+
+<a class="toc-item" data-tab="vision">
+<div class="toc-num">01</div>
+<div class="toc-content">
+<div class="title">Vision &amp; Heimat-These</div>
+<div class="desc">Das Fundament: Heimat statt Plattform. Fünf Personas, fünf Produktprinzipien, sechs Selbstbeschränkungen.</div>
+</div>
+</a>
+
+<a class="toc-item" data-tab="market">
+<div class="toc-num">02</div>
+<div class="toc-content">
+<div class="title">Markt &amp; Problem</div>
+<div class="desc">DACH-Bike-Markt, Diebstahl-Realität, Werkstatt-Digitalisierungs-Lücke.</div>
+</div>
+</a>
+
+<a class="toc-item" data-tab="product">
+<div class="toc-num">03</div>
+<div class="toc-content">
+<div class="title">Produkt &amp; Plattform</div>
+<div class="desc">Community, Bike-Pass, Werkstatt-Layer, Marktplatz, Hersteller-Console.</div>
+</div>
+</a>
+
+<a class="toc-item" data-tab="personas">
+<div class="toc-num">04</div>
+<div class="toc-content">
+<div class="title">Zielgruppen &amp; Personas</div>
+<div class="desc">Fünf Personen-Archetypen, drei zusätzliche Demografie-Erweiterungen.</div>
+</div>
+</a>
+
+<a class="toc-item" data-tab="pricing">
+<div class="toc-num">05</div>
+<div class="toc-content">
+<div class="title">Geschäftsmodell &amp; Pricing</div>
+<div class="desc">Sechs Akteurs-Gruppen, sechs Cashflow-Quellen, vollständiges Pricing-Modell.</div>
+</div>
+</a>
+
+<a class="toc-item" data-tab="strategy">
+<div class="toc-num">06</div>
+<div class="toc-content">
+<div class="title">Strategischer Plan 2026–2032</div>
+<div class="desc">Sieben Züge, vier Phasen, jährliche Erfolgs-Marker.</div>
+</div>
+</a>
+
+<a class="toc-item" data-tab="competition">
+<div class="toc-num">07</div>
+<div class="toc-content">
+<div class="title">Wettbewerb &amp; Differenzierung</div>
+<div class="desc">Sechs Konkurrenz-Szenarien, strukturelle Burggraben-Logik.</div>
+</div>
+</a>
+
+<a class="toc-item" data-tab="distribution">
+<div class="toc-num">08</div>
+<div class="toc-content">
+<div class="title">Distribution &amp; Marketing</div>
+<div class="desc">Insta-Wachstumsplan, LinkedIn-Outreach für Hersteller-Akquise.</div>
+</div>
+</a>
+
+<a class="toc-item" data-tab="behoerden">
+<div class="toc-num">09</div>
+<div class="toc-content">
+<div class="title">Behörden &amp; Regulatorik</div>
+<div class="desc">Polizei-Strategie in drei Stufen. Datenschutz und DSGVO-Konformität.</div>
+</div>
+</a>
+
+<a class="toc-item" data-tab="roadmap">
+<div class="toc-num">10</div>
+<div class="toc-content">
+<div class="title">Roadmap &amp; Erfolgs-Marker</div>
+<div class="desc">Quartalsweise Bauplan 2026–2027. Jährliche Ziele 2026–2032.</div>
+</div>
+</a>
+
+<a class="toc-item" data-tab="risks">
+<div class="toc-num">11</div>
+<div class="toc-content">
+<div class="title">Risiken &amp; offene Themen</div>
+<div class="desc">Strukturelle Risiken, operative Engpässe, kritische Annahmen.</div>
+</div>
+</a>
+
+</div>
+
+<div class="atlas-footer">
+<span class="signature">— Die Heimat der DACH-Bike-Welt —</span>
+<span>Bikeley GmbH · Master-Atlas · Lebendes Dokument · April 2026</span>
+</div>
+
+</section>
+
+<!-- 01 VISION -->
+
+<section id="vision" class="section">
+
+<h1><span class="num">Kapitel 01 · Fundament</span>Vision &amp; <em>Heimat-These</em></h1>
+
+<p class="lead">Das zentrale Versprechen, die fünf Personen, denen es gilt, die fünf Produktprinzipien, die jeder Entscheidung zugrunde liegen.</p>
+
+<h2>Das Versprechen</h2>
+
+<div class="hero-statement">
+<span class="label">Die Heimat-These · Bikeley 2032</span>
+<p class="text">Bikeley ist die <em>Heimat der DACH-Bike-Welt</em>. Hier treffen sich Biker, zeigen ihre Bikes, planen Touren — und kaufen ihr nächstes Bike sicher von geprüften Fachhändlern und Werkstätten. <em>Premium-Mitglieder</em> können ihr eigenes Bike verkaufen, mit ihrem dokumentierten Bike-Pass als Echtheits-Nachweis.</p>
+</div>
+
+<h2>Was an dieser Positionierung besonders ist</h2>
+
+<p><strong>Heimat statt Plattform.</strong> Plattformen sind funktional. Heimaten sind emotional. Der Begriff verschiebt das Produkt von austauschbarer Software zu einem identitätsstiftenden Ort. Eine Heimat verlässt man nicht so leicht — selbst wenn ein Konkurrent ein technisch besseres Werkzeug bauen würde.</p>
+
+<p><strong>DACH-Tiefe statt globale Breite.</strong> Geographische Beschränkung ist Stärke, nicht Schwäche. Globale Plattformen wie Strava oder Komoot können DACH-spezifische Themen — Werkstatt-Kultur, Versicherungslogik, behördliche Anerkennung — nicht in der Tiefe bedienen, die Bikeley anstrebt.</p>
+
+<p><strong>Treffen vor Kaufen.</strong> Die Reihenfolge der Verben im Versprechen ist bewusst: Erst die menschliche Verbindung (treffen, zeigen, planen), dann die transaktionale Funktion (kaufen, verkaufen). Plattformen, die mit „kaufen" zuerst kommen, werden Marktplätze. Plattformen, die mit „treffen" zuerst kommen, werden Heimaten.</p>
+
+<p><strong>Geprüfte statt offene Anbieter.</strong> Der Marktplatz ist kuratiert: Im Free-Tier können nur verifizierte Provider (Fachhändler, Werkstätten) verkaufen. Privatpersonen verkaufen ausschließlich über das kostenpflichtige Pro-Tier — was strukturell gegen Diebstahls-Verkäufe filtert.</p>
+
+<h2>Die fünf Produktprinzipien</h2>
+
+<div class="principles">
+
+<div class="principle">
+<div class="principle-num"></div>
+<div class="principle-content">
+<h4>Heimat vor Werkzeug</h4>
+<p>Bei Konflikt zwischen Community-Stärkung und technischer Eleganz gewinnt das Community-Gefühl. Werkzeuge ohne Heimat-Bezug werden ersetzt; eine Heimat ohne perfekte Werkzeuge bleibt trotzdem eine Heimat.</p>
+</div>
+</div>
+
+<div class="principle">
+<div class="principle-num"></div>
+<div class="principle-content">
+<h4>Vertrauen vor Volumen</h4>
+<p>Lieber 100 geprüfte Werkstätten als 1.000 ungeprüfte. Lieber 50 Pro-Verkäufer mit Bike-Pass als 500 anonyme Inserate. Schwarzmarkt-Volumen würde die Marke strukturell entwerten.</p>
+</div>
+</div>
+
+<div class="principle">
+<div class="principle-num"></div>
+<div class="principle-content">
+<h4>DACH-Tiefe vor globaler Breite</h4>
+<p>Keine englische Übersetzung, keine Expansion nach Italien, Frankreich, Niederlande. Bayrische Werkstatt-Kultur, deutsche Versicherungslogik, schweizerische Bike-Tour-Spots. Tiefe in einem Markt schlägt Breite über viele.</p>
+</div>
+</div>
+
+<div class="principle">
+<div class="principle-num"></div>
+<div class="principle-content">
+<h4>Subscription vor Werbung</h4>
+<p>Werbung im Free-Tier dezent möglich, niemals aufdringlich. Hauptmonetarisierung sind Subscriptions (Endkunden) und Provider-Pläne (B2B) — wiederkehrend und planbar. Werbe-Erlöse bleiben Nebeneinnahme.</p>
+</div>
+</div>
+
+<div class="principle">
+<div class="principle-num"></div>
+<div class="principle-content">
+<h4>Langsam und richtig vor schnell und schlampig</h4>
+<p>Features werden gelauncht, wenn sie funktionieren — nicht wenn sie im Sprint fertig sind. Eine Heimat darf nicht beta-haft wirken. Lieber ein Feature später, aber poliert, als zwei Features früher, aber halbfertig.</p>
+</div>
+</div>
+
+</div>
+
+<h2>Sechs bewusste Selbstbeschränkungen</h2>
+
+<p>Eine starke Vision definiert sich genauso über das, was sie ist, wie über das, was sie ablehnt. Die folgenden Felder bedient Bikeley bewusst nicht:</p>
+
+<ul class="list-clean">
+<li><strong>Kein Strava-Ersatz.</strong> Keine GPS-Tracking-Funktion, keine Segment-Zeiten, keine Watt-Messung. Wer Tracking will, nutzt Strava parallel.</li>
+<li><strong>Kein Komoot-Konkurrent.</strong> Keine eigene Routen-Engine, keine Turn-by-Turn-Navigation. Touren bei Bikeley sind sozial („wer fährt mit?"), nicht technisch („wie komme ich von A nach B?").</li>
+<li><strong>Kein bikemarkt.de-Konkurrent.</strong> Der Marktplatz wird kuratiert, nicht für jeden Privat-Verkäufer geöffnet. Verifikation über Provider-Status oder Pro-Tier-Subscription.</li>
+<li><strong>Kein Versicherer.</strong> Bikeley vermittelt Versicherungs-Partnerschaften (Wertgarantie, Allianz), trägt aber nie selbst Risiken.</li>
+<li><strong>Kein internationales Produkt.</strong> Keine Übersetzungen, keine Geschäftsentwicklung außerhalb DACH. Auch nicht Italien, auch nicht Frankreich.</li>
+<li><strong>Kein Hardware-Hersteller.</strong> Bikeley baut keine eigenen Bikes, Schlösser, Helme oder Komponenten. Software- und Marken-Heimat, keine Hardware.</li>
+</ul>
+
+<div class="pullquote">
+Plattformen verkauft man als Werkzeug. Eine Heimat verkauft man als Identität. Das ist der ganze Unterschied — und der Grund, warum diese Positionierung in einem Markt funktioniert, in dem viele Bike-Plattformen gescheitert sind.
+<span class="attr">— Strategischer Kerngedanke</span>
+</div>
+
+</section>
+
+<!-- 02 MARKT -->
+
+<section id="market" class="section">
+
+<h1><span class="num">Kapitel 02 · Markt</span>Markt &amp; <em>Problem</em></h1>
+
+<p class="lead">Der DACH-Bike-Markt ist groß und wächst. Drei strukturelle Probleme öffnen den Raum, den Bikeley besetzt: Diebstahl ohne Wiederfindung, Werkstatt-Digitalisierungs-Lücke, fehlender DACH-spezifischer Trust-Layer.</p>
+
+<h2>Marktgröße DACH</h2>
+
+<div class="stats-grid">
+<div class="stat-cell">
+<span class="num">7,5 Mio</span>
+<span class="lab">E-Bikes in Deutschland (2024, ZIV)</span>
+</div>
+<div class="stat-cell">
+<span class="num">+18%</span>
+<span class="lab">E-Bike-Wachstum YoY in DACH</span>
+</div>
+<div class="stat-cell">
+<span class="num">~9 Mrd €</span>
+<span class="lab">DACH-Bike-Markt-Volumen p.a.</span>
+</div>
+<div class="stat-cell">
+<span class="num">~6.000</span>
+<span class="lab">Fahrradwerkstätten in DACH</span>
+</div>
+</div>
+
+<h2>Problem 1: Diebstahl ohne Wiederfindung</h2>
+
+<div class="stats-grid">
+<div class="stat-cell">
+<span class="num">234.000</span>
+<span class="lab">Fahrräder/Jahr in Deutschland gestohlen (PKS 2021)</span>
+</div>
+<div class="stat-cell">
+<span class="num">9–10%</span>
+<span class="lab">Aufklärungsquote — eine der niedrigsten aller Straftaten</span>
+</div>
+<div class="stat-cell">
+<span class="num">40%+</span>
+<span class="lab">Aufklärungsquote bei codierten Bikes</span>
+</div>
+<div class="stat-cell">
+<span class="num">~3,2 Mrd €</span>
+<span class="lab">Schaden durch Bike-Diebstahl in DE p.a.</span>
+</div>
+</div>
+
+<p>Die offizielle polizeiliche Fahrradpass-App existiert seit Jahren, ist aber weitgehend ungenutzt und datenschwach. Etablierte private Anbieter wie fahrradpass.info bieten reine Registrierungs-Datenbanken ohne Community-Ebene oder Werkstatt-Integration. Die Lücke: Es gibt keine Plattform, die digitale Bike-Dokumentation, Werkstatt-Verifikation, Versicherungs-Anbindung und behördliche Kompatibilität zusammen denkt.</p>
+
+<h2>Problem 2: Werkstatt-Digitalisierungs-Lücke</h2>
+
+<p>Etwa 6.000 Fahrradwerkstätten in DACH bedienen einen wachsenden Markt — mit überwiegend analogen Werkzeugen. Typische Werkstatt heute: eine Website, die vor Jahren erstellt wurde. Google-Bewertungen. Mund-zu-Mund-Empfehlungen. Keine systematische Online-Terminbuchung, keine digitale Service-Historie, keine Kunden-Insights.</p>
+
+<p>Plattformen für andere Branchen (Treatwell für Friseure, OpenTable für Restaurants, Doctolib für Ärzte) zeigen, dass digitale Buchungssysteme funktionieren. Im Bike-Bereich existiert kein etablierter Anbieter. Werkstätten sind digital unterversorgt — und gleichzeitig ein zunehmend kritischer Bestandteil der Bike-Customer-Journey, weil E-Bikes wartungsintensiver sind als klassische Fahrräder.</p>
+
+<h2>Problem 3: Fehlender DACH-spezifischer Trust-Layer</h2>
+
+<p>Der C2C-Bike-Markt in DACH läuft heute über bikemarkt.de, eBay Kleinanzeigen und Facebook-Marketplace. Hauptproblem für Käufer: keine Echtheits-Verifikation. Hauptproblem für Verkäufer: niedrige Wiederverkaufswerte durch Misstrauen. Hauptproblem für Werkstätten: keine Möglichkeit, gebrauchte Premium-Bikes mit dokumentierter Service-Historie zu vermitteln.</p>
+
+<p>Premium-Marken wie Riese &amp; Müller, Cube oder Stevens haben hohes Interesse, ihre Bikes aus dem Schwarzmarkt-Umfeld zu lösen — finden aber keine Plattform, die Trust-Mechanismen strukturell aufbaut.</p>
+
+<h2>Adressierbarer Markt</h2>
+
+<p><strong>Total Addressable Market (TAM):</strong> alle Bike-Besitzer in DACH mit aktivem Bike-Wert über 800 EUR. Schätzung: 12-15 Millionen Personen.</p>
+
+<p><strong>Serviceable Addressable Market (SAM):</strong> digital-affine Bike-Besitzer 25-55 Jahre mit E-Bike oder hochwertigem Bike (4.000+ EUR). Schätzung: 4-5 Millionen Personen.</p>
+
+<p><strong>Serviceable Obtainable Market (SOM, 2032):</strong> realistisch erreichbarer Anteil. 200.000-300.000 aktive User entsprechen 4-6% des SAM — ehrgeizig, aber im Rahmen vergleichbarer DACH-Plattformen (Komoot DACH-Anteil deutlich höher).</p>
+
+</section>
+
+<!-- 03 PRODUKT -->
+
+<section id="product" class="section">
+
+<h1><span class="num">Kapitel 03 · Produkt</span>Produkt &amp; <em>Plattform</em></h1>
+
+<p class="lead">Bikeley besteht aus fünf integrierten Schichten, die zusammen die Heimat-Erfahrung erzeugen. Jede Schicht hat ihre eigene strategische Funktion. Sie sind nicht gleichwertig — sie folgen einer klaren Hierarchie.</p>
+
+<h2>Die fünfschichtige Architektur</h2>
+
+<div class="phase">
+<div class="phase-head"><span class="when">Tier 1 · Kern</span><span class="name">Community-Layer</span></div>
+<div class="phase-body">
+<p>Der Hauptbildschirm der App. Beim Öffnen sieht der User: Feed der Community, Bike-of-the-Week, anstehende Touren in der Region, neue Werkstatt-Reviews. Ohne diesen Kern wäre Bikeley nur Software — mit ihm wird es Heimat.</p>
+<ul class="list-clean">
+<li>User-Profile mit Bikes, Touren, Reviews</li>
+<li>Algorithmischer Feed (relevante Posts, lokal kuratiert)</li>
+<li>Touren-Funktion mit Treffpunkt, Teilnehmer-Liste, RSVP</li>
+<li>Lokale Gruppen (Stammtische, Bike-Type-Communities)</li>
+<li>Reviews und Bewertungen</li>
+</ul>
+</div>
+</div>
+
+<div class="phase">
+<div class="phase-head"><span class="when">Tier 2 · Werkzeug</span><span class="name">Bike-Pass &amp; Garage</span></div>
+<div class="phase-body">
+<p>Das stille Werkzeug, das Heimat-Identität schafft. Jeder User dokumentiert sein Bike — Fotos, Seriennummer, Komponenten, Wartungs-Historie. Free-Tier: ein Bike. Plus-Tier: erweiterte Garage. Pro-Tier: Verkaufs-fähiger Bike-Pass mit Echtheits-Siegel.</p>
+<ul class="list-clean">
+<li>Bike-Registrierung mit Foto, Seriennummer, Komponenten</li>
+<li>Service-Historie (manuell oder von Werkstatt eingetragen)</li>
+<li>Diebstahl-Doku mit One-Click-PDF-Export</li>
+<li>FEIN-Code-Integration (offizielle Eigentümer-Identifizierungs-Nummer)</li>
+<li>Versicherungs-API-Anbindung (ab Phase 2)</li>
+<li>Bike-Pass-Übertragung beim Verkauf</li>
+</ul>
+</div>
+</div>
+
+<div class="phase">
+<div class="phase-head"><span class="when">Tier 3 · Service</span><span class="name">Werkstatt-Marktplatz</span></div>
+<div class="phase-body">
+<p>Werkstätten als integraler Teil der Heimat — nicht als externer Marktplatz, sondern als Teilnehmer der Community. User finden geprüfte Werkstätten, buchen Service-Termine, lesen echte Bewertungen. Werkstätten erhalten Provider-Profile, Mitarbeiter-Sub-Accounts und Co-Marketing-Möglichkeiten.</p>
+<ul class="list-clean">
+<li>Provider-Profile mit Spezialisierung, Reviews, Standorten</li>
+<li>Online-Terminbuchung für Service</li>
+<li>Service-Listings (Inspektion, Reparatur, E-Bike-Service, Tuning)</li>
+<li>Multi-User-Accounts (Werkstatt-Inhaber + Mitarbeiter)</li>
+<li>Empfehlungs-Algorithmus auf Basis von Bike-Daten</li>
+</ul>
+</div>
+</div>
+
+<div class="phase">
+<div class="phase-head"><span class="when">Tier 4 · Markt</span><span class="name">Bike- und Komponenten-Marktplatz</span></div>
+<div class="phase-body">
+<p>Geprüfter Marktplatz mit zwei Quellen: B2C (Provider listen Bikes und Teile) und C2C (Pro-Mitglieder verkaufen ihre eigenen Bikes mit dokumentiertem Bike-Pass). Stripe-Connect-Treuhand sichert Transaktionen. Bikeley-Vertrauen statt Schwarzmarkt-Risiko.</p>
+<ul class="list-clean">
+<li>B2C-Listings durch geprüfte Provider</li>
+<li>C2C-Listings durch Pro-Mitglieder mit Bike-Pass-Verifikation</li>
+<li>Stripe-Connect-Treuhand für sichere Zahlungsabwicklung</li>
+<li>2% Plattform-Provision (B2C), später 3-5%</li>
+<li>Bike-Pass-Echtheits-Siegel als zentrale Differenzierung</li>
+</ul>
+</div>
+</div>
+
+<div class="phase">
+<div class="phase-head"><span class="when">Tier 5 · Bonus</span><span class="name">Hersteller-Layer</span></div>
+<div class="phase-body">
+<p>Ab 2028 sichtbar. Bike-Hersteller integrieren Bikeley für Garantie-Tracking, Bike-Registrierung beim Neukauf, Service-Empfehlungen. Marken werden zu sichtbaren Teilnehmern der Heimat. Hersteller-Manager nutzen eine separate Brand-Console mit anonymisierten Insights-Reports.</p>
+<ul class="list-clean">
+<li>Marken-Profile (Cube, Stevens, Riese &amp; Müller, etc.)</li>
+<li>Hersteller-zertifizierte Werkstätten finden</li>
+<li>Garantie-Tracking über Bikeley</li>
+<li>Brand-Console mit anonymisierten Daten-Insights</li>
+<li>Daten-Lizenzen als zentrale Cashflow-Quelle</li>
+</ul>
+</div>
+</div>
+
+<h2>Aktueller Bau-Stand</h2>
+
+<p>Die Plattform ist in aktiver Entwicklung. Die Web-Plattform (PHP, MySQL, Stripe Connect, VeloConnect-Integration) ist seit 2024 in Aufbau und enthält über 40 implementierte Module. Die native Mobile-App (Expo, React Native, TypeScript) wird parallel entwickelt und teilt das gleiche Backend.</p>
+
+<p>Aktueller Schwerpunkt im April 2026: Diebstahl-Flow auf App und Web mit synchronisierter Logik, einschließlich PDF-Generator im Format der bayrischen Online-Anzeige, Postmark-Integration für transaktionale Mails, Stripe-Subscription-System für Plus- und Pro-Tier.</p>
+
+<div class="note">
+<h3>Fünf-Schicht-Hierarchie als operatives Prinzip</h3>
+<p>Bei jedem Feature-Vorschlag wird zuerst geprüft, welcher Schicht er zuzuordnen ist. Tier-1-Features haben Vorrang vor Tier-3-Features. Das verhindert die typische Plattform-Falle, in der Marktplatz-Features (transaktional, schnelles Geld) den Community-Layer (langsam, geduldig) überlagern. Reihenfolge ist hier strategisch entscheidend.</p>
+</div>
+
+</section>
+
+<!-- 04 PERSONAS -->
+
+<section id="personas" class="section">
+
+<h1><span class="num">Kapitel 04 · Zielgruppen</span>Personas &amp; <em>Demografie</em></h1>
+
+<p class="lead">Fünf Personen-Archetypen, an die Bikeley bei jeder Produkt-Entscheidung denkt. Drei Endkunden, ein Werkstatt-Tandem, ein Hersteller-Manager. Plus drei zusätzliche Demografie-Erweiterungen, die strategisch wichtig sind.</p>
+
+<div class="persona">
+<div class="persona-head">
+<div class="persona-icon">M</div>
+<div class="persona-id">
+<div class="name">Marco, 28</div>
+<div class="meta">München · Gravel- &amp; MTB-Biker · freier Designer</div>
+</div>
+<div class="persona-tier">Plus · 4,99€</div>
+</div>
+<div class="persona-body">
+<p>Fährt seit 7 Jahren ernsthaft Mountainbike, in den letzten 2 Jahren auch Gravel. Besitzt zwei Bikes (Cube Stereo Hybrid 3.500 EUR, Specialized Diverge 2.800 EUR). Trifft sich am Wochenende mit Freunden für Trails am Tegernsee. Posttet auf Instagram, hat 1.200 Follower. Heute nutzt er Strava, Komoot, Insta und gelegentlich bikemarkt.de — vier Apps, keine spricht mit der anderen. Bikeley wird seine zentrale Heimat: Bikes mit Wartungs-Details dokumentiert, andere MTB-Fahrer in München gefunden, gemeinsame Touren geplant, geprüfte Werkstätten direkt buchbar.</p>
+</div>
+</div>
+
+<div class="persona">
+<div class="persona-head">
+<div class="persona-icon">S</div>
+<div class="persona-id">
+<div class="name">Sabine, 52</div>
+<div class="meta">Rosenheim · E-Bike-Fahrerin · Geschäftsführerin · Familie</div>
+</div>
+<div class="persona-tier">Pro · 9,99€</div>
+</div>
+<div class="persona-body">
+<p>Fährt seit 4 Jahren ein Riese &amp; Müller Charger4 (5.800 EUR). Mit ihrem Mann macht sie regelmäßig Wochenend-Touren in Oberbayern und am Chiemsee. Beide nutzen ihre E-Bikes häufiger als ihre Autos. Heute keine systematische Bike-Doku — eine Excel-Tabelle für Wartungstermine. Bikeley wird ihr digitaler Bike-Berater im Hintergrund: Bike registriert mit Fotos und Service-Historie, Wartungs-Erinnerungen automatisch, Werkstätten mit echten Reviews. Wenn sie ihr Charger4 in zwei Jahren ersetzt, läuft der Verkauf über Bikeley — der dokumentierte Bike-Pass macht den Wiederverkaufswert höher.</p>
+</div>
+</div>
+
+<div class="persona">
+<div class="persona-head">
+<div class="persona-icon">T</div>
+<div class="persona-id">
+<div class="name">Tobi, 35</div>
+<div class="meta">München-Sendling · Werkstatt-Inhaber „Cycle Munich"</div>
+</div>
+<div class="persona-tier b2b">Standard · 99€</div>
+</div>
+<div class="persona-body">
+<p>Hat vor 5 Jahren seine Werkstatt eröffnet. 3 Mitarbeiter, spezialisiert auf MTB-Service und E-Bikes. Stammkundschaft von etwa 400 Personen. Hat eine Werkstatt-Website, die vor Jahren ein Student gebaut hat, und 4,7 Sterne bei Google. Auf Instagram 480 Follower, postet selten. Wachstum stagniert. Bikeley wird sein neuer Vertriebskanal: Provider-Profil mit Spezialisierung, Online-Service-Buchung, echte Reviews, Co-Production-Reels mit Bikeley-Marketing. Im Standard-Tier kann er 50 Listings (gebrauchte Bikes, Komponenten) anbieten.</p>
+</div>
+</div>
+
+<div class="persona">
+<div class="persona-head">
+<div class="persona-icon">L</div>
+<div class="persona-id">
+<div class="name">Lisa, 24</div>
+<div class="meta">München · Mechanikerin bei Cycle Munich · selbst MTB-Fahrerin</div>
+</div>
+<div class="persona-tier b2b">Mitarbeiter-Account</div>
+</div>
+<div class="persona-body">
+<p>Ausgebildete KFZ-Mechatronikerin, vor 18 Monaten zu Bikes gewechselt. Macht hauptsächlich E-Bike-Service, Reparaturen, Bremsen-Wartung. Sehr Insta-aktiv, fährt selbst MTB. Heute hat ihre Werkstatt einen Bikeley-Account, sie selbst nicht — sie kann keine Service-Einträge schreiben, hat keine eigene Bikeley-Identität. Multi-User-Accounts unter dem Cycle-Munich-Provider lösen das: Lisa bekommt eigenes öffentliches Profil als „Mechanikerin bei Cycle Munich", verlinkt ihren Insta, wird das Gesicht für Co-Production-Reels mit Bikeley. Junge Mechanikerinnen sind in der DACH-Bike-Szene unterrepräsentiert — und genau deshalb authentisch viral.</p>
+</div>
+</div>
+
+<div class="persona">
+<div class="persona-head">
+<div class="persona-icon">St</div>
+<div class="persona-id">
+<div class="name">Stefan, 41</div>
+<div class="meta">Bad Urach · Marketing-Director Magura · MTB-Renner</div>
+</div>
+<div class="persona-tier brand">Hersteller-Pilot</div>
+</div>
+<div class="persona-body">
+<p>Seit 11 Jahren bei Magura, heute Marketing-Director DACH. Selbst aktiver Mountainbiker. Verantwortlich für Markenstrategie, Werkstatt-Programm, Endkunden-Insights. Heute fehlt ihm die direkte Verbindung zu Endkunden, die Magura-Produkte besitzen. Keine Daten, welche Werkstätten Magura-Service machen. Marketing erfolgt blind — basierend auf Bauchgefühl und Händler-Feedback. Bikeley wird seine wichtigste strategische Datenquelle: Brand-Console mit anonymisierten Insights („4.823 User haben Magura-Bremsen registriert, 67% in Bayern"), Self-Service für Co-Marketing-Anfragen, dedizierter Bikeley-Ansprechpartner.</p>
+</div>
+</div>
+
+<h2>Drei zusätzliche Demografie-Erweiterungen</h2>
+
+<p>Die fünf Personas beschreiben die Hauptzielgruppen. Drei zusätzliche Segmente sind strategisch wichtig, ohne eigene volle Persona zu rechtfertigen — aber sie erweitern die Reichweite über das Marco-Sabine-Tobi-Profil hinaus.</p>
+
+<div class="demo-grid">
+
+<div class="demo-cell">
+<h4>Junge Frauen MTB</h4>
+<div class="size">~80.000 in DACH, +18% YoY</div>
+<p>22-35 Jahre, sehr Insta-aktiv, kaufen E-MTBs ab 4.000 EUR. Schauen auf weibliche Influencer. Wenn Bikeley junge Mechanikerinnen wie Lisa zeigt, sind diese User die ersten, die Inhalte teilen.</p>
+</div>
+
+<div class="demo-cell">
+<h4>Junge Pendler unter 25</h4>
+<div class="size">~250.000 in DACH-Großstädten</div>
+<p>Studenten, Auszubildende, Berufsanfänger. Fahren Cityrad oder günstiges E-Bike (1.500-3.000 EUR). Plus-Tier-Conversion möglich, Pro-Tier eher nicht. Hohe Diebstahl-Anfälligkeit als Hauptkonversions-Anreiz.</p>
+</div>
+
+<div class="demo-cell">
+<h4>Migranten-Bike-Communities</h4>
+<div class="size">~120.000 aktive Lieferbiker DACH</div>
+<p>Berlin, Hamburg, Frankfurt: starke Lieferbike-Szene, oft Erstgenerations-Migranten. Werkstätten in Berlin-Neukölln, Hamburg-Wilhelmsburg sind potentielle Provider. Sprachvereinfachung in der App-UX statt Übersetzung.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- 05 PRICING -->
+
+<section id="pricing" class="section">
+
+<h1><span class="num">Kapitel 05 · Geschäftsmodell</span>Pricing &amp; <em>Cashflow</em></h1>
+
+<p class="lead">Sechs Akteurs-Gruppen zahlen Bikeley auf sechs unterschiedliche Arten. Endkunden über Subscription, Werkstätten über Provider-Pläne, Hersteller über Pilots und Daten-Lizenzen, Versicherer über Vermittlungs-Provisionen, Marktplatz-Verkäufer über Provisionen, Tour-Guides über Plattform-Anteile.</p>
+
+<h2>Endkunden-Tiers</h2>
+
+<div class="pricing-grid">
+
+<div class="pricing-cell">
+<div class="name">Free</div>
+<div class="price">0€<span class="unit">/Monat</span></div>
+<ul>
+<li>Vollständiger Community-Zugang</li>
+<li>1 Bike registrieren</li>
+<li>Touren beitreten und finden</li>
+<li>Werkstätten suchen, Reviews schreiben</li>
+<li>Marktplatz: Bikes und Teile kaufen</li>
+<li>Werbefinanziert (dezent)</li>
+</ul>
+</div>
+
+<div class="pricing-cell featured">
+<div class="name">Plus</div>
+<div class="price">4,99€<span class="unit">/Monat</span></div>
+<ul>
+<li>Alles aus Free</li>
+<li>Bis zu 5 Bikes mit erweiterter Garage</li>
+<li>Service-Erinnerungen automatisch</li>
+<li>Diebstahl-Doku &amp; One-Click-PDF</li>
+<li>Vorrang bei Werkstatt-Buchungen</li>
+<li>Werbefreie Nutzung</li>
+<li>Versicherungs-Integration</li>
+</ul>
+</div>
+
+<div class="pricing-cell">
+<div class="name">Pro</div>
+<div class="price">9,99€<span class="unit">/Monat</span></div>
+<ul>
+<li>Alles aus Plus</li>
+<li><strong>Eigenes Bike auf dem Marktplatz verkaufen</strong></li>
+<li>Bike-Pass-Echtheits-Siegel als Verkaufs-Asset</li>
+<li>Bevorzugte Sichtbarkeit beim Verkauf</li>
+<li>Stripe-Connect-Treuhand inklusive</li>
+<li>Premium-Statistiken und Käufer-Insights</li>
+</ul>
+</div>
+
+</div>
+
+<p><strong>Conversion-Annahmen:</strong> Free 80-85% der User, Plus 10-15% der aktiven User (über Branchenschnitt von 5-8%, durch Versicherungs-Vorteil ab Phase 2 erreichbar), Pro 3-5% der aktiven User. Bei 50.000 aktiven Usern (Ende 2028): 5.000-7.500 Plus-Subscriber, 1.500-2.500 Pro-Subscriber.</p>
+
+<h2>Provider-Tiers (Werkstätten und Händler)</h2>
+
+<div class="pricing-grid">
+
+<div class="pricing-cell">
+<div class="name">Starter</div>
+<div class="price">29,90€<span class="unit">/Monat</span></div>
+<ul>
+<li>Provider-Profil mit Standard-Sichtbarkeit</li>
+<li>Bis zu 10 Service-Listings</li>
+<li>Online-Buchungs-Funktion</li>
+<li>Bis zu 3 Mitarbeiter-Accounts</li>
+<li>Standard-Reviews</li>
+</ul>
+</div>
+
+<div class="pricing-cell featured">
+<div class="name">Standard</div>
+<div class="price">99€<span class="unit">/Monat</span></div>
+<ul>
+<li>Alles aus Starter</li>
+<li>Bevorzugte Sichtbarkeit in Suche</li>
+<li>Bis zu 50 Listings (Bikes, Komponenten)</li>
+<li>Bis zu 10 Mitarbeiter-Accounts</li>
+<li>Co-Production-Möglichkeit mit Bikeley</li>
+<li>Monatliche Insights-Reports</li>
+</ul>
+</div>
+
+<div class="pricing-cell">
+<div class="name">Pro</div>
+<div class="price">199€<span class="unit">/Monat</span></div>
+<ul>
+<li>Alles aus Standard</li>
+<li>Featured-Position auf Werkstatt-Suche</li>
+<li>Unbegrenzte Listings</li>
+<li>Unbegrenzte Mitarbeiter-Accounts</li>
+<li>Hersteller-Zertifizierungs-Anzeige</li>
+<li>Erweiterte Analytics</li>
+</ul>
+</div>
+
+<div class="pricing-cell">
+<div class="name">Business</div>
+<div class="price">399€<span class="unit">/Monat</span></div>
+<ul>
+<li>Alles aus Pro</li>
+<li>Featured-Slots auf Marken-Seiten</li>
+<li>Co-Marketing-Budget mit Bikeley</li>
+<li>API-Zugriff auf eigene Daten</li>
+<li>Dedizierter Account-Manager</li>
+<li>Frühzugriff auf neue Features</li>
+</ul>
+</div>
+
+</div>
+
+<p><strong>Provider-Pricing-Logik:</strong> Tiers staffeln Sichtbarkeit, nicht Funktionen. Auch Starter-Werkstätten haben alle Kernfunktionen — sie sind nur weniger sichtbar. Das vermeidet die typische SaaS-Falle, in der grundlegende Features hinter Paywalls verschwinden.</p>
+
+<h2>Hersteller-Pricing (Daten-Lizenzen)</h2>
+
+<table class="compact-table">
+<thead><tr><th>Stufe</th><th>Preis p.a.</th><th>Was enthalten ist</th></tr></thead>
+<tbody>
+<tr><td><strong>Pilot</strong> (Welle 1)</td><td>0 € · 12 Monate</td><td>Marken-Profil, monatliche Insights, Co-Marketing-Möglichkeit. Erste 4-6 Hersteller. Primärfunktion: Referenz aufbauen.</td></tr>
+<tr><td><strong>Welle 2</strong></td><td>20.000–40.000 €</td><td>Marken-Profil, vierteljährliche Insights, Co-Marketing-Budget bis 5.000 EUR/Jahr inkludiert. Hersteller mit DACH-Umsatz 5-50 Mio EUR.</td></tr>
+<tr><td><strong>Welle 3</strong></td><td>50.000–100.000 €</td><td>Vollständige Brand-Console mit Daten-Self-Service, monatliche Insights, dedicated Account-Manager, Co-Marketing-Budget 15.000 EUR/Jahr. Hersteller mit DACH-Umsatz 50+ Mio EUR.</td></tr>
+<tr><td><strong>Komponenten-Konzern</strong></td><td>100.000–250.000 €</td><td>Brand-Console plus exklusive Daten-Lizenz für eine Produktkategorie (z.B. „alle Bremsen"-Daten anonymisiert). Bosch, Shimano, SRAM. Ab Phase 4 (2029+).</td></tr>
+</tbody>
+</table>
+
+<h2>Marktplatz-Provisionen</h2>
+
+<table class="compact-table">
+<thead><tr><th>Marktplatz-Typ</th><th>Provision</th><th>Anmerkung</th></tr></thead>
+<tbody>
+<tr><td><strong>B2C-Bikes</strong> (Provider verkauft)</td><td>2%</td><td>Phase 1-2. Erhöhung auf 3-4% in Phase 3 möglich.</td></tr>
+<tr><td><strong>C2C-Pro</strong> (Privat-User mit Pro-Sub verkauft)</td><td>3%</td><td>Plus 9,99€ Pro-Subscription monatlich. Doppelmonetarisierung.</td></tr>
+<tr><td><strong>Service-Buchungen</strong> (Werkstatt-Termine)</td><td>0%</td><td>Provider-Plan deckt Service-Buchungen ab. Keine zusätzliche Transaktions-Gebühr.</td></tr>
+<tr><td><strong>Bezahlte Touren-Guides</strong> (ab Phase 3)</td><td>5%</td><td>Plus Stripe-Treuhand-Mechanik. Dritter Marktplatz neben Bikes und Service.</td></tr>
+<tr><td><strong>Komponenten-Marktplatz</strong></td><td>3%</td><td>Phase 2+. Werkstätten verkaufen gebrauchte Komponenten an User.</td></tr>
+</tbody>
+</table>
+
+<h2>Versicherungs-Vermittlungs-Provisionen</h2>
+
+<p>Ab Phase 2 (Q4 2026) Vermittlung von Bike-Versicherungen über Wertgarantie und in Phase 3 weitere Partner. Provisions-Modell: <strong>Einmal-Provision 30-50 EUR pro abgeschlossener Versicherung, plus 5-10 EUR jährliche Bestandspflege-Provision pro aktivem Vertrag.</strong> Bei 5.000 vermittelten Versicherungen mit 7 EUR durchschnittlicher Bestandspflege ergibt das 35.000 EUR jährlichen Bestandspflege-Cashflow zusätzlich zur einmaligen Vermittlungs-Provision.</p>
+
+<h2>Cashflow-Modell-Annahmen Ende 2028</h2>
+
+<div class="stats-grid">
+<div class="stat-cell">
+<span class="num">~50.000</span>
+<span class="lab">aktive User</span>
+</div>
+<div class="stat-cell">
+<span class="num">~250</span>
+<span class="lab">zahlende Werkstatt-Provider</span>
+</div>
+<div class="stat-cell">
+<span class="num">4-6</span>
+<span class="lab">Hersteller-Pilots / Welle-2-Verträge</span>
+</div>
+<div class="stat-cell">
+<span class="num">~2,5 Mio €</span>
+<span class="lab">ARR Ziel Ende 2028</span>
+</div>
+</div>
+
+<p>Cashflow-Verteilung Ende 2028 (Schätzung): 35% Endkunden-Subscriptions, 30% Provider-Plan-Erlöse, 20% Hersteller-Pilots/Daten-Lizenzen, 8% Marktplatz-Provisionen, 5% Versicherungs-Vermittlung, 2% Werbung. Diese Verteilung verschiebt sich ab 2029 zugunsten von Hersteller-Daten-Lizenzen, die strukturell schneller skalieren als Subscriptions.</p>
+
+<div class="note">
+<h3>Strategische Hierarchie der Einnahme-Quellen</h3>
+<p>Subscriptions (Endkunden + Provider) liefern wiederkehrenden, planbaren Cashflow und sind die Basis für Bewertung und Stabilität. Hersteller-Daten-Lizenzen liefern überproportionale Skalierung — ein Hersteller-Vertrag entspricht den jährlichen Subscriptions von ca. 1.000 Plus-Tier-Usern. Marktplatz-Provisionen sind Nebeneinnahme. Werbung ist Volumen-Geschäft, das wir bewusst nicht priorisieren.</p>
+</div>
+
+</section>
+
+<!-- 06 STRATEGY -->
+
+<section id="strategy" class="section">
+
+<h1><span class="num">Kapitel 06 · Strategischer Plan</span>Sieben Züge <em>2026–2032</em></h1>
+
+<p class="lead">Strategie ist nicht Vision. Strategie ist die konkrete Folge von Entscheidungen, die zur Vision führen. Sieben Züge in Reihenfolge, vier Phasen, jährliche Erfolgs-Marker.</p>
+
+<div class="chess-grid">
+
+<div class="chess-row">
+<div class="chess-num">1</div>
+<div class="chess-content">
+<h4>Heimat-Foundation</h4>
+<p>Community-Layer aufbauen, 5.000 aktive User in Bayern. Insta als Hauptkanal. Diebstahl-Flow als Plus-Tier-Conversion-Hebel.</p>
+<span class="when">2026 H1 · in aktiver Umsetzung</span>
+</div>
+</div>
+
+<div class="chess-row">
+<div class="chess-num">2</div>
+<div class="chess-content">
+<h4>Werkstatt-Schwarm</h4>
+<p>100 Werkstätten in München als Heimat-Teilnehmer. B2B-Subscription-Cashflow startet. Erste Co-Production-Reels.</p>
+<span class="when">2026 H2</span>
+</div>
+</div>
+
+<div class="chess-row">
+<div class="chess-num">3</div>
+<div class="chess-content">
+<h4>Versicherungs-Allianz</h4>
+<p>Wertgarantie als erster Versicherungs-Partner. Plus-Tier-Boost durch integrierten Diebstahlschutz.</p>
+<span class="when">Q4 2026 – Q1 2027</span>
+</div>
+</div>
+
+<div class="chess-row">
+<div class="chess-num">4</div>
+<div class="chess-content">
+<h4>Hersteller-Welle 1</h4>
+<p>Magura, Riese &amp; Müller, SKS, Pinion als Pilot-Partner. Premium-Marken bringen Premium-User. Marken-Profile gehen live.</p>
+<span class="when">Q2 2027</span>
+</div>
+</div>
+
+<div class="chess-row">
+<div class="chess-num">5</div>
+<div class="chess-content">
+<h4>Pro-Tier &amp; Marktplatz öffnen</h4>
+<p>C2C-Verkauf für Pro-Mitglieder. Bike-Pass wird zum Verkaufs-Asset. Stripe-Connect-Treuhand sichert Transaktionen.</p>
+<span class="when">2028</span>
+</div>
+</div>
+
+<div class="chess-row">
+<div class="chess-num">6</div>
+<div class="chess-content">
+<h4>DACH-Skalierung</h4>
+<p>Innsbruck (Phase 1.5), dann Wien, Zürich. Lokale Werkstatt-Schwärme replizieren. Hersteller-Welle 2 (Cube, Stevens, Brose).</p>
+<span class="when">2029–2030</span>
+</div>
+</div>
+
+<div class="chess-row">
+<div class="chess-num">7</div>
+<div class="chess-content">
+<h4>Endspiel — Daten-Monopol</h4>
+<p>Hersteller-Welle 3 (Bosch, Shimano-Komponenten). Daten-Lizenzen als Hauptcashflow. Übernahme-Anfragen werden konkret.</p>
+<span class="when">2031–2032</span>
+</div>
+</div>
+
+</div>
+
+<h2>Drei strategische Bedingungen für Marktdominanz</h2>
+
+<div class="warn">
+<h3>Was gleichzeitig wahr werden muss</h3>
+<p><strong>1. Wir besetzen ein Verb.</strong> „Ich biketle das" oder „Bike-Pass auf Bikeley" wird zur Selbstverständlichkeit für DACH-Bike-Besitzer. Das Verb-Besetzungs-Phänomen — vergleichbar mit „googeln" oder „skypen" — ist die stärkste Form von Markenkraft.<br><br>
+<strong>2. Wir kontrollieren den Hersteller-Distributionskanal.</strong> Premium-Marken wie Riese &amp; Müller, Cube, Stevens laufen über Bikeley für Garantie, Service-Empfehlung, Endkunden-Insights. Bikeley wird Teil ihrer Customer Journey, nicht Konkurrenz dazu.<br><br>
+<strong>3. Wir haben das Daten-Monopol.</strong> Niemand sonst weiß, was wir wissen — wer welches Bike fährt, welche Werkstätten welche Marken servicen, welche Komponenten am häufigsten ausfallen. Diese Daten werden in Phase 4 zur Hauptcashflow-Quelle.</p>
+</div>
+
+<h2>Vier Produktphasen 2026–2032</h2>
+
+<div class="phase">
+<div class="phase-head"><span class="when">Phase 1 · 2026 H1</span><span class="name">Heimat-Foundation</span></div>
+<div class="phase-body">
+<p>Hauptfokus Community-Funktionen. User-Profile, Touren, Gruppen, Feed. Diebstahl-Flow live. Plus-Tier-Subscription startet.</p>
+<p>Was nicht gebaut wird: Versicherung, Hersteller-Layer, internationaler Markt.</p>
+</div>
+</div>
+
+<div class="phase">
+<div class="phase-head"><span class="when">Phase 2 · 2026 H2 / 2027</span><span class="name">Bike-Pass-Vertiefung &amp; Premium</span></div>
+<div class="phase-body">
+<p>Plus-Subscription monetarisieren. Erweiterte Bike-Garage, Service-Erinnerungen, erste Wertgarantie-Partnerschaft. Werkstatt-Akquise München erreicht 100 Provider. Erste Hersteller-Pilot-Anfragen.</p>
+</div>
+</div>
+
+<div class="phase">
+<div class="phase-head"><span class="when">Phase 3 · 2028</span><span class="name">Pro-Tier &amp; C2C-Marktplatz</span></div>
+<div class="phase-body">
+<p>Pro-Tier launchen. C2C-Bike-Verkauf öffnet. Bike-Pass wird zum Verkaufs-Asset mit Echtheits-Siegel. Erste 4-6 Hersteller-Pilots live. Tour-Marktplatz mit bezahlten Guides.</p>
+</div>
+</div>
+
+<div class="phase">
+<div class="phase-head"><span class="when">Phase 4 · 2029–2032</span><span class="name">Hersteller-Skalierung &amp; Daten-Monetarisierung</span></div>
+<div class="phase-body">
+<p>Hersteller-Layer als Hauptcashflow. Bosch, Cube, Stevens und weitere integrieren Bikeley für Garantie-Tracking. Daten-Insights werden lizenziert. DACH-Expansion (Innsbruck, Wien, Zürich). Erste Übernahme-Anfragen werden realistisch.</p>
+</div>
+</div>
+
+</section>
+
+<!-- 07 COMPETITION -->
+
+<section id="competition" class="section">
+
+<h1><span class="num">Kapitel 07 · Wettbewerb</span>Differenzierung &amp; <em>Burggraben</em></h1>
+
+<p class="lead">Bikeley konkurriert nicht direkt mit globalen Plattformen wie Strava oder Komoot, sondern besetzt eine eigene Kategorie: DACH-spezifische Bike-Heimat. Sechs Konkurrenz-Szenarien, jeweils mit struktureller Antwort.</p>
+
+<h2>Sechs Wettbewerbs-Szenarien</h2>
+
+<div>
+
+<div class="comp-row">
+<div class="comp-threat">Komoot baut Bike-Pass</div>
+<div class="comp-response">Komoot hat 30 Mio User global, könnte Bike-Pass schnell launchen. Antwort: <strong>Komoot bleibt Routen-Tool, kein Werkstatt-Werkzeug</strong>. Kein Werkstatt-Beziehungsnetzwerk, kein Provider-Modell, keine Versicherungs-Anbindung. Verschiedene Use-Cases. Kooperation statt Konkurrenz: Komoot-Routen-Sharing in Bikeley-Touren, Bikeley-Pass auf Komoot-Routen-Detailseiten.</div>
+</div>
+
+<div class="comp-row">
+<div class="comp-threat">Strava integriert Werkstätten</div>
+<div class="comp-response">Strava hat 100 Mio User global. DACH-Werkstatt-Akquise ist Lokalarbeit, die globale Plattformen schlecht können. Antwort: <strong>Wir gewinnen die ersten 250 Werkstätten in DACH</strong>, bevor Strava einsteigen würde. Strava müsste DACH-Office aufbauen — unwahrscheinlich. Wir haben Lokalsprache, persönliche Akquise, Tiefe.</div>
+</div>
+
+<div class="comp-row">
+<div class="comp-threat">bikemarkt.de Premium-Tier</div>
+<div class="comp-response">Bikemarkt.de hat Marktplatz-Volumen, aber kein Trust-System. Antwort: <strong>Bike-Pass-Echtheits-Siegel</strong> ist strukturell nicht reproduzierbar (kein Werkstatt-Backbone, keine Service-Historie). Wenn bikemarkt.de Premium launcht, wird es „bessere Listings" sein, nicht „verifizierte Bikes". Verschiedene Werte-Versprechen, verschiedene Zielgruppen.</div>
+</div>
+
+<div class="comp-row">
+<div class="comp-threat">eBay Kleinanzeigen Bike-Plattform</div>
+<div class="comp-response">eBay hat das größte deutsche User-Volumen, aber Bike-spezifische Tiefe fehlt. Antwort: <strong>eBay bleibt für Sub-1.000-EUR-Bikes der Standard</strong>. Bikeley-Pro-Tier-User haben Bikes ab 2.000 EUR (oft 4.000-8.000) — sie wollen Trust, nicht Volumen. Wir verlieren das billige Segment, gewinnen das wertvolle.</div>
+</div>
+
+<div class="comp-row">
+<div class="comp-threat">Hersteller bauen eigene Apps</div>
+<div class="comp-response">Bosch hat eBike-Connect, Cube hat App. Was, wenn alle Hersteller eigene Plattformen haben? Antwort: <strong>Hersteller-Apps bleiben Marken-Silos</strong>. Niemand will fünf Apps für fünf Marken. Bikeley ist die marken-übergreifende Plattform — strukturelles Asset. Hersteller-Apps sensibilisieren User für digitale Bike-Verwaltung; auf Bikeley finden sie dann die marken-übergreifende Lösung.</div>
+</div>
+
+<div class="comp-row">
+<div class="comp-threat">Versicherer baut eigene Plattform</div>
+<div class="comp-response">Wertgarantie oder Allianz könnte Plattform mit Bike-Pass plus Versicherung bauen. Antwort: <strong>Versicherer haben kein Marketing-Know-how, keine Werkstatt-Beziehungen, keine Community</strong>. Sie sind Risiko-Vermittler, nicht Plattform-Builder. Ihre Plattform würde sich wie Verträge anfühlen, nicht wie Heimat. Kooperation: Bikeley als Lead-Quelle, Versicherer als Risikoträger.</div>
+</div>
+
+</div>
+
+<h2>fase24 (Österreich) als spezieller Fall</h2>
+
+<p>fase24.at ist der österreichische Marktführer für Bike-Registrierung mit Versicherung. Etabliert seit Jahren, Kooperationen mit Generali und Allianz Partners, ca. 2.000 Fachhandel-Partner. <strong>fase24 ist exakt das Modell, das Bikeley in DACH aufbauen will — sie haben es in Österreich schon gemacht.</strong></p>
+
+<p>Strategische Position: Wenn Bikeley nach Österreich expandiert (Phase 1.5 ab 2027), wird fase24 weder ignoriert noch direkt konkurriert. Wahrscheinlichste Form: <strong>Kooperation</strong>. fase24 liefert Versicherungs-Backbone in Österreich, Bikeley bringt Community und Bike-Pass-Tiefe. Verschiedene Stärken, komplementäre Schwächen.</p>
+
+<h2>Strukturelle Differenzierung</h2>
+
+<div class="principles">
+
+<div class="principle">
+<div class="principle-num"></div>
+<div class="principle-content">
+<h4>Heimat statt Register</h4>
+<p>fahrradpass.info, BikeRegister und ähnliche sind reine Datenbanken. Bikeley ist die einzige Plattform, die Pass + Community + Werkstätten + Hersteller in einem Heimat-Kontext bündelt.</p>
+</div>
+</div>
+
+<div class="principle">
+<div class="principle-num"></div>
+<div class="principle-content">
+<h4>Werkstätten als Codier-Partner</h4>
+<p>Der ADFC organisiert Codier-Aktionen mit Freiwilligen. Bikeley kann Werkstätten haben, die zertifiziert codieren — laufend, nicht nur an Aktionstagen. 100 Bikeley-Codier-Werkstätten in DACH können mehr Bikes codieren als alle ADFC-Aktionen zusammen.</p>
+</div>
+</div>
+
+<div class="principle">
+<div class="principle-num"></div>
+<div class="principle-content">
+<h4>Daten-Tiefe ohne Konkurrenz</h4>
+<p>Polizei-Datenbanken haben oft nur Rahmennummer, Modell, Farbe. Bikeley hat zusätzlich hochauflösende Fotos, Komponenten-Liste, Service-Historie, Geo-Daten. Im Diebstahl-Fall sind diese Zusatz-Daten gold wert.</p>
+</div>
+</div>
+
+<div class="principle">
+<div class="principle-num"></div>
+<div class="principle-content">
+<h4>DACH-Fokus als Stärke</h4>
+<p>Globale Player können DACH-Spezifika nicht in Tiefe bedienen. Bayrische Werkstatt-Kultur, deutsche Versicherungs-Logik, schweizerische Trail-Spots — das sind unsere strukturellen Vorteile.</p>
+</div>
+</div>
+
+</div>
+
+<div class="pullquote">
+Wir reagieren nicht auf jede Konkurrenz-Bewegung. Reagieren ist die Falle. Vertiefen ist die Antwort. Wenn Konkurrenz unsere Werkstätten ansprechen möchte, machen wir unsere Werkstatt-Beziehungen tiefer, nicht breiter.
+<span class="attr">— Strategischer Schluss-Gedanke</span>
+</div>
+
+</section>
+
+<!-- 08 DISTRIBUTION -->
+
+<section id="distribution" class="section">
+
+<h1><span class="num">Kapitel 08 · Distribution</span>Marketing &amp; <em>Kanäle</em></h1>
+
+<p class="lead">Bikeley nutzt drei Hauptkanäle für unterschiedliche Zielgruppen: Instagram für Endkunden, LinkedIn für Hersteller, lokales B2B-Outreach für Werkstätten. Jeder Kanal folgt eigener Logik und Zeitplänen.</p>
+
+<h2>Instagram — Endkunden-Akquise</h2>
+
+<p>Hauptkanal für Endkunden-Akquise. Phase 0 (April-Mai 2026): Foundation aufbauen — Bio, Banner, Highlight-Stories, 9 Foundation-Posts (3 Karussells, 3 Reels, 3 Single-Posts). Phase 1 (Juni-Juli 2026): erste Koop-Reels mit Münchner Nano-Influencern. Phase 2 (ab August 2026): Werkstatt-Co-Productions, Botschafter-Programm, geführte Hashtag-Aktionen.</p>
+
+<h3>Sechs Conversion-Mechaniken</h3>
+
+<ul class="list-clean">
+<li><strong>Anchor-Loop:</strong> Jeder Reel verweist im ersten Frame auf „Bikeley · Heimat der DACH-Bike-Welt"</li>
+<li><strong>Save-Hook:</strong> Karussells enden mit „Speichern für später" — Saves zählen heute mehr als Likes</li>
+<li><strong>Profil-Klick-Brücke:</strong> Reels führen zu „Mehr dazu in der Bio". Ziel: 3-5% Profil-Klick-Rate</li>
+<li><strong>Co-Production-Multiplikator:</strong> Reels mit Werkstätten oder Nano-Influencern multiplizieren Reichweite</li>
+<li><strong>Botschafter-System:</strong> Aktive User bekommen Bikeley-Patches und Sticker. Sie posten organisch</li>
+<li><strong>Hashtag-Aktion:</strong> #BikeleyMyBike als geführte Aktion ab Woche 8 der Foundation-Phase</li>
+</ul>
+
+<h3>Realistische Wachstumsziele</h3>
+
+<div class="stats-grid">
+<div class="stat-cell">
+<span class="num">2.200</span>
+<span class="lab">nach 8 Wochen Foundation</span>
+</div>
+<div class="stat-cell">
+<span class="num">10.000</span>
+<span class="lab">nach 6 Monaten</span>
+</div>
+<div class="stat-cell">
+<span class="num">35-40k</span>
+<span class="lab">nach 18 Monaten</span>
+</div>
+</div>
+
+<h2>LinkedIn — Hersteller-Akquise</h2>
+
+<p>Hauptkanal für Welle-1-Hersteller-Akquise. Acht-Wochen-Plan vom stillen Beobachten zum Konzept-Versand. Volume-Tax 2026 strikt beachten: maximal 5 Connection-Requests pro Tag, mit personalisierter Notiz, nach mindestens 2-wöchiger stiller Beobachtungs-Phase.</p>
+
+<table class="compact-table">
+<thead><tr><th>Phase</th><th>Wochen</th><th>Aktivität</th></tr></thead>
+<tbody>
+<tr><td><strong>Profil-Foundation</strong></td><td>1-2</td><td>Headline, About, Featured-Sektion mit Pilot-Konzept-PDF</td></tr>
+<tr><td><strong>Stille Beobachtung</strong></td><td>3-4</td><td>Hersteller-Personen folgen, beobachten, 1 substantieller Kommentar pro Tag</td></tr>
+<tr><td><strong>Connection-Requests</strong></td><td>5-6</td><td>Maximal 5 pro Tag, jeder personalisiert. Bei Akzeptanz Wert-Nachricht nach 2-3 Tagen</td></tr>
+<tr><td><strong>Soft-Pitch &amp; Versand</strong></td><td>7-8</td><td>Bei warmen Connections offene Frage stellen. Bei positiven Antworten Pilot-Konzept versenden</td></tr>
+</tbody>
+</table>
+
+<h2>Welle-1-Hersteller-Pilot-Konzept</h2>
+
+<p>Konzept-Dokument für die ersten 4-6 Hersteller-Anfragen. Zielmarken: Magura (Premium, DACH, Werkstatt-affin), Riese &amp; Müller (Premium-E-Bikes), SKS (Komponenten, Werkstatt-fokussiert), Pinion (Premium-Schaltungen). Alle vier sind mittelständisch und DACH-zentriert — weniger Konzernpolitik als Bosch oder R&amp;M.</p>
+
+<h3>Was Bikeley dem Hersteller bietet</h3>
+
+<ul class="list-clean">
+<li>Marken-Profil mit Featured-Position für 12 Monate kostenlos</li>
+<li>Anonymisierte Insights-Reports monatlich (welche Modelle suchen User, welche Werkstätten servicen die Marke)</li>
+<li>Werkstatt-Verzeichnis-Highlight für autorisierte Werkstätten</li>
+<li>Co-Marketing-Möglichkeiten für gemeinsame Posts</li>
+</ul>
+
+<h3>Was Bikeley vom Hersteller verlangt</h3>
+
+<ul class="list-clean">
+<li>Logo-Nutzung mit klaren Brand-Guidelines</li>
+<li>Erwähnung als „digitaler Partner" auf der Hersteller-Website</li>
+<li>Eine gemeinsame Pressemeldung zum Pilot-Start</li>
+<li>Ein gemeinsamer LinkedIn-Post zum Pilot-Launch</li>
+</ul>
+
+<h2>Werkstatt-Akquise (B2B-Lokal)</h2>
+
+<p>Werkstatt-Akquise startet erst, sobald Bikeley 5.000 aktive User in Bayern hat (Phase 2). Vorher fehlen die Argumente: Werkstätten zahlen 99 EUR/Monat nicht, wenn sie keine User-Anfragen erwarten können. Geplante Mechanik: persönlicher Erstkontakt durch Jules selbst (nicht Mail-Marketing), 30-Minuten-Termin in der Werkstatt, kostenloser 90-Tage-Trial im Standard-Tier.</p>
+
+<p>Detailliertes Werkstatt-Akquise-Playbook München wird Q3 2026 erstellt, sobald die User-Schwelle erreicht ist.</p>
+
+</section>
+
+<!-- 09 BEHÖRDEN -->
+
+<section id="behoerden" class="section">
+
+<h1><span class="num">Kapitel 09 · Behörden</span>Polizei &amp; <em>Regulatorik</em></h1>
+
+<p class="lead">Eine Polizei-Partnerschaft erscheint zunächst als Heiliger Gral der Trust-Differenzierung. Behörden-Verträge dauern aber Jahre. Bikeley folgt einer dreistufigen Strategie: Kompatibilität sofort, Codier-Aktionen mittelfristig, formale Kooperation langfristig.</p>
+
+<h2>Stufe 1 — Kompatibilitäts-Layer (sofort)</h2>
+
+<p>Bikeley wird kompatibel mit dem polizeilichen Fahrradpass-System gemacht — ohne formellen Behörden-Vertrag. Reine Code-Arbeit auf Bikeley-Seite, keine Genehmigung nötig.</p>
+
+<ul class="list-clean">
+<li><strong>FEIN-Code-Feld in der Bike-Garage:</strong> User mit codiertem Bike kann den Code hinterlegen (Eigentümer-Identifizierungs-Nummer)</li>
+<li><strong>Diebstahl-One-Click-PDF:</strong> Im Format der bayerischen Online-Anzeige, mit allen relevanten Daten in der polizei-konformen Reihenfolge</li>
+<li><strong>Bike-Pass-Echtheits-Verifikation:</strong> Beim Pro-Marktplatz-Verkauf via FEIN-Code-Abgleich</li>
+<li><strong>„Polizei-kompatibel" als Marketing-Sprache:</strong> Sachlich korrekt, weil PDF-Format nachgebildet wird. Keine Verwendung von Polizei-Logos oder behördlichen Wappen</li>
+</ul>
+
+<h2>Stufe 2 — Codier-Aktionen als Partner (Q4 2026 – Q3 2027)</h2>
+
+<p>Bikeley wird lokaler Partner für Codier-Aktionen — wie der ADFC seit Jahrzehnten. Das gibt Behörden-Nähe ohne formellen Vertrag mit dem Innenministerium.</p>
+
+<p>Mechanik: Erste Bikeley-Codier-Aktion in München Q4 2026, gemeinsam mit ADFC München und einer lokalen Polizei-Inspektion. Bikeley stellt Veranstaltungsort (Werkstatt-Partner-Hof), Marketing, Werkstatt-Mitarbeiter als Codierer. ADFC bringt fachliche Expertise und Behörden-Anerkennung.</p>
+
+<p>Strategischer Hebel: <strong>Codieren als Bike-Event statt als Behörden-Pflicht</strong>. Werkstatt-Hof-Atmosphäre statt Polizei-Parkplatz. Junge MTB-Szene wird angesprochen statt nur älterer Bürger. Conversion-Rate zu Bikeley-Usern: 60-80% der Anwesenden statt 20-30% bei klassischen ADFC-Tagen.</p>
+
+<h2>Stufe 3 — Formale Polizei-Kooperation (2027–2028)</h2>
+
+<p>Erst wenn Stufe 1 und 2 erfolgreich laufen. Voraussetzungen: 10.000+ aktive User in Bayern, 5.000+ registrierte Bike-Pässe, 10+ durchgeführte Codier-Aktionen, dokumentierte Erfolgsfälle (Bikes wiedergefunden), Datenschutz-Gutachten von einem zertifizierten Beauftragten.</p>
+
+<table class="compact-table">
+<thead><tr><th>Vertrags-Form</th><th>Was es bedeutet</th><th>Aufwand</th></tr></thead>
+<tbody>
+<tr><td><strong>A. Datenfreigabe</strong></td><td>Polizei kann auf Bikeley-Daten anfragen bei Bike-Kontrollen, mit Audit-Log und DSGVO-Compliance</td><td>Hoch</td></tr>
+<tr><td><strong>B. Diebstahl-API</strong></td><td>Bikeley übermittelt Vor-Anzeige automatisch an zuständige Dienststelle. Beamter prüft und bestätigt</td><td>Hoch</td></tr>
+<tr><td><strong>C. Empfehlungs-Anerkennung</strong></td><td>Polizei empfiehlt Bikeley auf polizei.bayern.de als Partner für digitale Bike-Pässe</td><td>Niedrig</td></tr>
+<tr><td><strong>D. Codier-Standard</strong></td><td>Bikeley wird offiziell als Codier-Träger in Bayern anerkannt, vergleichbar mit ADFC-Status</td><td>Mittel</td></tr>
+</tbody>
+</table>
+
+<p><strong>Strategische Reihenfolge:</strong> Form C zuerst (niedrigste Hürde, hohe Marketing-Wirkung), dann Form D, dann A oder B. Niemals alle gleichzeitig anstreben — überfordert die Verwaltung und führt zur Ablehnung aller Anträge.</p>
+
+<h2>Datenschutz und DSGVO-Konformität</h2>
+
+<p>Bikeley speichert personenbezogene Daten DSGVO-konform. Drei Wege aus der Plattform sind dokumentiert:</p>
+
+<ul class="list-clean">
+<li><strong>Pause-Modus:</strong> Account temporär ruhend, Reaktivierung jederzeit ohne Datenverlust</li>
+<li><strong>Soft-Delete:</strong> Profil gelöscht, persönliche Daten anonymisiert. 30-Tage-Cooling-Off-Phase mit Reaktivierungs-Möglichkeit</li>
+<li><strong>DSGVO-Hard-Delete:</strong> Vollständige Löschung nach Art. 17 DSGVO. Reviews und Service-Einträge werden zu „[gelöscht]"</li>
+</ul>
+
+<p>Bei Bike-Verkäufen wird ein anonymisierter Snapshot der Vorbesitzer-Daten erstellt, der auch nach Account-Löschung des Verkäufers erhalten bleibt — relevant für Käufer-Trust und versicherungsrelevante Schadensdokumentation.</p>
+
+<p>Datenschutz-Gutachten ist als Vorbereitungs-Schritt für Stufe 3 (formale Polizei-Kooperation) und Stufe 2-Versicherungs-Partnerschaften geplant. Aufwand: 2.000-5.000 EUR, einmalig vor erster Behörden-Anfrage.</p>
+
+</section>
+
+<!-- 10 ROADMAP -->
+
+<section id="roadmap" class="section">
+
+<h1><span class="num">Kapitel 10 · Roadmap</span>Pfad &amp; <em>Erfolgs-Marker</em></h1>
+
+<p class="lead">Quartalsweise Bauplan für 2026 und 2027 mit konkreten Coding- und Marketing-Aufgaben. Jährliche Erfolgs-Marker 2026-2032 als operative Steuer-Mechanik.</p>
+
+<h2>Quartalsplan 2026</h2>
+
+<div class="phase">
+<div class="phase-head"><span class="when">Q2 2026 · Mai-Juni</span><span class="name">Foundation &amp; Onboarding</span></div>
+<div class="phase-body">
+<ul class="list-clean">
+<li>3-Screen-Onboarding mit Heimat-Vision-Pitch</li>
+<li>Endkunden-Subscription Stripe (Plus 4,99€ und Pro 9,99€)</li>
+<li>Diebstahl-Flow App + Web fertigstellen</li>
+<li>Stories-Highlight-Funktion</li>
+<li>Insta-Foundation-Phase abschließen</li>
+</ul>
+</div>
+</div>
+
+<div class="phase">
+<div class="phase-head"><span class="when">Q3 2026 · Juli-September</span><span class="name">Community-Layer-Push</span></div>
+<div class="phase-body">
+<ul class="list-clean">
+<li>Algorithmischer Community-Feed (wichtigste Aufgabe)</li>
+<li>Touren-Funktion vertiefen mit RSVP-System</li>
+<li>Lokale Gruppen-System polishen</li>
+<li>Bike-of-the-Week Backend-Tool</li>
+<li>Online-Service-Booking-Workflow für Werkstätten</li>
+</ul>
+</div>
+</div>
+
+<div class="phase">
+<div class="phase-head"><span class="when">Q4 2026 · Oktober-Dezember</span><span class="name">Bike-Pass-Vertiefung</span></div>
+<div class="phase-body">
+<ul class="list-clean">
+<li>Bike-Garage UX überarbeiten (Multiple Bikes, bessere Galerie)</li>
+<li>Service-Erinnerungen automatisieren</li>
+<li>Werkstatt-Dashboard mit Live-Anfragen</li>
+<li>Versicherungs-API-Mapping (Wertgarantie)</li>
+<li>Erste 25 Werkstatt-Provider akquirieren</li>
+</ul>
+</div>
+</div>
+
+<h2>Jährliche Erfolgs-Marker 2026–2032</h2>
+
+<div class="milestones">
+
+<div class="ms-row head">
+<div class="cell">Jahresende</div>
+<div class="cell">User</div>
+<div class="cell">Hauptziel und Erfolgs-Marker</div>
+</div>
+
+<div class="ms-row current">
+<div class="cell when">2026</div>
+<div class="cell target">5.000</div>
+<div class="cell">Heimat-Foundation. 25 Werkstatt-Provider, Diebstahl-Flow live, Plus-Conversion 8%, Wertgarantie-Erstkontakt</div>
+</div>
+
+<div class="ms-row">
+<div class="cell when">2027</div>
+<div class="cell target">15.000</div>
+<div class="cell">Versicherung &amp; erster Hersteller-Pilot. Wertgarantie live, Magura-Pilot live, 50 Werkstatt-Provider, Plus-Conversion 12%</div>
+</div>
+
+<div class="ms-row">
+<div class="cell when">2028</div>
+<div class="cell target">50.000</div>
+<div class="cell">Pro-Tier &amp; C2C. C2C-Verkauf live, 4-6 Hersteller-Pilots, Pro-Conversion 3%, 200 Werkstätten, 1 Mio EUR ARR</div>
+</div>
+
+<div class="ms-row">
+<div class="cell when">2029</div>
+<div class="cell target">100.000</div>
+<div class="cell">DACH-Skalierung. Innsbruck + Wien Eintritt, 8 Hersteller-Pilots, 2,5 Mio EUR ARR, erste Daten-Lizenz</div>
+</div>
+
+<div class="ms-row">
+<div class="cell when">2030</div>
+<div class="cell target">150.000</div>
+<div class="cell">Hersteller-Welle 2. Cube + Stevens + Brose live, 3 Daten-Lizenzen, 4 Mio EUR ARR, 30% EBITDA-Marge</div>
+</div>
+
+<div class="ms-row">
+<div class="cell when">2031</div>
+<div class="cell target">180.000</div>
+<div class="cell">Endspiel beginnt. Erste Übernahme-Anfragen, Bosch-Verhandlung, 5,5 Mio EUR ARR, Schweiz-Eintritt</div>
+</div>
+
+<div class="ms-row">
+<div class="cell when">2032</div>
+<div class="cell target">200.000+</div>
+<div class="cell">Endspiel: Exit oder Cashflow-Maschine. 7-10 Mio EUR ARR, Exit-Entscheidung, Marktdominanz erreicht</div>
+</div>
+
+</div>
+
+<h2>Trigger für Strategie-Anpassung</h2>
+
+<p>Erfolgs-Marker sind keine starren Quartals-Quoten. Wenn Marker nicht erreicht werden, gibt es klare Anpassungs-Trigger:</p>
+
+<ul class="list-clean">
+<li><strong>Plus-Conversion unter 8% nach 6 Monaten Phase 1:</strong> Plus-Features überarbeiten, Pricing reduzieren oder Plus-Wert klarer kommunizieren</li>
+<li><strong>Werkstatt-Provider unter 25 nach Q3 2026:</strong> Werkstatt-Akquise-Playbook durcharbeiten, Pricing-Tier-Differenzierung prüfen</li>
+<li><strong>Magura-Pilot abgesagt:</strong> Welle-1-Hersteller-Liste neu sortieren, Pilot-Konzept überarbeiten</li>
+<li><strong>3 von 4 Welle-1-Herstellern lehnen ab:</strong> Master-Strategie-Zug 4 verzögert, alternative Distribution-Strategie</li>
+</ul>
+
+</section>
+
+<!-- 11 RISIKEN -->
+
+<section id="risks" class="section">
+
+<h1><span class="num">Kapitel 11 · Risiken</span>Risiken &amp; <em>offene Themen</em></h1>
+
+<p class="lead">Strukturelle Risiken, operative Engpässe, kritische Annahmen. Bewusst transparent dargestellt, weil das Verschweigen von Risiken schlechtere Strategie produziert als das Adressieren.</p>
+
+<h2>Strukturelle Risiken</h2>
+
+<h3>1. Markt entsteht nicht</h3>
+
+<p>Das größte und gleichzeitig schwierigste Risiko. Wenn DACH-Bike-Besitzer einfach kein starkes Bedürfnis nach digitaler Bike-Heimat haben, wenn die Schmerzpunkte (Diebstahl, Werkstatt-Suche, Bike-Verkauf) nicht ausreichen, eine Plattform-Migration zu rechtfertigen — dann scheitert nicht nur Bikeley, sondern jede ähnliche Initiative. Indikatoren sprechen dagegen (E-Bike-Wachstum, hohe Diebstahl-Zahlen, junge digital-affine Demografie), aber die Annahme ist nicht testbar bevor Foundation-Phase abgeschlossen ist.</p>
+
+<p>Mitigations-Strategie: Erste 5.000 User-Akquisition wird als kritischer Validierungs-Schritt behandelt. Wenn nach 8 Wochen Foundation und 6 Monaten aktivem Marketing weniger als 2.000 User akquiriert sind, wird die Heimat-These ehrlich überprüft und Pivot-Optionen werden geprüft.</p>
+
+<h3>2. Bootstrap-Cashflow-Limits</h3>
+
+<p>Bikeley ist aktuell selbstfinanziert (Bootstrap), Solo-Gründung. Realistisch verfügbare Wochenstunden: 20-25 für Bikeley neben anderen Verpflichtungen (Freiluft, NatureLiveCam). Wachstumsphasen, die mehr verlangen (Q3 2026 mit Community-Feed-Bau, Q4 2026 mit Werkstatt-Akquise und Versicherung-Erstkontakt), sind zeitkritisch.</p>
+
+<p>Mitigations-Strategie: Quartals-Aufgaben werden nach Vision-Hierarchie priorisiert. Wenn Bandbreite knapp wird, fallen Tier-3-Aufgaben weg, nicht Tier-1. Externe Hilfe (Freelancer für UX, Designer für Marken-Identität) wird eingeplant ab Q1 2027, sobald erster Cashflow stabilisiert ist.</p>
+
+<h3>3. Werkstatt-Akquise-Mechanik unbewiesen</h3>
+
+<p>Plan setzt voraus, dass Werkstätten 99 EUR/Monat zahlen, sobald Bikeley 5.000 User hat. Diese Annahme basiert auf Vergleichs-Plattformen (Treatwell, OpenTable) und Werkstatt-Inhaber-Gesprächen, ist aber nicht validiert.</p>
+
+<p>Mitigations-Strategie: Erste 5-10 Werkstätten werden mit kostenlosem 90-Tage-Trial gewonnen. Conversion-Rate Trial-zu-Bezahlt wird gemessen. Bei unter 30% Conversion wird Pricing-Modell überdacht (z.B. provisions-basiertes Modell statt monatliche Subscription).</p>
+
+<h3>4. Hersteller-Pilots zu früh gepitcht</h3>
+
+<p>Plan sieht Welle-1-Hersteller-Anfragen ab Q2 2027 vor, mit Voraussetzung von 5.000+ aktiven Usern. Wenn Hersteller stärkere Traction-Beweise verlangen (10.000+ User, dokumentierte Use-Cases), verschiebt sich Zug 4 der Master-Strategie um 6-12 Monate.</p>
+
+<p>Mitigations-Strategie: Hersteller-Pilot-Konzept ist als 12-Monats-kostenloser Pilot strukturiert — Hersteller hat geringes Risiko, akzeptiert daher mit weniger Traction-Beweisen. Erste Anfrage geht an mittelständische Marke (Magura), nicht Konzern (Bosch).</p>
+
+<h2>Operative Engpässe</h2>
+
+<h3>5. Solo-Gründer-Risiko</h3>
+
+<p>Bikeley wird aktuell allein von Julius Gebler entwickelt. Ausfall durch Krankheit, Burnout oder externe Faktoren würde die Plattform zum Stillstand bringen. Co-Founder-Suche ist nicht aktiv priorisiert.</p>
+
+<p>Mitigations-Strategie: Code und Dokumentation werden so gepflegt, dass technische Übergabe innerhalb von 4 Wochen möglich wäre (saubere Repos, klare Architektur-Dokumentation, lesbare Briefings für KI-Assistenten). Co-Founder-Option bleibt offen für 2027, wenn Cashflow erste Anstellung erlaubt.</p>
+
+<h3>6. App-Store-Genehmigungs-Risiko</h3>
+
+<p>Apple App Store und Google Play Store haben in den letzten Jahren strengere Auflagen für Plattformen mit Subscription-Tier. Bikeley könnte bei Submission Probleme bekommen, wenn Pro-Tier-C2C-Verkaufs-Funktion als „Marktplatz" eingestuft wird (15-30% Apple-Provision auf In-App-Verkäufe).</p>
+
+<p>Mitigations-Strategie: C2C-Verkaufs-Abwicklung läuft über Web-Browser, nicht über App. App selbst hat nur Listings-Anzeige, Buchung-Initiierung und Stripe-Connect-Routing. Strukturell ähnlich zu Airbnb oder Etsy, die diesen Trick erfolgreich nutzen.</p>
+
+<h3>7. Insta-Algorithmus-Abhängigkeit</h3>
+
+<p>Hauptkanal für Endkunden-Akquise ist Instagram. Algorithmus-Änderungen können Reichweite drastisch reduzieren (siehe -35% Reels-Reichweite 2025-2026). Wenn Insta-Wachstumsplan nicht funktioniert, fehlt skalierbare Akquise-Quelle.</p>
+
+<p>Mitigations-Strategie: Diversifikation der Akquise-Kanäle ab Phase 2 (TikTok ab 10k Insta-Followern, YouTube ab Phase 3, eigener Newsletter ab 5.000 Subscribern). LinkedIn als sekundärer Endkunden-Kanal für ältere Demografie.</p>
+
+<h2>Kritische Annahmen</h2>
+
+<p>Bikeley basiert auf vier zentralen Annahmen, die nicht alle gleichzeitig validiert sind:</p>
+
+<ul class="list-clean">
+<li><strong>Annahme 1:</strong> DACH-Bike-Besitzer haben starkes Bedürfnis nach digitaler Bike-Heimat (testbar Q3-Q4 2026)</li>
+<li><strong>Annahme 2:</strong> Werkstätten zahlen 99 EUR/Monat für Provider-Plan bei 5.000+ Usern (testbar ab Q4 2026)</li>
+<li><strong>Annahme 3:</strong> Versicherer kooperieren mit Bikeley als Vermittler (Erstkontakt Q4 2026)</li>
+<li><strong>Annahme 4:</strong> Premium-Hersteller akzeptieren Pilot-Programme (Anfragen Q2 2027)</li>
+</ul>
+
+<p>Wenn alle vier Annahmen sich als falsch erweisen würden, scheitert die Strategie strukturell. Wenn 3 von 4 stimmen, ist Anpassung möglich. Wenn nur 1-2 stimmen, ist grundsätzlicher Pivot nötig.</p>
+
+<div class="warn">
+<h3>Was diese Risiken nicht bedeuten</h3>
+<p>Risiken werden hier transparent dargestellt, weil sie das Strategie-Niveau erhöhen. Sie bedeuten nicht, dass Bikeley wahrscheinlich scheitert. Im Gegenteil: jedes der genannten Risiken hat eine konkrete Mitigations-Strategie. Die ehrliche Auseinandersetzung mit dem, was schief gehen könnte, ist Teil der strategischen Stärke — nicht ihre Schwäche.</p>
+</div>
+
+<div class="atlas-footer">
+<span class="signature">— Die Heimat der DACH-Bike-Welt —</span>
+<span>Bikeley GmbH · Master-Atlas · Lebendes Dokument · April 2026</span>
+</div>
+
+</section>
 
 </div>
 
 <script>
-const STORAGE_KEY = 'bikeley_coach_v1';
+const STORAGE_KEY = 'bikeley_atlas_v1';
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tocItems = document.querySelectorAll('.toc-item');
+const sections = document.querySelectorAll('.section');
 
-const weeks = [
-  {n:1, start:'28.04', end:'04.05', startDate:'2026-04-28', phase:'Foundation Coding', focus:'API-Contract finalisieren, Backend-Tabelle, PDF-Generator starten', target:600,
-   tasks:[
-     {id:'w1-1', cat:'coding', text:'API-Contract mit App- und Web-Claude finalisieren'},
-     {id:'w1-2', cat:'coding', text:'theft_reports-Tabelle und Endpoints (Web-Claude)'},
-     {id:'w1-3', cat:'coding', text:'PDF-Generator Setup mit mPDF'},
-     {id:'w1-4', cat:'coding', text:'Postmark-Account anlegen + DNS-Records'},
-     {id:'w1-5', cat:'insta', text:'Bio neu schreiben (3 Versionen, beste auswählen)'},
-     {id:'w1-6', cat:'insta', text:'Banner-Bild erstellen oder beauftragen'},
-     {id:'w1-7', cat:'insta', text:'3 Highlight-Stories anlegen'},
-     {id:'w1-8', cat:'linkedin', text:'LinkedIn-Profil-Audit (Headline, About, Foto)'},
-     {id:'w1-9', cat:'strategy', text:'Sonntag: Wochenrückblick im KPI-Tab eintragen'},
-   ]},
-  {n:2, start:'05.05', end:'11.05', startDate:'2026-05-05', phase:'PDF-Generator + Foundation-Posts', focus:'PDF live, App-Side Diebstahl-Flow startet, 9 Foundation-Posts produziert', target:700,
-   tasks:[
-     {id:'w2-1', cat:'coding', text:'PDF-Spec umsetzen (Web-Claude)'},
-     {id:'w2-2', cat:'coding', text:'App-Side Diebstahl-Onboarding-Screens'},
-     {id:'w2-3', cat:'coding', text:'Testen mit Test-Bike-Daten'},
-     {id:'w2-4', cat:'insta', text:'9 Foundation-Posts produzieren oder Freelancer beauftragen'},
-     {id:'w2-5', cat:'insta', text:'3 Karussells: Bike-Pass, Wartung, Diebstahl'},
-     {id:'w2-6', cat:'insta', text:'3 Reels: App-Vorstellung, Werkstatt, Bikeley-Story'},
-     {id:'w2-7', cat:'linkedin', text:'About-Sektion fertig schreiben'},
-     {id:'w2-8', cat:'linkedin', text:'Featured-Sektion mit Pilot-Konzept-PDF'},
-     {id:'w2-9', cat:'linkedin', text:'2 erste Posts veröffentlichen'},
-   ]},
-  {n:3, start:'12.05', end:'18.05', startDate:'2026-05-12', phase:'Web-Side + Posts publish', focus:'Web-Side Diebstahl-Flow + Sync, Foundation-Posts veröffentlichen', target:850,
-   tasks:[
-     {id:'w3-1', cat:'coding', text:'Web-View Diebstahl-Flow (Web-Claude)'},
-     {id:'w3-2', cat:'coding', text:'App-Web Synchronisation testen'},
-     {id:'w3-3', cat:'coding', text:'Soft-Launch mit 5-10 Test-Usern'},
-     {id:'w3-4', cat:'insta', text:'Foundation-Posts veröffentlichen (1-2 pro Tag)'},
-     {id:'w3-5', cat:'insta', text:'3 wichtigste Reels oben pinnen'},
-     {id:'w3-6', cat:'insta', text:'User-Reposts in Stories starten (3x/Woche)'},
-     {id:'w3-7', cat:'insta', text:'5 Kommentare pro Tag bei MTL-Bike-Influencern'},
-     {id:'w3-8', cat:'linkedin', text:'Hersteller-Mapping starten (4 Hersteller, 16 Personen)'},
-     {id:'w3-9', cat:'linkedin', text:'2 weitere Posts veröffentlichen'},
-   ]},
-  {n:4, start:'19.05', end:'25.05', startDate:'2026-05-19', phase:'Diebstahl-Flow live + Stripe', focus:'Diebstahl-Flow Production-Launch, Stripe für Plus/Pro vorbereitet', target:1000,
-   tasks:[
-     {id:'w4-1', cat:'coding', text:'Letzte Bug-Fixes Diebstahl-Flow'},
-     {id:'w4-2', cat:'coding', text:'Production-Launch Diebstahl-Flow'},
-     {id:'w4-3', cat:'coding', text:'Stripe-Setup für Plus (4,99€) und Pro (9,99€)'},
-     {id:'w4-4', cat:'coding', text:'Stripe-Webhook-Logik + End-to-End-Test'},
-     {id:'w4-5', cat:'insta', text:'Erste Koop-Anfrage an Münchner Nano-Influencer'},
-     {id:'w4-6', cat:'insta', text:'3 weitere Solo-Reels mit Conversion-Mechanik'},
-     {id:'w4-7', cat:'insta', text:'Karussell zu Diebstahl-Schutz (zum Launch)'},
-     {id:'w4-8', cat:'linkedin', text:'Hersteller-Personen folgen (kein Request, nur Follow)'},
-     {id:'w4-9', cat:'linkedin', text:'1 substantieller Kommentar pro Tag bei Hersteller'},
-   ]},
-  {n:5, start:'26.05', end:'01.06', startDate:'2026-05-26', phase:'Bike-Garage UX + LinkedIn-Outreach', focus:'Multiple Bikes pro User, erste LinkedIn-Connection-Requests', target:1200,
-   tasks:[
-     {id:'w5-1', cat:'coding', text:'Multiple Bikes pro User (Plus-Feature)'},
-     {id:'w5-2', cat:'coding', text:'Bessere Foto-Galerie pro Bike'},
-     {id:'w5-3', cat:'insta', text:'Erste Koop-Reels mit 1-2 Nano-Influencern'},
-     {id:'w5-4', cat:'insta', text:'Werkstatt-Co-Production planen + Werkstatt anschreiben'},
-     {id:'w5-5', cat:'insta', text:'Botschafter-Programm soft starten (3-5 User identifizieren)'},
-     {id:'w5-6', cat:'linkedin', text:'Erste Connection-Requests mit personalisierter Notiz'},
-     {id:'w5-7', cat:'linkedin', text:'Max 5 Requests pro Tag (Volume-Tax beachten)'},
-     {id:'w5-8', cat:'linkedin', text:'Bei Akzeptanz: 2-3 Tage warten, dann Wert-Nachricht'},
-   ]},
-  {n:6, start:'02.06', end:'08.06', startDate:'2026-06-02', phase:'Service-Erinnerungen + Vertiefung', focus:'Cron für Service-Erinnerungen, LinkedIn-Konversationen vertiefen', target:1500,
-   tasks:[
-     {id:'w6-1', cat:'coding', text:'Service-Erinnerung als Cron-Job-Script'},
-     {id:'w6-2', cat:'coding', text:'Provider-Dashboard erste Verbesserungen'},
-     {id:'w6-3', cat:'insta', text:'Erste Werkstatt-Co-Production live'},
-     {id:'w6-4', cat:'insta', text:'Botschafter-Patches bestellen + verschicken'},
-     {id:'w6-5', cat:'insta', text:'2. Koop-Reel mit Nano-Influencer'},
-     {id:'w6-6', cat:'linkedin', text:'Vertiefungs-Touch bei den Verbundenen aus W5'},
-     {id:'w6-7', cat:'linkedin', text:'Eigene Posts: 3 pro Woche'},
-   ]},
-  {n:7, start:'09.06', end:'15.06', startDate:'2026-06-09', phase:'Polish + Soft-Pitch', focus:'Diebstahl-Funktion polishen, Werkstatt-Dashboard, Soft-Pitch starten', target:1800,
-   tasks:[
-     {id:'w7-1', cat:'coding', text:'Diebstahl-Funktion finale Polierung'},
-     {id:'w7-2', cat:'coding', text:'Werkstatt-Dashboard verbessern'},
-     {id:'w7-3', cat:'insta', text:'Weitere Koops mit Conversion-Tracking'},
-     {id:'w7-4', cat:'insta', text:'#BikeleyMyBike Hashtag-Aktion vorbereiten'},
-     {id:'w7-5', cat:'linkedin', text:'Soft-Pitch-Phase starten bei warmsten Connections'},
-     {id:'w7-6', cat:'linkedin', text:'Vorlage 4 verwenden (kein Pitch, offene Frage)'},
-   ]},
-  {n:8, start:'16.06', end:'22.06', startDate:'2026-06-16', phase:'Foundation-Abschluss', focus:'8-Wochen-Foundation abschließen, ADFC-Erstkontakt vorbereiten', target:2200,
-   tasks:[
-     {id:'w8-1', cat:'coding', text:'Bug-Fixes basierend auf User-Feedback'},
-     {id:'w8-2', cat:'coding', text:'Performance-Optimierung App + Web'},
-     {id:'w8-3', cat:'insta', text:'#BikeleyMyBike Hashtag-Aktion launchen'},
-     {id:'w8-4', cat:'insta', text:'Botschafter-Programm: 5 aktive Botschafter'},
-     {id:'w8-5', cat:'linkedin', text:'Konzept-Versand bei positiven Soft-Pitch-Antworten'},
-     {id:'w8-6', cat:'strategy', text:'ADFC München Erstkontakt-Email vorbereiten (NICHT senden!)'},
-     {id:'w8-7', cat:'strategy', text:'Großer 8-Wochen-Rückblick: was wurde erreicht?'},
-   ]},
-];
-
-const rituals = [
-  {id:'r-morning', time:'07:30', title:'Engagement', dur:'1h', desc:'5 Insta-Kommentare bei Hersteller/Bike-Influencern + 2-3 LinkedIn-Kommentare'},
-  {id:'r-noon', time:'12:30', title:'Stories + DMs', dur:'30m', desc:'Insta-Story oder User-Repost. DM-Antworten bearbeiten.'},
-  {id:'r-afternoon', time:'14:00', title:'Coding-Block', dur:'3-4h', desc:'Hauptarbeitszeit: App, Web, oder Backend. Im Block, nicht zerstückelt.'},
-  {id:'r-evening', time:'19:00', title:'Posts + Review', dur:'30m', desc:'Insta-/LinkedIn-Post falls geplant. 5 Min Tagesreview.'},
-  {id:'r-sunday', time:'Sonntag', title:'Wochenrückblick', dur:'30m', desc:'KPIs eintragen, größter Hebel reflektieren, Plan für nächste Woche'},
-];
-
-const focusQuestions = [
-  'Was ist die EINE Sache, die heute fertig sein muss?',
-  'Welche Aufgabe schiebe ich seit Tagen — und warum?',
-  'Welche meiner Aktivitäten heute baut wirklich Reichweite oder Funktion?',
-  'Habe ich heute etwas getan, das mich der Heimat-Vision näher bringt?',
-  'Welcher Schritt heute spart mir Zeit in 4 Wochen?',
-  'Wo könnte ich heute Perfektion gegen Tempo eintauschen?',
-  'Was würde Marco (Plus-Tier-Persona) heute über Bikeley denken?',
-  'Welche User-Frage habe ich diese Woche ignoriert, die ich beantworten sollte?',
-  'Was ist mein größter Engpass — Zeit, Energie, oder Klarheit?',
-  'Welche Tätigkeit fühlt sich produktiv an, ist es aber nicht?',
-];
-
-let state = {
-  tasksDone: {},
-  ritualsDone: {},
-  ritualsDate: '',
-  kpis: [],
-  notes: '',
-  currentTab: 'today',
-};
-
-function getToday() { return new Date(); }
-function getTodayStr() { return getToday().toISOString().split('T')[0]; }
-
-function getCurrentWeekIndex() {
-  const today = getToday();
-  for (let i = weeks.length - 1; i >= 0; i--) {
-    const ws = new Date(weeks[i].startDate);
-    if (today >= ws) return i;
-  }
-  return 0;
+function showSection(id) {
+  sections.forEach(s => s.classList.toggle('active', s.id === id));
+  tabBtns.forEach(b => b.classList.toggle('active', b.dataset.tab === id));
+  window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
-function loadState() {
+tabBtns.forEach(btn => {
+  btn.addEventListener('click', () => showSection(btn.dataset.tab));
+});
+
+tocItems.forEach(item => {
+  item.addEventListener('click', (e) => {
+    e.preventDefault();
+    showSection(item.dataset.tab);
+  });
+});
+
+// Status Dashboard Persistence
+const kpiInputs = ['kpi-followers','kpi-users','kpi-providers','kpi-plus','kpi-pro','kpi-mrr','kpi-pilots','kpi-buildstatus'];
+let kpiState = {};
+
+function loadKPIs() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) {
-      const parsed = JSON.parse(raw);
-      state = Object.assign(state, parsed);
+      kpiState = JSON.parse(raw);
+      kpiInputs.forEach(id => {
+        if (kpiState[id] !== undefined && kpiState[id] !== null) {
+          document.getElementById(id).value = kpiState[id];
+        }
+      });
+      updatePhaseIndicator();
+      updateTargets();
     }
   } catch(e) { console.error('Load failed:', e); }
-
-  if (state.ritualsDate !== getTodayStr()) {
-    state.ritualsDone = {};
-    state.ritualsDate = getTodayStr();
-    saveState();
-  }
 }
 
-function saveState() {
+function saveKPIs() {
+  kpiInputs.forEach(id => {
+    const val = document.getElementById(id).value;
+    kpiState[id] = val ? parseFloat(val) : null;
+  });
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(kpiState));
+    showSavedMsg();
+    updatePhaseIndicator();
+    updateTargets();
   } catch(e) { console.error('Save failed:', e); }
 }
 
-function tagLabel(cat) {
-  return {coding:'Coding', insta:'Insta', linkedin:'LinkedIn', strategy:'Strategie'}[cat] || cat;
+function showSavedMsg() {
+  const msg = document.getElementById('saved-msg');
+  msg.textContent = '✓ Werte gespeichert · ' + new Date().toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'});
+  setTimeout(() => msg.textContent = '', 3000);
 }
 
-function renderHeader() {
-  const wIdx = getCurrentWeekIndex();
-  document.getElementById('current-week').innerHTML = (wIdx+1) + ' <span class="small">/ 8</span>';
-
-  const lastKpi = state.kpis && state.kpis.length > 0 ? state.kpis[state.kpis.length-1] : null;
-  const followers = lastKpi && lastKpi.followers ? lastKpi.followers : 540;
-  document.getElementById('current-followers').textContent = followers.toLocaleString('de-DE');
-
-  const totalTasks = weeks.reduce((s,w) => s + w.tasks.length, 0);
-  const doneTasks = Object.values(state.tasksDone).filter(Boolean).length;
-  document.getElementById('tasks-done').innerHTML = doneTasks + ' <span class="small">/ ' + totalTasks + '</span>';
-
-  const ritualsToday = Object.values(state.ritualsDone).filter(Boolean).length;
-  document.getElementById('rituals-today').innerHTML = ritualsToday + ' <span class="small">/ 5</span>';
-
-  const today = getToday();
-  document.getElementById('today-display').textContent = today.toLocaleDateString('de-DE', {weekday:'long', day:'2-digit', month:'long', year:'numeric'});
-}
-
-function renderToday() {
-  const wIdx = getCurrentWeekIndex();
-  const w = weeks[wIdx];
-  const container = document.getElementById('today-tasks');
-  container.innerHTML = '';
-  let done = 0;
-  w.tasks.forEach(t => {
-    if (state.tasksDone[t.id]) done++;
-    const el = document.createElement('div');
-    el.className = 'task' + (state.tasksDone[t.id] ? ' done' : '');
-    el.innerHTML = '<div class="task-checkbox"></div><div class="task-text"><span class="task-tag tag-' + t.cat + '">' + tagLabel(t.cat) + '</span>' + t.text + '</div>';
-    el.addEventListener('click', () => {
-      state.tasksDone[t.id] = !state.tasksDone[t.id];
-      saveState();
-      renderToday();
-      renderHeader();
-    });
-    container.appendChild(el);
+function updateTargets() {
+  document.querySelectorAll('.kpi-target').forEach(el => {
+    const kpi = el.dataset.kpi;
+    const target = parseFloat(el.dataset.target);
+    const current = kpiState['kpi-' + kpi];
+    if (current !== null && current !== undefined && current >= target) {
+      el.classList.add('reached');
+      el.textContent = '✓ Phase-Ziel erreicht';
+    } else {
+      el.classList.remove('reached');
+      const labels = {
+        followers: 'Phase-1-Ziel: 2.200',
+        users: 'Phase-1-Ziel: 5.000',
+        providers: 'Phase-1-Ziel: 25',
+        plus: 'Phase-1-Ziel: 200',
+        pro: 'Phase-1-Ziel: 50',
+        mrr: 'Phase-1-Ziel: 3.000',
+        pilots: 'Phase-2-Ziel: 1',
+        buildstatus: 'Phase-1-Ziel: 100%'
+      };
+      el.textContent = labels[kpi] || '';
+    }
   });
-  document.getElementById('today-progress').textContent = done + ' von ' + w.tasks.length + ' erledigt · Woche ' + w.n;
-  const today = getToday();
-  const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 86400000);
-  document.getElementById('focus-question').textContent = focusQuestions[dayOfYear % focusQuestions.length];
 }
 
-function renderWeeks() {
-  const sel = document.getElementById('week-selector');
-  if (sel.options.length === 0) {
-    weeks.forEach((w,i) => {
-      const opt = document.createElement('option');
-      opt.value = i;
-      opt.textContent = 'Woche ' + w.n + ' · ' + w.start + '–' + w.end + ' · ' + w.phase;
-      sel.appendChild(opt);
-    });
-    sel.value = getCurrentWeekIndex();
-    sel.addEventListener('change', renderWeekDetail);
+function updatePhaseIndicator() {
+  const followers = kpiState['kpi-followers'] || 0;
+  const users = kpiState['kpi-users'] || 0;
+  const providers = kpiState['kpi-providers'] || 0;
+  const pilots = kpiState['kpi-pilots'] || 0;
+  const buildStatus = kpiState['kpi-buildstatus'] || 0;
+  const mrr = kpiState['kpi-mrr'] || 0;
+  
+  const nameEl = document.getElementById('phase-name');
+  const descEl = document.getElementById('phase-desc');
+  
+  if (pilots >= 1 && users >= 5000) {
+    nameEl.textContent = 'Phase 2 · Versicherung & Hersteller-Pilots';
+    descEl.textContent = 'Erste Hersteller-Pilots laufen, Versicherungs-Partnerschaft in Vorbereitung. Werkstatt-Akquise auf 50+ Provider ausweiten. Plus-Conversion auf 12% pushen.';
+  } else if (users >= 5000 && providers >= 25) {
+    nameEl.textContent = 'Phase 1.5 · Werkstatt-Akquise';
+    descEl.textContent = 'Foundation steht, erste Werkstatt-Provider zahlen. Versicherungs-Erstkontakt vorbereiten. Erste Hersteller-LinkedIn-Aktivität.';
+  } else if (users >= 2000 || followers >= 2200) {
+    nameEl.textContent = 'Phase 1 · Heimat-Foundation';
+    descEl.textContent = 'Foundation wächst, erste tausend User aktiv. Diebstahl-Flow live, Plus-Tier konvertiert. Werkstatt-Akquise startet bei 5.000 User.';
+  } else if (buildStatus >= 50) {
+    nameEl.textContent = 'Phase 0.5 · Foundation aktiv';
+    descEl.textContent = 'Diebstahl-Flow im Bau, Foundation-Posts in Produktion. Erste tausend Insta-Follower akquirieren. Plus-Tier-Subscription wird vorbereitet.';
+  } else {
+    nameEl.textContent = 'Phase 0 · Foundation';
+    descEl.textContent = 'Insta-Foundation aufbauen, Diebstahl-Flow fertigstellen, erste Plus-Tier-Conversion vorbereiten.';
   }
-  renderWeekDetail();
 }
 
-function renderWeekDetail() {
-  const idx = parseInt(document.getElementById('week-selector').value);
-  const w = weeks[idx];
-  const container = document.getElementById('week-detail');
-  const isCurrent = idx === getCurrentWeekIndex();
+document.getElementById('save-btn').addEventListener('click', saveKPIs);
 
-  let tasksHTML = '';
-  w.tasks.forEach(t => {
-    const done = state.tasksDone[t.id];
-    tasksHTML += '<div class="task' + (done ? ' done' : '') + '" data-tid="' + t.id + '"><div class="task-checkbox"></div><div class="task-text"><span class="task-tag tag-' + t.cat + '">' + tagLabel(t.cat) + '</span>' + t.text + '</div></div>';
-  });
-
-  container.innerHTML =
-    '<div class="week-card' + (isCurrent ? ' current' : '') + '">' +
-      '<div class="week-card-head">' +
-        '<div><h3>Woche ' + w.n + ' · ' + w.phase + '</h3>' +
-        '<div class="dates">' + w.start + ' – ' + w.end + ' 2026</div></div>' +
-        '<div class="target"><div class="label">Insta-Ziel</div><div class="value">' + w.target.toLocaleString('de-DE') + '</div></div>' +
-      '</div>' +
-      '<div class="focus">' + w.focus + '</div>' +
-      '<div class="tasks">' + tasksHTML + '</div>' +
-    '</div>';
-
-  container.querySelectorAll('.task').forEach(row => {
-    row.addEventListener('click', () => {
-      const tid = row.dataset.tid;
-      state.tasksDone[tid] = !state.tasksDone[tid];
-      saveState();
-      renderWeekDetail();
-      renderHeader();
-    });
-  });
-
-  document.getElementById('prev-week').disabled = idx === 0;
-  document.getElementById('next-week').disabled = idx === weeks.length - 1;
-}
-
-function renderKPI() {
-  const sel = document.getElementById('kpi-week');
-  if (sel.options.length === 0) {
-    weeks.forEach((w,i) => {
-      const opt = document.createElement('option');
-      opt.value = i+1;
-      opt.textContent = 'Woche ' + w.n + ' (' + w.start + ')';
-      sel.appendChild(opt);
-    });
-    sel.value = getCurrentWeekIndex() + 1;
-  }
-  if (!document.getElementById('kpi-date').value) {
-    document.getElementById('kpi-date').value = getTodayStr();
-  }
-  renderKPIList();
-}
-
-function renderKPIList() {
-  const container = document.getElementById('kpi-list');
-  if (!state.kpis || state.kpis.length === 0) {
-    container.innerHTML = '<p style="font-size: 13px; color: var(--ink-muted); font-style: italic;">Noch keine Einträge. Erste Sonntag-Eintragung kommt in Woche 1.</p>';
-    return;
-  }
-  container.innerHTML = '<div class="kpi-row head"><div>Wo.</div><div>Follower</div><div class="col-coding">Coding</div><div>LinkedIn</div></div>';
-  state.kpis.slice().reverse().forEach(k => {
-    const row = document.createElement('div');
-    row.className = 'kpi-row';
-    row.innerHTML =
-      '<div class="week-num">W' + k.week + '</div>' +
-      '<div>' + (k.followers ? k.followers.toLocaleString('de-DE') : '—') + '</div>' +
-      '<div class="col-coding" style="font-size: 12px;">' + (k.codingTask ? (k.codingTask.length > 35 ? k.codingTask.substring(0,35) + '…' : k.codingTask) : '—') + '</div>' +
-      '<div>' + (k.liSent ? k.liSent + ' / ' + (k.liAccepted||0) : '—') + '</div>';
-    container.appendChild(row);
-  });
-}
-
-document.getElementById('save-kpi').addEventListener('click', () => {
-  const week = parseInt(document.getElementById('kpi-week').value);
-  const entry = {
-    week: week,
-    date: document.getElementById('kpi-date').value,
-    followers: parseInt(document.getElementById('kpi-followers').value) || 0,
-    clickRate: parseFloat(document.getElementById('kpi-click-rate').value) || 0,
-    saveRate: parseFloat(document.getElementById('kpi-save-rate').value) || 0,
-    codingTask: document.getElementById('kpi-coding-task').value,
-    codingPct: parseInt(document.getElementById('kpi-coding-pct').value) || 0,
-    liSent: parseInt(document.getElementById('kpi-li-sent').value) || 0,
-    liAccepted: parseInt(document.getElementById('kpi-li-accepted').value) || 0,
-    liReplies: parseInt(document.getElementById('kpi-li-replies').value) || 0,
-    leverage: document.getElementById('kpi-leverage').value,
-    blocker: document.getElementById('kpi-blocker').value,
-    nextGoal: document.getElementById('kpi-next-goal').value,
-    savedAt: new Date().toISOString(),
-  };
-  const existing = state.kpis.findIndex(k => k.week === week);
-  if (existing >= 0) state.kpis[existing] = entry;
-  else state.kpis.push(entry);
-  state.kpis.sort((a,b) => a.week - b.week);
-  saveState();
-  ['kpi-followers','kpi-click-rate','kpi-save-rate','kpi-coding-task','kpi-coding-pct','kpi-li-sent','kpi-li-accepted','kpi-li-replies','kpi-leverage','kpi-blocker','kpi-next-goal'].forEach(id => {
-    document.getElementById(id).value = '';
-  });
-  renderKPIList();
-  renderHeader();
-  const btn = document.getElementById('save-kpi');
-  const orig = btn.textContent;
-  btn.textContent = '✓ Gespeichert';
-  setTimeout(() => btn.textContent = orig, 1500);
-});
-
-function renderRituals() {
-  const container = document.getElementById('rituals-container');
-  container.innerHTML = '';
-  rituals.forEach(r => {
-    const done = state.ritualsDone[r.id];
-    const card = document.createElement('div');
-    card.className = 'ritual' + (done ? ' done' : '');
-    card.innerHTML =
-      '<div class="ritual-time">' + r.time + '</div>' +
-      '<div class="ritual-checkbox"></div>' +
-      '<div class="ritual-content"><div class="ritual-title">' + r.title + ' <span class="dur">· ' + r.dur + '</span></div><div class="ritual-desc">' + r.desc + '</div></div>';
-    card.addEventListener('click', () => {
-      state.ritualsDone[r.id] = !state.ritualsDone[r.id];
-      saveState();
-      renderRituals();
-      renderHeader();
-    });
-    container.appendChild(card);
-  });
-  document.getElementById('rituals-date').textContent = getToday().toLocaleDateString('de-DE', {weekday:'long'});
-}
-
-function renderNotes() {
-  document.getElementById('quick-notes').value = state.notes || '';
-}
-
-function saveNotes() {
-  state.notes = document.getElementById('quick-notes').value;
-  saveState();
-  document.getElementById('notes-saved').textContent = 'Gespeichert · ' + new Date().toLocaleTimeString('de-DE', {hour:'2-digit', minute:'2-digit'});
-  setTimeout(() => {
-    document.getElementById('notes-saved').textContent = '';
-  }, 3000);
-}
-
-document.getElementById('save-notes').addEventListener('click', saveNotes);
-document.getElementById('quick-notes').addEventListener('input', () => {
-  clearTimeout(window._notesTimeout);
-  window._notesTimeout = setTimeout(saveNotes, 30000);
-});
-
-function switchTab(tab) {
-  state.currentTab = tab;
-  saveState();
-  document.querySelectorAll('.tab-btn').forEach(b => {
-    b.classList.toggle('active', b.dataset.tab === tab);
-  });
-  document.querySelectorAll('.tab-panel').forEach(p => {
-    p.classList.toggle('active', p.id === 'tab-' + tab);
-  });
-  if (tab === 'today') renderToday();
-  if (tab === 'weeks') renderWeeks();
-  if (tab === 'kpi') renderKPI();
-  if (tab === 'rituals') renderRituals();
-  if (tab === 'notes') renderNotes();
-}
-
-document.querySelectorAll('.tab-btn').forEach(b => {
-  b.addEventListener('click', () => switchTab(b.dataset.tab));
-});
-
-document.getElementById('prev-week').addEventListener('click', () => {
-  const sel = document.getElementById('week-selector');
-  if (sel.selectedIndex > 0) {
-    sel.selectedIndex--;
-    renderWeekDetail();
-  }
-});
-document.getElementById('next-week').addEventListener('click', () => {
-  const sel = document.getElementById('week-selector');
-  if (sel.selectedIndex < sel.options.length - 1) {
-    sel.selectedIndex++;
-    renderWeekDetail();
-  }
+kpiInputs.forEach(id => {
+  document.getElementById(id).addEventListener('change', saveKPIs);
 });
 
 document.getElementById('export-btn').addEventListener('click', () => {
-  const data = JSON.stringify(state, null, 2);
+  const data = JSON.stringify(kpiState, null, 2);
   const blob = new Blob([data], {type: 'application/json'});
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'bikeley_coach_backup_' + getTodayStr() + '.json';
+  a.download = 'bikeley_atlas_backup_' + new Date().toISOString().split('T')[0] + '.json';
   a.click();
   URL.revokeObjectURL(url);
 });
@@ -1332,10 +2465,14 @@ document.getElementById('import-file').addEventListener('change', (e) => {
   reader.onload = (event) => {
     try {
       const imported = JSON.parse(event.target.result);
-      if (confirm('Backup importieren? Aktuelle Daten werden überschrieben.')) {
-        state = Object.assign(state, imported);
-        saveState();
-        location.reload();
+      if (confirm('Backup importieren? Aktuelle Werte werden überschrieben.')) {
+        kpiState = imported;
+        kpiInputs.forEach(id => {
+          if (kpiState[id] !== undefined && kpiState[id] !== null) {
+            document.getElementById(id).value = kpiState[id];
+          }
+        });
+        saveKPIs();
       }
     } catch(err) {
       alert('Fehler beim Import: ' + err.message);
@@ -1344,9 +2481,8 @@ document.getElementById('import-file').addEventListener('change', (e) => {
   reader.readAsText(file);
 });
 
-loadState();
-renderHeader();
-switchTab(state.currentTab || 'today');
+loadKPIs();
 </script>
+
 </body>
 </html>
