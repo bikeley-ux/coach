@@ -994,6 +994,144 @@ code {
   background: var(--accent);
 }
 
+/* ============= TASKLIST (abhakbar) ============= */
+
+.tasklist {
+  list-style: none;
+  margin: 12px 0 20px;
+  padding: 0;
+}
+
+.tasklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 14px;
+  margin: 0 0 4px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.15s;
+  user-select: none;
+}
+
+.tasklist li:hover {
+  border-color: var(--ink-4);
+  background: var(--bg);
+}
+
+.tasklist li.done {
+  background: var(--green-bg);
+  border-color: var(--green);
+}
+
+.tasklist .task-check {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--ink-4);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  background: var(--card);
+  transition: all 0.15s;
+}
+
+.tasklist li.done .task-check {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.tasklist li.done .task-check::after {
+  content: "✓";
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.tasklist .task-text {
+  flex: 1;
+  font-size: 14px;
+  color: var(--ink);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.tasklist li.done .task-text {
+  color: var(--ink-3);
+  text-decoration: line-through;
+}
+
+.tasklist .task-cat {
+  flex-shrink: 0;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  background: var(--line-2);
+  border-radius: 100px;
+  margin-top: 2px;
+}
+
+.tasklist .task-cat.bauen { background: #dbeafe; color: #1e40af; }
+.tasklist .task-cat.marketing { background: #fce7f3; color: #9d174d; }
+.tasklist .task-cat.strategie { background: #fef3c7; color: #92400e; }
+.tasklist .task-cat.ziel { background: var(--green-bg); color: var(--green); }
+
+.tasklist li.done .task-cat { opacity: 0.5; }
+
+/* Week Progress Bar */
+.week-progress {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0 8px;
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+.week-progress-bar {
+  flex: 1;
+  height: 8px;
+  background: var(--line);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.week-progress-fill {
+  height: 100%;
+  background: var(--green);
+  transition: width 0.3s ease;
+  border-radius: 100px;
+}
+
+.week-progress-count {
+  font-weight: 600;
+  color: var(--ink);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+}
+
+/* Reset button for tasks */
+.task-reset {
+  margin-top: 12px;
+  font-size: 11px;
+  color: var(--ink-4);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  font-family: inherit;
+}
+
+.task-reset:hover { color: var(--ink-3); }
+
 /* ============= INFO BOXES ============= */
 
 .box {
@@ -2549,7 +2687,7 @@ Der größte Fehler bei Hersteller-Pitches ist, das stärkste Versprechen zuerst
 <section id="fahrplan" class="section">
 
 <h1><span class="num">Kapitel 12 · Operativer Fahrplan</span>8 Wochen · 28. April – 22. Juni 2026</h1>
-<p class="lead">Konkrete wöchentliche Ziele und Tasks für die nächsten 8 Wochen. Jede Woche hat ein Hauptziel, drei Arbeitsstränge (Bauen, Marketing, Strategie) und ein klares Insta-Follower-Ziel.</p>
+<p class="lead">Konkrete Tasks pro Woche, einfach abhakbar. Jede Woche hat eine Hauptaufgabe, klare einzelne Tasks und ein Follower-Ziel. Tippe auf einen Task, um ihn als erledigt zu markieren — der Fortschritt wird im Browser gespeichert.</p>
 
 <h2>Übersicht — wo wir hin wollen</h2>
 
@@ -2562,54 +2700,38 @@ Der größte Fehler bei Hersteller-Pitches ist, das stärkste Versprechen zuerst
 
 <p>Das Phase-1-Foundation-Ziel ist 2.200 Insta-Follower. Realistisch heißt das: pro Woche 200-250 neue Follower, mit Beschleunigung in den letzten Wochen, wenn Hashtag-Aktion und Co-Production-Reels greifen.</p>
 
-<h2>Tagesrhythmus — die Basis</h2>
-
-<p>Der 8-Wochen-Plan funktioniert nur, wenn der Tagesrhythmus stabil ist. Die folgenden Anker sind die operative Grundlage:</p>
-
-<table class="data-table">
-<thead><tr><th>Zeit</th><th>Aktivität</th><th>Dauer</th></tr></thead>
-<tbody>
-<tr><td><strong>06:30 – 07:00</strong></td><td>Insta-Check, ersten Comment-Block, Posts der Vortag-Stories prüfen</td><td>30 min</td></tr>
-<tr><td><strong>07:00 – 09:00</strong></td><td>Deep-Work-Block (Code, kein Slack, kein Insta)</td><td>2h</td></tr>
-<tr><td><strong>09:00 – 12:00</strong></td><td>Hauptarbeit am Wochen-Hauptziel</td><td>3h</td></tr>
-<tr><td><strong>12:00 – 13:00</strong></td><td>Mittagspause, körperlich (Fahrrad, Spaziergang, kein Bildschirm)</td><td>1h</td></tr>
-<tr><td><strong>13:00 – 16:00</strong></td><td>Hauptarbeit Teil 2, Strategie-Tasks</td><td>3h</td></tr>
-<tr><td><strong>16:00 – 16:30</strong></td><td>Insta-Tagesposting, Story-Update, DM-Bearbeitung</td><td>30 min</td></tr>
-<tr><td><strong>16:30 – 18:00</strong></td><td>Marketing-Tasks (LinkedIn, Content-Vorbereitung, Outreach)</td><td>1,5h</td></tr>
-<tr><td><strong>20:00 – 20:30</strong></td><td>Insta-Abend-Check, letzten Comment-Block, Tagesnotiz</td><td>30 min</td></tr>
-</tbody>
-</table>
-
-<p><strong>Wochenende:</strong> Samstag-Vormittag Strategie-Review, Sonntag frei. Sonntag-Abend kurze Wochenplanung (30 Minuten).</p>
+<div class="dashboard" style="margin: 24px 0 32px;">
+<h2>Gesamt-Fortschritt</h2>
+<p class="dashboard-sub">Alle Tasks aus den 8 Wochen zusammen. Tippe in den Wochen unten auf einzelne Tasks, um sie zu erledigen.</p>
+<div class="week-progress" style="margin: 0;">
+<span style="font-size: 13px; font-weight: 500; color: var(--ink);">Erledigt</span>
+<div class="week-progress-bar"><div class="week-progress-fill" id="total-progress-fill" style="width: 0%;"></div></div>
+<span class="week-progress-count" id="total-progress-count">0 / 61</span>
+</div>
+</div>
 
 <h2>Woche 1 — 28. April – 4. Mai</h2>
 
 <div class="phase">
-<div class="phase-head"><span class="phase-when">Woche 1</span><span class="phase-name">Diebstahl-Flow Foundation &amp; Insta-Profil-Polish</span></div>
+<div class="phase-head"><span class="phase-when">Woche 1 · Foundation</span><span class="phase-name">Diebstahl-Flow planen &amp; Insta polishen</span></div>
 <div class="phase-body">
-<p><strong>Wochen-Hauptziel:</strong> Diebstahl-Flow-Architektur final festgelegt, API-Contract dokumentiert, erste Backend-Tabelle gebaut. Insta-Bio &amp; Highlights polished.</p>
-<p><strong>Insta-Follower-Ziel:</strong> 600 (von 540 ausgehend, +60)</p>
+<p><strong>Hauptaufgabe der Woche:</strong> Plan für den Diebstahl-Flow steht, Instagram-Profil ist auf den neuesten Stand. Erste 60 neue Follower.</p>
 
-<h3>Bauen</h3>
-<ul class="checklist">
-<li>API-Contract für /api/theft-reports schreiben (Endpoints, Felder, Status-Machine)</li>
-<li>Backend-Tabelle theft_reports anlegen mit allen Pflichtfeldern</li>
-<li>OpenGeoDB einbinden für PLZ-zu-Bundesland-Mapping</li>
-<li>mPDF testen mit erstem Mock-PDF im bayrischen Format</li>
-</ul>
+<div class="week-progress">
+<span>Fortschritt</span>
+<div class="week-progress-bar"><div class="week-progress-fill" data-week="1"></div></div>
+<span class="week-progress-count" data-week-count="1">0 / 8</span>
+</div>
 
-<h3>Marketing</h3>
-<ul class="checklist">
-<li>Insta-Bio überarbeiten mit klarem Heimat-Positionierungs-Satz</li>
-<li>Highlight-Stories „Bike-Pass", „Werkstätten", „Über uns" anlegen</li>
-<li>Profilbild und Banner aktualisieren (DACH-Bike-Heimat-Aesthetic)</li>
-<li>Linkbaum (Linktree-Alternative) auf bikeley.com/links einrichten</li>
-</ul>
-
-<h3>Strategie</h3>
-<ul class="checklist">
-<li>LinkedIn-Profil-Audit: Headline, About, Featured-Section vorbereiten</li>
-<li>Liste von 30 LinkedIn-Personen bei Welle-1-Herstellern recherchieren (5 pro Hersteller)</li>
+<ul class="tasklist" data-week="1">
+<li data-task="w1-t1"><div class="task-check"></div><div class="task-text">Insta-Bio überarbeiten mit klarem Bikeley-Satz</div><div class="task-cat marketing">Marketing</div></li>
+<li data-task="w1-t2"><div class="task-check"></div><div class="task-text">Drei Highlight-Stories anlegen: Bike-Pass, Werkstätten, Über uns</div><div class="task-cat marketing">Marketing</div></li>
+<li data-task="w1-t3"><div class="task-check"></div><div class="task-text">Profilbild und Banner aktualisieren</div><div class="task-cat marketing">Marketing</div></li>
+<li data-task="w1-t4"><div class="task-check"></div><div class="task-text">Linkbaum auf bikeley.com/links einrichten</div><div class="task-cat marketing">Marketing</div></li>
+<li data-task="w1-t5"><div class="task-check"></div><div class="task-text">Diebstahl-Flow-Plan schreiben (welche Felder, welche Schritte)</div><div class="task-cat bauen">Bauen</div></li>
+<li data-task="w1-t6"><div class="task-check"></div><div class="task-text">Datenbank-Tabelle für Diebstahl-Anzeigen anlegen</div><div class="task-cat bauen">Bauen</div></li>
+<li data-task="w1-t7"><div class="task-check"></div><div class="task-text">LinkedIn-Profil aufräumen: Headline, Über-mich, Featured-Section</div><div class="task-cat strategie">Strategie</div></li>
+<li data-task="w1-t8"><div class="task-check"></div><div class="task-text">600 Insta-Follower erreicht (von 540)</div><div class="task-cat ziel">Ziel</div></li>
 </ul>
 </div>
 </div>
@@ -2617,30 +2739,25 @@ Der größte Fehler bei Hersteller-Pitches ist, das stärkste Versprechen zuerst
 <h2>Woche 2 — 5. Mai – 11. Mai</h2>
 
 <div class="phase">
-<div class="phase-head"><span class="phase-when">Woche 2</span><span class="phase-name">Diebstahl-PDF-Logik &amp; App-Flow-Mockups</span></div>
+<div class="phase-head"><span class="phase-when">Woche 2 · Foundation</span><span class="phase-name">Diebstahl-PDF &amp; erste Posts</span></div>
 <div class="phase-body">
-<p><strong>Wochen-Hauptziel:</strong> PDF-Generator funktioniert mit Test-Daten, App-Flow-Mockups in Figma fertig, erste 3 Foundation-Posts produziert.</p>
-<p><strong>Insta-Follower-Ziel:</strong> 700 (+100)</p>
+<p><strong>Hauptaufgabe der Woche:</strong> Diebstahl-PDF wird mit Test-Daten korrekt erstellt, erste drei Posts auf Instagram veröffentlicht.</p>
 
-<h3>Bauen</h3>
-<ul class="checklist">
-<li>mPDF-Integration: Seite 1 (bayrisches Anzeige-Format) mit echten Test-Daten</li>
-<li>Postmark-Account einrichten, Test-Mails versenden, Reply-To-Mechanik testen</li>
-<li>App-Diebstahl-Flow in Figma mocken: 6-Schritt-Wizard mit Validierungen</li>
-<li>Bilder-Upload-Logik (3-5 Zusatzfotos optional) speccen</li>
-</ul>
+<div class="week-progress">
+<span>Fortschritt</span>
+<div class="week-progress-bar"><div class="week-progress-fill" data-week="2"></div></div>
+<span class="week-progress-count" data-week-count="2">0 / 8</span>
+</div>
 
-<h3>Marketing</h3>
-<ul class="checklist">
-<li>3 Foundation-Posts produzieren: „Was ist Bikeley", „Wer sind wir", „Bike-Pass-Demo"</li>
-<li>Erstes Karussell-Posting mit Save-Hook am Ende</li>
-<li>2 Stories pro Tag: Werkstatt-Realität, Bike-Pass-Walkthrough</li>
-</ul>
-
-<h3>Strategie</h3>
-<ul class="checklist">
-<li>LinkedIn-Profil veröffentlichen mit Featured-Section (1 Post zur Heimat-Vision)</li>
-<li>Stille Beobachtungs-Phase starten: Welle-1-Hersteller-Personen folgen</li>
+<ul class="tasklist" data-week="2">
+<li data-task="w2-t1"><div class="task-check"></div><div class="task-text">Diebstahl-PDF-Vorlage erstellen (im Format der bayrischen Anzeige)</div><div class="task-cat bauen">Bauen</div></li>
+<li data-task="w2-t2"><div class="task-check"></div><div class="task-text">PDF mit Test-Daten erfolgreich erzeugen und prüfen</div><div class="task-cat bauen">Bauen</div></li>
+<li data-task="w2-t3"><div class="task-check"></div><div class="task-text">E-Mail-Versand für PDF einrichten (Postmark)</div><div class="task-cat bauen">Bauen</div></li>
+<li data-task="w2-t4"><div class="task-check"></div><div class="task-text">Post 1: „Was ist Bikeley" veröffentlichen</div><div class="task-cat marketing">Marketing</div></li>
+<li data-task="w2-t5"><div class="task-check"></div><div class="task-text">Post 2: „Wer sind wir" veröffentlichen</div><div class="task-cat marketing">Marketing</div></li>
+<li data-task="w2-t6"><div class="task-check"></div><div class="task-text">Post 3: „Bike-Pass-Demo" veröffentlichen</div><div class="task-cat marketing">Marketing</div></li>
+<li data-task="w2-t7"><div class="task-check"></div><div class="task-text">Auf LinkedIn 30 Personen bei Magura, R&amp;M, SKS, Pinion folgen</div><div class="task-cat strategie">Strategie</div></li>
+<li data-task="w2-t8"><div class="task-check"></div><div class="task-text">700 Insta-Follower erreicht</div><div class="task-cat ziel">Ziel</div></li>
 </ul>
 </div>
 </div>
@@ -2648,31 +2765,26 @@ Der größte Fehler bei Hersteller-Pitches ist, das stärkste Versprechen zuerst
 <h2>Woche 3 — 12. Mai – 18. Mai</h2>
 
 <div class="phase">
-<div class="phase-head"><span class="phase-when">Woche 3</span><span class="phase-name">Web-Diebstahl-Flow &amp; Foundation-Posts veröffentlichen</span></div>
+<div class="phase-head"><span class="phase-when">Woche 3 · Foundation</span><span class="phase-name">Diebstahl-Flow im Web &amp; mehr Posts</span></div>
 <div class="phase-body">
-<p><strong>Wochen-Hauptziel:</strong> Web-Version des Diebstahl-Flows läuft End-to-End, alle 9 Foundation-Posts veröffentlicht, Hersteller-Werkstatt-Mapping recherchiert.</p>
-<p><strong>Insta-Follower-Ziel:</strong> 850 (+150)</p>
+<p><strong>Hauptaufgabe der Woche:</strong> Diebstahl-Flow funktioniert komplett im Web-Browser. Sechs weitere Posts veröffentlicht. Erste Werkstatt-Recherche in München.</p>
 
-<h3>Bauen</h3>
-<ul class="checklist">
-<li>Web-Diebstahl-Flow End-to-End: Form → Validierung → PDF-Generierung → E-Mail-Versand</li>
-<li>FEIN-Code-Validierung einbauen (Format-Check, Eindeutigkeit)</li>
-<li>Status-Machine implementieren: draft → reported → police_filed → resolved</li>
-<li>Test-Account mit echten Daten durchlaufen</li>
-</ul>
+<div class="week-progress">
+<span>Fortschritt</span>
+<div class="week-progress-bar"><div class="week-progress-fill" data-week="3"></div></div>
+<span class="week-progress-count" data-week-count="3">0 / 9</span>
+</div>
 
-<h3>Marketing</h3>
-<ul class="checklist">
-<li>Foundation-Posts 4-9 produzieren und veröffentlichen (alle 2 Tage 1 Post)</li>
-<li>Themen: „Werkstatt-Realität DACH", „Diebstahl-Statistik DACH", „Bike-Pass-FAQ", „Versicherungs-Lücke", „Provider-Tier-Übersicht", „Heimat statt Plattform"</li>
-<li>Stories täglich, Engagement mit ersten Followern (Antworten auf DMs in unter 4h)</li>
-</ul>
-
-<h3>Strategie</h3>
-<ul class="checklist">
-<li>Werkstatt-Hersteller-Mapping: Welche Münchner Werkstätten sind „Magura zertifiziert"?</li>
-<li>Liste von 30 potenziellen ersten Werkstatt-Partnern in München erstellen</li>
-<li>LinkedIn: erste Kommentare unter Welle-1-Hersteller-Posts (1-2 pro Tag)</li>
+<ul class="tasklist" data-week="3">
+<li data-task="w3-t1"><div class="task-check"></div><div class="task-text">Diebstahl-Flow im Web von Anfang bis Ende durchspielen</div><div class="task-cat bauen">Bauen</div></li>
+<li data-task="w3-t2"><div class="task-check"></div><div class="task-text">FEIN-Code-Feld einbauen und prüfen</div><div class="task-cat bauen">Bauen</div></li>
+<li data-task="w3-t3"><div class="task-check"></div><div class="task-text">Selbst eine Test-Anzeige durchlaufen und PDF erhalten</div><div class="task-cat bauen">Bauen</div></li>
+<li data-task="w3-t4"><div class="task-check"></div><div class="task-text">Posts 4–6 produzieren und veröffentlichen</div><div class="task-cat marketing">Marketing</div></li>
+<li data-task="w3-t5"><div class="task-check"></div><div class="task-text">Posts 7–9 produzieren und veröffentlichen</div><div class="task-cat marketing">Marketing</div></li>
+<li data-task="w3-t6"><div class="task-check"></div><div class="task-text">Stories täglich posten, DMs unter 4 Stunden beantworten</div><div class="task-cat marketing">Marketing</div></li>
+<li data-task="w3-t7"><div class="task-check"></div><div class="task-text">Liste mit 30 Werkstätten in München erstellen</div><div class="task-cat strategie">Strategie</div></li>
+<li data-task="w3-t8"><div class="task-check"></div><div class="task-text">LinkedIn: 1–2 Kommentare pro Tag bei Hersteller-Posts</div><div class="task-cat strategie">Strategie</div></li>
+<li data-task="w3-t9"><div class="task-check"></div><div class="task-text">850 Insta-Follower erreicht</div><div class="task-cat ziel">Ziel</div></li>
 </ul>
 </div>
 </div>
@@ -2680,31 +2792,25 @@ Der größte Fehler bei Hersteller-Pitches ist, das stärkste Versprechen zuerst
 <h2>Woche 4 — 19. Mai – 25. Mai</h2>
 
 <div class="phase">
-<div class="phase-head"><span class="phase-when">Woche 4</span><span class="phase-name">Diebstahl-Flow Production &amp; Stripe-Setup</span></div>
+<div class="phase-head"><span class="phase-when">Woche 4 · Foundation</span><span class="phase-name">Diebstahl-Flow live &amp; Plus-Tier startet</span></div>
 <div class="phase-body">
-<p><strong>Wochen-Hauptziel:</strong> Diebstahl-Flow ist live in Production, Stripe-Subscriptions für Plus-Tier eingerichtet, erste Werkstatt-Koop-Anfrage versendet.</p>
-<p><strong>Insta-Follower-Ziel:</strong> 1.000 (+150) — psychologische 1k-Marke</p>
+<p><strong>Hauptaufgabe der Woche:</strong> Diebstahl-Flow ist online verfügbar. Plus-Tier-Subscription läuft über Stripe. 1.000-Follower-Marke geknackt.</p>
 
-<h3>Bauen</h3>
-<ul class="checklist">
-<li>Diebstahl-Flow Production-Deploy mit Monitoring</li>
-<li>Stripe-Plus-Subscription einrichten (4,99€/Monat, kann 7-Tage-Trial haben)</li>
-<li>Erste Plus-Tier-Conversion-CTA im App- und Web-Flow einbauen</li>
-<li>Bug-Fixes aus Test-Phase</li>
-</ul>
+<div class="week-progress">
+<span>Fortschritt</span>
+<div class="week-progress-bar"><div class="week-progress-fill" data-week="4"></div></div>
+<span class="week-progress-count" data-week-count="4">0 / 8</span>
+</div>
 
-<h3>Marketing</h3>
-<ul class="checklist">
-<li>1k-Follower-Story als Meilenstein zelebrieren (Community-Dank-Post)</li>
-<li>Erstes Reel mit gescriptetem Hook (kein Talking-Head, sondern visuelle Geschichte)</li>
-<li>Cross-Post auf TikTok als Test (kein Account-Aufbau noch, nur Versuch)</li>
-</ul>
-
-<h3>Strategie</h3>
-<ul class="checklist">
-<li>Erste konkrete Werkstatt-Koop-Anfrage in München versenden (1-2 Werkstätten)</li>
-<li>LinkedIn: 5 Connection-Requests pro Tag mit personalisierter Notiz starten</li>
-<li>Versicherungs-Recherche: Wertgarantie-Ansprechpartner identifizieren</li>
+<ul class="tasklist" data-week="4">
+<li data-task="w4-t1"><div class="task-check"></div><div class="task-text">Diebstahl-Flow live schalten</div><div class="task-cat bauen">Bauen</div></li>
+<li data-task="w4-t2"><div class="task-check"></div><div class="task-text">Stripe-Plus-Subscription einrichten (4,99€/Monat)</div><div class="task-cat bauen">Bauen</div></li>
+<li data-task="w4-t3"><div class="task-check"></div><div class="task-text">Plus-Tier-Hinweis im Diebstahl-Flow einbauen</div><div class="task-cat bauen">Bauen</div></li>
+<li data-task="w4-t4"><div class="task-check"></div><div class="task-text">1.000-Follower-Meilenstein-Post veröffentlichen</div><div class="task-cat marketing">Marketing</div></li>
+<li data-task="w4-t5"><div class="task-check"></div><div class="task-text">Erstes Reel mit Hook-Geschichte produzieren</div><div class="task-cat marketing">Marketing</div></li>
+<li data-task="w4-t6"><div class="task-check"></div><div class="task-text">Erste Werkstatt in München kontaktieren (Anruf oder E-Mail)</div><div class="task-cat strategie">Strategie</div></li>
+<li data-task="w4-t7"><div class="task-check"></div><div class="task-text">LinkedIn: 5 Connection-Requests mit persönlicher Notiz</div><div class="task-cat strategie">Strategie</div></li>
+<li data-task="w4-t8"><div class="task-check"></div><div class="task-text">1.000 Insta-Follower erreicht</div><div class="task-cat ziel">Ziel</div></li>
 </ul>
 </div>
 </div>
@@ -2712,30 +2818,24 @@ Der größte Fehler bei Hersteller-Pitches ist, das stärkste Versprechen zuerst
 <h2>Woche 5 — 26. Mai – 1. Juni</h2>
 
 <div class="phase">
-<div class="phase-head"><span class="phase-when">Woche 5</span><span class="phase-name">Bike-Garage UX &amp; erste Co-Production</span></div>
+<div class="phase-head"><span class="phase-when">Woche 5 · Beschleunigung</span><span class="phase-name">Bike-Garage besser &amp; erstes Werkstatt-Reel</span></div>
 <div class="phase-body">
-<p><strong>Wochen-Hauptziel:</strong> Bike-Garage UX überarbeitet (Multiple Bikes, klare Service-Historie), erstes Co-Production-Reel mit Werkstatt im Kasten.</p>
-<p><strong>Insta-Follower-Ziel:</strong> 1.200 (+200)</p>
+<p><strong>Hauptaufgabe der Woche:</strong> Bike-Garage hat eine bessere Oberfläche. Erstes gemeinsames Reel mit einer Werkstatt im Kasten.</p>
 
-<h3>Bauen</h3>
-<ul class="checklist">
-<li>Bike-Garage UX-Refactor: bessere Foto-Verwaltung, klarere Service-Historie</li>
-<li>Service-Erinnerungs-Logik konzipieren (was wird wann erinnert?)</li>
-<li>FEIN-Code-Suche-Funktion: Bike kann über FEIN-Code gefunden werden</li>
-</ul>
+<div class="week-progress">
+<span>Fortschritt</span>
+<div class="week-progress-bar"><div class="week-progress-fill" data-week="5"></div></div>
+<span class="week-progress-count" data-week-count="5">0 / 7</span>
+</div>
 
-<h3>Marketing</h3>
-<ul class="checklist">
-<li>Erstes Co-Production-Reel mit Werkstatt drehen (Tobi-Style: junger Werkstatt-Inhaber)</li>
-<li>Reel veröffentlichen mit Tag der Werkstatt — Cross-Promotion-Effekt nutzen</li>
-<li>Stories: Behind-the-Scenes von der Reel-Produktion</li>
-</ul>
-
-<h3>Strategie</h3>
-<ul class="checklist">
-<li>LinkedIn: bei warmen Connections erste Wert-Nachrichten versenden (kein Pitch, nur Frage)</li>
-<li>Werkstatt-Programm konzipieren: 90-Tage-Trial für die ersten 25 Werkstätten</li>
-<li>Wertgarantie-Erstkontakt vorbereiten (E-Mail-Entwurf, kein Versand)</li>
+<ul class="tasklist" data-week="5">
+<li data-task="w5-t1"><div class="task-check"></div><div class="task-text">Bike-Garage: Foto-Verwaltung verbessern</div><div class="task-cat bauen">Bauen</div></li>
+<li data-task="w5-t2"><div class="task-check"></div><div class="task-text">Bike-Garage: Service-Historie übersichtlicher machen</div><div class="task-cat bauen">Bauen</div></li>
+<li data-task="w5-t3"><div class="task-check"></div><div class="task-text">Reel mit Werkstatt drehen (vor Ort, ca. 2 Stunden)</div><div class="task-cat marketing">Marketing</div></li>
+<li data-task="w5-t4"><div class="task-check"></div><div class="task-text">Reel veröffentlichen, Werkstatt taggen</div><div class="task-cat marketing">Marketing</div></li>
+<li data-task="w5-t5"><div class="task-check"></div><div class="task-text">Werkstatt-Trial-Konzept fertigschreiben (90 Tage gratis)</div><div class="task-cat strategie">Strategie</div></li>
+<li data-task="w5-t6"><div class="task-check"></div><div class="task-text">Wertgarantie: passenden Ansprechpartner finden</div><div class="task-cat strategie">Strategie</div></li>
+<li data-task="w5-t7"><div class="task-check"></div><div class="task-text">1.200 Insta-Follower erreicht</div><div class="task-cat ziel">Ziel</div></li>
 </ul>
 </div>
 </div>
@@ -2743,30 +2843,24 @@ Der größte Fehler bei Hersteller-Pitches ist, das stärkste Versprechen zuerst
 <h2>Woche 6 — 2. Juni – 8. Juni</h2>
 
 <div class="phase">
-<div class="phase-head"><span class="phase-when">Woche 6</span><span class="phase-name">Service-Cron &amp; Werkstatt-Co-Production</span></div>
+<div class="phase-head"><span class="phase-when">Woche 6 · Beschleunigung</span><span class="phase-name">Service-Erinnerungen &amp; zweites Werkstatt-Reel</span></div>
 <div class="phase-body">
-<p><strong>Wochen-Hauptziel:</strong> Automatisierte Service-Erinnerungs-Mails laufen (Cron-Job), zweites Co-Production-Reel veröffentlicht, erste Werkstatt-Trial-Anmeldung.</p>
-<p><strong>Insta-Follower-Ziel:</strong> 1.500 (+300)</p>
+<p><strong>Hauptaufgabe der Woche:</strong> Automatische Service-Erinnerungs-Mails laufen. Zweites Werkstatt-Reel veröffentlicht. Erste Werkstatt im Trial.</p>
 
-<h3>Bauen</h3>
-<ul class="checklist">
-<li>Service-Erinnerungs-Cron-Job einrichten (täglich um 9 Uhr E-Mails versenden)</li>
-<li>E-Mail-Templates für Service-Erinnerungen schreiben (3 Stufen: 30, 14, 7 Tage)</li>
-<li>Customer-Hub-MVP für Werkstätten: Liste der eigenen Stammkunden</li>
-</ul>
+<div class="week-progress">
+<span>Fortschritt</span>
+<div class="week-progress-bar"><div class="week-progress-fill" data-week="6"></div></div>
+<span class="week-progress-count" data-week-count="6">0 / 7</span>
+</div>
 
-<h3>Marketing</h3>
-<ul class="checklist">
-<li>Zweites Co-Production-Reel mit anderer Werkstatt — anderer Stil (Service-Demo)</li>
-<li>Erstes Karussell-Posting zur Service-Erinnerungs-Funktion</li>
-<li>Stories: User-Testimonials sammeln (auch wenn klein)</li>
-</ul>
-
-<h3>Strategie</h3>
-<ul class="checklist">
-<li>Erste Werkstatt-Trial-Anmeldung abschließen (sollte Ergebnis von W4-Anfrage sein)</li>
-<li>Werkstatt-Trial-Onboarding-Dokument finalisieren</li>
-<li>LinkedIn: Welle-1-Hersteller weiter beobachten, gezielt 1 Post pro Tag kommentieren</li>
+<ul class="tasklist" data-week="6">
+<li data-task="w6-t1"><div class="task-check"></div><div class="task-text">Service-Erinnerungs-System einrichten (E-Mails 30/14/7 Tage vorher)</div><div class="task-cat bauen">Bauen</div></li>
+<li data-task="w6-t2"><div class="task-check"></div><div class="task-text">E-Mail-Texte für die drei Erinnerungsstufen schreiben</div><div class="task-cat bauen">Bauen</div></li>
+<li data-task="w6-t3"><div class="task-check"></div><div class="task-text">Zweites Reel mit anderer Werkstatt veröffentlichen</div><div class="task-cat marketing">Marketing</div></li>
+<li data-task="w6-t4"><div class="task-check"></div><div class="task-text">Karussell-Post zur Service-Erinnerungs-Funktion</div><div class="task-cat marketing">Marketing</div></li>
+<li data-task="w6-t5"><div class="task-check"></div><div class="task-text">Erste Werkstatt im Trial-Modus angemeldet</div><div class="task-cat strategie">Strategie</div></li>
+<li data-task="w6-t6"><div class="task-check"></div><div class="task-text">LinkedIn: Hersteller-Posts beobachten und gezielt kommentieren</div><div class="task-cat strategie">Strategie</div></li>
+<li data-task="w6-t7"><div class="task-check"></div><div class="task-text">1.500 Insta-Follower erreicht</div><div class="task-cat ziel">Ziel</div></li>
 </ul>
 </div>
 </div>
@@ -2774,30 +2868,24 @@ Der größte Fehler bei Hersteller-Pitches ist, das stärkste Versprechen zuerst
 <h2>Woche 7 — 9. Juni – 15. Juni</h2>
 
 <div class="phase">
-<div class="phase-head"><span class="phase-when">Woche 7</span><span class="phase-name">Polish &amp; LinkedIn-Soft-Pitch-Phase</span></div>
+<div class="phase-head"><span class="phase-when">Woche 7 · Beschleunigung</span><span class="phase-name">Polish &amp; LinkedIn-Soft-Pitch starten</span></div>
 <div class="phase-body">
-<p><strong>Wochen-Hauptziel:</strong> Diebstahl-Flow + Service-Cron + Bike-Garage poliert (Bug-Fixes, kleine UX-Verbesserungen), LinkedIn-Soft-Pitches starten bei warmen Connections.</p>
-<p><strong>Insta-Follower-Ziel:</strong> 1.800 (+300)</p>
+<p><strong>Hauptaufgabe der Woche:</strong> Alles bisher Gebaute bekommt den Feinschliff. Erste vorsichtige Pitches auf LinkedIn bei warmen Kontakten.</p>
 
-<h3>Bauen</h3>
-<ul class="checklist">
-<li>UX-Polish: Loading-States, Error-Messages, Empty-States überall verbessern</li>
-<li>Mobile-Responsiveness aller Web-Flows prüfen</li>
-<li>Performance-Optimierung: Page-Load unter 2 Sekunden bringen</li>
-</ul>
+<div class="week-progress">
+<span>Fortschritt</span>
+<div class="week-progress-bar"><div class="week-progress-fill" data-week="7"></div></div>
+<span class="week-progress-count" data-week-count="7">0 / 7</span>
+</div>
 
-<h3>Marketing</h3>
-<ul class="checklist">
-<li>Drittes Co-Production-Reel — diesmal mit Mechanikerin Lisa-Style (junge Frau in Werkstatt)</li>
-<li>#BikeleyMyBike-Aktion vorbereiten (Hashtag, Mechanik, Belohnung definieren)</li>
-<li>Erste Insta-Live-Session ankündigen für W8 (Q&amp;A zur Heimat-Vision)</li>
-</ul>
-
-<h3>Strategie</h3>
-<ul class="checklist">
-<li>LinkedIn: Bei 3-5 warmen Connections offene Fragen versenden („Wie geht ihr heute mit X um?")</li>
-<li>Erste Wertgarantie-E-Mail versenden (Erstkontakt, kein Pitch)</li>
-<li>Pilot-Konzept-PDF für Hersteller fertigstellen (für W9+ bereit)</li>
+<ul class="tasklist" data-week="7">
+<li data-task="w7-t1"><div class="task-check"></div><div class="task-text">Lade-Anzeigen, Fehlermeldungen, leere Zustände überall verbessern</div><div class="task-cat bauen">Bauen</div></li>
+<li data-task="w7-t2"><div class="task-check"></div><div class="task-text">Mobile-Ansicht aller Web-Seiten prüfen und Fehler beheben</div><div class="task-cat bauen">Bauen</div></li>
+<li data-task="w7-t3"><div class="task-check"></div><div class="task-text">Drittes Reel — diesmal mit junger Mechanikerin (Lisa-Persona)</div><div class="task-cat marketing">Marketing</div></li>
+<li data-task="w7-t4"><div class="task-check"></div><div class="task-text">#BikeleyMyBike-Aktion vorbereiten (Mechanik festlegen)</div><div class="task-cat marketing">Marketing</div></li>
+<li data-task="w7-t5"><div class="task-check"></div><div class="task-text">LinkedIn: Bei 3–5 warmen Kontakten eine offene Frage stellen</div><div class="task-cat strategie">Strategie</div></li>
+<li data-task="w7-t6"><div class="task-check"></div><div class="task-text">Erste E-Mail an Wertgarantie verschicken</div><div class="task-cat strategie">Strategie</div></li>
+<li data-task="w7-t7"><div class="task-check"></div><div class="task-text">1.800 Insta-Follower erreicht</div><div class="task-cat ziel">Ziel</div></li>
 </ul>
 </div>
 </div>
@@ -2805,48 +2893,27 @@ Der größte Fehler bei Hersteller-Pitches ist, das stärkste Versprechen zuerst
 <h2>Woche 8 — 16. Juni – 22. Juni</h2>
 
 <div class="phase">
-<div class="phase-head"><span class="phase-when">Woche 8</span><span class="phase-name">#BikeleyMyBike Launch &amp; Phase-1-Übergang</span></div>
+<div class="phase-head"><span class="phase-when">Woche 8 · Übergang</span><span class="phase-name">#BikeleyMyBike Launch &amp; Phase-1-Ziel</span></div>
 <div class="phase-body">
-<p><strong>Wochen-Hauptziel:</strong> Hashtag-Aktion #BikeleyMyBike live, Insta-Live-Session durchgeführt, ADFC-München-Erstkontakt vorbereitet (NICHT versendet), Rückblick auf 8 Wochen.</p>
-<p><strong>Insta-Follower-Ziel:</strong> 2.200 (+400) — Phase-1-Foundation-Ziel erreicht</p>
+<p><strong>Hauptaufgabe der Woche:</strong> Hashtag-Aktion launchen, Insta-Live durchziehen, das 2.200-Follower-Ziel erreichen.</p>
 
-<h3>Bauen</h3>
-<ul class="checklist">
-<li>#BikeleyMyBike-Landing-Page auf bikeley.com/mybike (zeigt alle Posts mit dem Hashtag)</li>
-<li>Backend-Polish: Database-Indexes optimieren, langsame Queries identifizieren</li>
-<li>Backup-System für User-Daten testen</li>
-</ul>
+<div class="week-progress">
+<span>Fortschritt</span>
+<div class="week-progress-bar"><div class="week-progress-fill" data-week="8"></div></div>
+<span class="week-progress-count" data-week-count="8">0 / 7</span>
+</div>
 
-<h3>Marketing</h3>
-<ul class="checklist">
-<li>#BikeleyMyBike offiziell launchen (großes Karussell-Posting + Reel)</li>
-<li>Insta-Live durchführen mit Q&amp;A zur Heimat-Vision (30-45 Minuten)</li>
-<li>2.200-Follower-Meilenstein zelebrieren (Community-Dank-Post)</li>
-</ul>
-
-<h3>Strategie</h3>
-<ul class="checklist">
-<li>ADFC-München-Erstkontakt für Codier-Aktion VORBEREITEN (E-Mail-Entwurf, NICHT versenden — kommt in Phase 2)</li>
-<li>8-Wochen-Rückblick: Was funktioniert, was nicht, was wird in den nächsten 8 Wochen anders</li>
-<li>Phase-2-Plan beginnen (Juni-Ende-Update der Roadmap)</li>
+<ul class="tasklist" data-week="8">
+<li data-task="w8-t1"><div class="task-check"></div><div class="task-text">Landing-Page bikeley.com/mybike bauen (zeigt Posts mit Hashtag)</div><div class="task-cat bauen">Bauen</div></li>
+<li data-task="w8-t2"><div class="task-check"></div><div class="task-text">Daten-Backup-System einmal komplett durchtesten</div><div class="task-cat bauen">Bauen</div></li>
+<li data-task="w8-t3"><div class="task-check"></div><div class="task-text">#BikeleyMyBike offiziell launchen (großer Karussell-Post + Reel)</div><div class="task-cat marketing">Marketing</div></li>
+<li data-task="w8-t4"><div class="task-check"></div><div class="task-text">Insta-Live durchführen (Q&amp;A zur Heimat-Vision, 30–45 Min)</div><div class="task-cat marketing">Marketing</div></li>
+<li data-task="w8-t5"><div class="task-check"></div><div class="task-text">8-Wochen-Rückblick schreiben: was lief gut, was nicht</div><div class="task-cat strategie">Strategie</div></li>
+<li data-task="w8-t6"><div class="task-check"></div><div class="task-text">ADFC-München-E-Mail vorbereiten (NICHT senden — kommt später)</div><div class="task-cat strategie">Strategie</div></li>
+<li data-task="w8-t7"><div class="task-check"></div><div class="task-text">2.200 Insta-Follower erreicht — Phase-1-Ziel geschafft</div><div class="task-cat ziel">Ziel</div></li>
 </ul>
 </div>
 </div>
-
-<h2>Wochenrhythmus pro Wochentag</h2>
-
-<table class="data-table">
-<thead><tr><th>Tag</th><th>Hauptfokus</th><th>Standard-Tasks</th></tr></thead>
-<tbody>
-<tr><td><strong>Montag</strong></td><td>Wochen-Setup</td><td>Wochenziele schreiben, Posts der Woche planen, Code-Roadmap der Woche</td></tr>
-<tr><td><strong>Dienstag</strong></td><td>Deep-Coding</td><td>Größte Code-Tasks, keine Calls, kein Marketing-Content</td></tr>
-<tr><td><strong>Mittwoch</strong></td><td>Content-Production</td><td>Reel-Drehs, Karussell-Designs, Stories-Batches</td></tr>
-<tr><td><strong>Donnerstag</strong></td><td>Strategie &amp; Outreach</td><td>LinkedIn-Aktivität, Werkstatt-Anfragen, Hersteller-Beobachtung</td></tr>
-<tr><td><strong>Freitag</strong></td><td>Polish &amp; Veröffentlichung</td><td>Code-Review, Bug-Fixes, Wochen-Highlight veröffentlichen</td></tr>
-<tr><td><strong>Samstag</strong></td><td>Strategie-Review (Vormittag)</td><td>Was hat funktioniert, was nicht, Anpassung für nächste Woche</td></tr>
-<tr><td><strong>Sonntag</strong></td><td>Frei (bis 19 Uhr)</td><td>19:00 Wochenplanung Sonntag-Abend, dann frei</td></tr>
-</tbody>
-</table>
 
 <h2>Was passiert NICHT in diesen 8 Wochen</h2>
 
@@ -3122,6 +3189,79 @@ document.getElementById('import-file').addEventListener('change', (e) => {
 });
 
 loadKPIs();
+
+// ============= TASK PERSISTENCE =============
+
+const TASK_STORAGE_KEY = 'bikeley_atlas_tasks_v1';
+let taskState = {};
+
+function loadTasks() {
+  try {
+    const raw = localStorage.getItem(TASK_STORAGE_KEY);
+    if (raw) taskState = JSON.parse(raw);
+  } catch(e) { console.error('Task load failed:', e); }
+
+  document.querySelectorAll('.tasklist li[data-task]').forEach(li => {
+    const id = li.dataset.task;
+    if (taskState[id]) li.classList.add('done');
+  });
+
+  updateAllWeekProgress();
+}
+
+function saveTasks() {
+  try {
+    localStorage.setItem(TASK_STORAGE_KEY, JSON.stringify(taskState));
+  } catch(e) { console.error('Task save failed:', e); }
+}
+
+function toggleTask(li) {
+  const id = li.dataset.task;
+  if (li.classList.contains('done')) {
+    li.classList.remove('done');
+    delete taskState[id];
+  } else {
+    li.classList.add('done');
+    taskState[id] = true;
+  }
+  saveTasks();
+  updateAllWeekProgress();
+}
+
+function updateWeekProgress(weekNum) {
+  const tasklist = document.querySelector(`.tasklist[data-week="${weekNum}"]`);
+  if (!tasklist) return;
+  const total = tasklist.querySelectorAll('li[data-task]').length;
+  const done = tasklist.querySelectorAll('li.done').length;
+  const pct = total ? (done / total) * 100 : 0;
+
+  const fill = document.querySelector(`.week-progress-fill[data-week="${weekNum}"]`);
+  const count = document.querySelector(`.week-progress-count[data-week-count="${weekNum}"]`);
+  if (fill) fill.style.width = pct + '%';
+  if (count) count.textContent = `${done} / ${total}`;
+}
+
+function updateAllWeekProgress() {
+  document.querySelectorAll('.tasklist[data-week]').forEach(tl => {
+    updateWeekProgress(tl.dataset.week);
+  });
+  // Total progress
+  const allTasks = document.querySelectorAll('.tasklist li[data-task]');
+  const doneTasks = document.querySelectorAll('.tasklist li.done');
+  const total = allTasks.length;
+  const done = doneTasks.length;
+  const pct = total ? (done / total) * 100 : 0;
+  const fill = document.getElementById('total-progress-fill');
+  const count = document.getElementById('total-progress-count');
+  if (fill) fill.style.width = pct + '%';
+  if (count) count.textContent = `${done} / ${total}`;
+}
+
+document.querySelectorAll('.tasklist li[data-task]').forEach(li => {
+  li.addEventListener('click', () => toggleTask(li));
+});
+
+loadTasks();
 </script>
 
 </body>
