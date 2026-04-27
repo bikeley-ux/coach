@@ -1330,9 +1330,11 @@ Bikeley Atlas
 <button class="tab" data-tab="pricing">Pricing</button>
 <button class="tab" data-tab="strategy">Strategie</button>
 <button class="tab" data-tab="competition">Wettbewerb</button>
+<button class="tab" data-tab="hersteller">Hersteller</button>
 <button class="tab" data-tab="distribution">Distribution</button>
 <button class="tab" data-tab="behoerden">Behörden</button>
 <button class="tab" data-tab="roadmap">Roadmap</button>
+<button class="tab" data-tab="fahrplan">Fahrplan</button>
 <button class="tab" data-tab="risks">Risiken</button>
 </div>
 <button class="menu-btn" id="menu-btn" aria-label="Menü">
@@ -1359,10 +1361,12 @@ Bikeley Atlas
 <button class="tab" data-tab="pricing"><span class="num">05</span>Pricing</button>
 <button class="tab" data-tab="strategy"><span class="num">06</span>Strategie</button>
 <button class="tab" data-tab="competition"><span class="num">07</span>Wettbewerb</button>
-<button class="tab" data-tab="distribution"><span class="num">08</span>Distribution</button>
-<button class="tab" data-tab="behoerden"><span class="num">09</span>Behörden</button>
-<button class="tab" data-tab="roadmap"><span class="num">10</span>Roadmap</button>
-<button class="tab" data-tab="risks"><span class="num">11</span>Risiken</button>
+<button class="tab" data-tab="hersteller"><span class="num">08</span>Hersteller</button>
+<button class="tab" data-tab="distribution"><span class="num">09</span>Distribution</button>
+<button class="tab" data-tab="behoerden"><span class="num">10</span>Behörden</button>
+<button class="tab" data-tab="roadmap"><span class="num">11</span>Roadmap</button>
+<button class="tab" data-tab="fahrplan"><span class="num">12</span>Fahrplan</button>
+<button class="tab" data-tab="risks"><span class="num">13</span>Risiken</button>
 </nav>
 </aside>
 
@@ -1413,7 +1417,7 @@ Bikeley Atlas
 <div class="kpi-target" data-kpi="mrr" data-target="3000">Phase-1-Ziel: 3.000</div>
 </div>
 <div class="kpi">
-<span class="kpi-label">Pilots aktiv</span>
+<span class="kpi-label">Hersteller-Pilots</span>
 <input type="number" id="kpi-pilots" placeholder="0" />
 <div class="kpi-target" data-kpi="pilots" data-target="1">Phase-2-Ziel: 1</div>
 </div>
@@ -1491,29 +1495,43 @@ Bikeley Atlas
 <div class="toc-desc">Sechs Konkurrenz-Szenarien, strukturelle Burggraben-Logik.</div>
 </div>
 </a>
-<a class="toc-item" data-tab="distribution">
+<a class="toc-item" data-tab="hersteller">
 <div class="toc-num">08</div>
 <div class="toc-content">
+<div class="toc-title">Hersteller-Strategie</div>
+<div class="toc-desc">Drei Stufen: Werkstatt-Brücke 2026, Early-Access 2027, Daten-Pilots 2028.</div>
+</div>
+</a>
+<a class="toc-item" data-tab="distribution">
+<div class="toc-num">09</div>
+<div class="toc-content">
 <div class="toc-title">Distribution &amp; Marketing</div>
-<div class="toc-desc">Insta-Wachstumsplan, LinkedIn-Outreach für Hersteller.</div>
+<div class="toc-desc">Insta-Wachstumsplan, LinkedIn-Outreach, Werkstatt-Akquise.</div>
 </div>
 </a>
 <a class="toc-item" data-tab="behoerden">
-<div class="toc-num">09</div>
+<div class="toc-num">10</div>
 <div class="toc-content">
 <div class="toc-title">Behörden &amp; Regulatorik</div>
 <div class="toc-desc">Polizei-Strategie in drei Stufen. DSGVO-Konformität.</div>
 </div>
 </a>
 <a class="toc-item" data-tab="roadmap">
-<div class="toc-num">10</div>
+<div class="toc-num">11</div>
 <div class="toc-content">
 <div class="toc-title">Roadmap &amp; Erfolgs-Marker</div>
-<div class="toc-desc">Quartalsweise Bauplan 2026–2027. Jährliche Ziele 2026–2032.</div>
+<div class="toc-desc">Quartalsweise Bauplan 2026–2027. Jährliche Ziele bis 2032.</div>
+</div>
+</a>
+<a class="toc-item" data-tab="fahrplan">
+<div class="toc-num">12</div>
+<div class="toc-content">
+<div class="toc-title">8-Wochen-Fahrplan</div>
+<div class="toc-desc">Operativer Plan 28. April – 22. Juni 2026 mit wöchentlichen Zielen und Tasks.</div>
 </div>
 </a>
 <a class="toc-item" data-tab="risks">
-<div class="toc-num">11</div>
+<div class="toc-num">13</div>
 <div class="toc-content">
 <div class="toc-title">Risiken &amp; offene Themen</div>
 <div class="toc-desc">Strukturelle Risiken, operative Engpässe, kritische Annahmen.</div>
@@ -2219,10 +2237,95 @@ Wir reagieren nicht auf jede Konkurrenz-Bewegung. Reagieren ist die Falle. Verti
 
 </section>
 
-<!-- ============= 08 DISTRIBUTION ============= -->
+<!-- ============= 08 HERSTELLER ============= -->
+<section id="hersteller" class="section">
+
+<h1><span class="num">Kapitel 08 · Hersteller</span>Hersteller-Strategie</h1>
+<p class="lead">Hersteller-Partnerschaften sind langfristig der wichtigste Cashflow-Hebel — aber auch der missverstandenste. Drei Stufen, jede mit eigenem Mehrwert-Angebot, jede zum richtigen Zeitpunkt.</p>
+
+<h2>Die ehrliche Ausgangslage</h2>
+
+<p>Es gibt eine Falle bei Bootstrap-Plattformen, die mit Herstellern arbeiten wollen: zu früh mit „Daten-Pilot" pitchen, ohne Daten zu haben. Magura hat 80.000 Insta-Follower und arbeitet mit etablierten Marketing-Agenturen. Wenn Bikeley mit 540 Followern und 0 aktiven Usern ein „Pilot-Angebot mit Insights" pitcht, wirkt das nicht ernsthaft.</p>
+
+<p>Realistisch braucht Bikeley drei verschiedene Mehrwert-Angebote für Hersteller — abhängig davon, wie weit die eigene Plattform ist. Jede Stufe hat ihre eigene Logik, ihre eigene Hürde, ihre eigene Person beim Hersteller.</p>
+
+<div class="box warn">
+<h3>Warum nicht direkt der Daten-Pilot?</h3>
+<p>Anonymisierte Insights („4.823 User haben Magura-Bremsen registriert") sind das eigentliche Premium-Produkt. Aber sie funktionieren erst ab 5.000-10.000 aktiven Usern mit dokumentierten Bikes. Vorher wäre der Pilot ein Versprechen ohne Substanz. Daher zuerst Werkstatt-Brücke, dann Early-Access, dann Daten-Pilot.</p>
+</div>
+
+<h2>Stufe 1 — Werkstatt-Brücke (Q4 2026 – Q1 2027)</h2>
+
+<p><strong>Mehrwert für Hersteller:</strong> Ihre zertifizierten Werkstätten werden auf Bikeley sichtbar. Wenn Magura zertifizierte „Magura Service Partner" hat, bekommen diese Werkstätten ein Magura-Badge auf ihrem Bikeley-Profil. User, die nach einer Magura-Service-Werkstatt suchen, finden sie. Hersteller-Werkstatt-Programm wird gestärkt.</p>
+
+<p><strong>Was Bikeley dafür bekommt:</strong> Logo-Nutzung, Listing als „Partner" auf der Hersteller-Website, gemeinsame Kommunikation an die Werkstätten („Eure Bikeley-Sichtbarkeit ist jetzt Teil eures Magura-Pakets").</p>
+
+<p><strong>Wer ist der Ansprechpartner beim Hersteller:</strong> Werkstatt-Programm-Manager, B2B-Sales-Director DACH. Nicht Marketing-Direktor.</p>
+
+<p><strong>Voraussetzungen auf Bikeley-Seite:</strong> 50+ Werkstatt-Provider in DACH, davon mindestens 5-10 mit Hersteller-Zertifikat. Wir wissen also, wer Magura zertifiziert ist.</p>
+
+<p><strong>Kosten für Hersteller:</strong> 0€. Es ist eine reine Sichtbarkeits-Verbesserung für deren bestehende Werkstatt-Partner — keine Daten-Lieferung, kein Insights-Reporting, kein Marketing-Anspruch.</p>
+
+<div class="box note">
+<h3>Warum diese Stufe der richtige Einstieg ist</h3>
+<p>Niedrige Hürde für beide Seiten. Hersteller hat nichts zu verlieren — wenn nichts dabei rumkommt, kostet es ihn nichts. Bikeley etabliert die Beziehung, sammelt erste Daten zur Werkstatt-Hersteller-Mapping-Realität, baut Vertrauen auf für Stufe 2.</p>
+</div>
+
+<h2>Stufe 2 — Early-Access-Partnerschaft (Q2-Q3 2027)</h2>
+
+<p><strong>Mehrwert für Hersteller:</strong> Mitgestaltung der Hersteller-Schnittstelle auf Bikeley. Welche Daten werden in den Brand-Console-Reports angezeigt? Wie wird Co-Marketing strukturiert? Welche Features bekommt das Marken-Profil? Hersteller-Partner in dieser Phase haben Einfluss — und werden in der Bikeley-Story als „Gründungs-Partner" platziert.</p>
+
+<p><strong>Was Bikeley dafür bekommt:</strong> Strategische Allianz, Pressemeldung, gemeinsamer LinkedIn-Auftritt, Erwähnung in Hersteller-Newsletter. Plus ehrliches Feedback zur Plattform-Entwicklung.</p>
+
+<p><strong>Wer ist der Ansprechpartner:</strong> Marketing-Director DACH oder VP Strategy. Hier wird's strategisch — nicht mehr Werkstatt-Programm-Ebene.</p>
+
+<p><strong>Voraussetzungen auf Bikeley-Seite:</strong> 5.000+ aktive User, erster Versicherungspartner (Wertgarantie) bereits im Pilot, klare Brand-Console-Mockups vorzeigbar.</p>
+
+<p><strong>Kosten für Hersteller:</strong> 0€ in der 12-monatigen Early-Access-Phase. Nach 12 Monaten Übergang zu kommerziellem Modell (siehe Stufe 3).</p>
+
+<h2>Stufe 3 — Daten-Pilot (Q4 2027 – 2028)</h2>
+
+<p><strong>Mehrwert für Hersteller:</strong> Anonymisierte Insights über deren Marken-Präsenz im Markt. Welche Modelle werden registriert, in welchen Regionen, welche Service-Häufigkeit, welche Komponenten-Probleme. Diese Daten haben Hersteller heute nirgends — sie kennen ihre B2B-Verkaufs-Zahlen über Händler, aber nicht die Endkunden-Realität.</p>
+
+<p><strong>Was Bikeley dafür bekommt:</strong> Erste echte Hersteller-Cashflows. Welle 2 (mittelständische Hersteller): 20.000-40.000 EUR/Jahr. Welle 3 (große Hersteller): 50.000-100.000 EUR/Jahr.</p>
+
+<p><strong>Wer ist der Ansprechpartner:</strong> Marketing-Director plus Insights-Verantwortlicher. Bei großen Konzernen kommt CFO ins Spiel.</p>
+
+<p><strong>Voraussetzungen auf Bikeley-Seite:</strong> 15.000+ aktive User mit dokumentierten Bikes, Datenschutz-Gutachten, Brand-Console-Backend produktiv, mindestens 2 erfolgreiche Stufe-2-Early-Access-Partner als Referenz.</p>
+
+<h2>Welle-1-Hersteller (in Reihenfolge der Anfragen)</h2>
+
+<table class="data-table">
+<thead><tr><th>Hersteller</th><th>Warum Welle 1</th><th>Erste Stufe</th></tr></thead>
+<tbody>
+<tr><td><strong>Magura</strong></td><td>Premium, DACH, Werkstatt-affin, mittelständisch, weniger Konzernpolitik</td><td>Werkstatt-Brücke Q4 2026</td></tr>
+<tr><td><strong>Riese &amp; Müller</strong></td><td>Premium-E-Bikes, hohe Wiederverkaufswerte, eigenes Werkstatt-Modell</td><td>Werkstatt-Brücke Q1 2027</td></tr>
+<tr><td><strong>SKS</strong></td><td>Komponenten, Werkstatt-fokussiert, kleinere Marketing-Teams (gut adressierbar)</td><td>Werkstatt-Brücke Q1 2027</td></tr>
+<tr><td><strong>Pinion</strong></td><td>Premium-Schaltungen, klares Premium-Image, kleine Marke (entscheidet schnell)</td><td>Werkstatt-Brücke Q2 2027</td></tr>
+</tbody>
+</table>
+
+<h2>Was Hersteller von Bikeley NICHT bekommen</h2>
+
+<ul class="checklist">
+<li>Kein Zugriff auf personenbezogene User-Daten — nur Aggregate, anonymisiert</li>
+<li>Keine Werbeplatzierungen im Endkunden-Feed (Subscription vor Werbung)</li>
+<li>Keine Möglichkeit, Bewertungen zu beeinflussen oder zu filtern</li>
+<li>Keine Exklusivität in Kategorien (Magura schließt nicht Shimano aus)</li>
+<li>Keine Bikeley-Co-Branding ohne klare Brand-Guidelines beider Seiten</li>
+</ul>
+
+<div class="callout">
+Der größte Fehler bei Hersteller-Pitches ist, das stärkste Versprechen zuerst zu machen. Wer mit „Daten-Pilot" startet ohne Daten zu haben, verbrennt die Chance dauerhaft. Die richtige Reihenfolge ist klein, ehrlich, wachsend.
+<span class="callout-attr">Strategischer Schluss-Gedanke</span>
+</div>
+
+</section>
+
+<!-- ============= 09 DISTRIBUTION ============= -->
 <section id="distribution" class="section">
 
-<h1><span class="num">Kapitel 08 · Distribution</span>Marketing &amp; Kanäle</h1>
+<h1><span class="num">Kapitel 09 · Distribution</span>Marketing &amp; Kanäle</h1>
 <p class="lead">Drei Hauptkanäle für unterschiedliche Zielgruppen: Instagram für Endkunden, LinkedIn für Hersteller, lokales B2B-Outreach für Werkstätten.</p>
 
 <h2>Instagram — Endkunden-Akquise</h2>
@@ -2291,7 +2394,7 @@ Wir reagieren nicht auf jede Konkurrenz-Bewegung. Reagieren ist die Falle. Verti
 <!-- ============= 09 BEHÖRDEN ============= -->
 <section id="behoerden" class="section">
 
-<h1><span class="num">Kapitel 09 · Behörden</span>Polizei &amp; Regulatorik</h1>
+<h1><span class="num">Kapitel 10 · Behörden</span>Polizei &amp; Regulatorik</h1>
 <p class="lead">Bikeley folgt einer dreistufigen Strategie: Kompatibilität sofort, Codier-Aktionen mittelfristig, formale Kooperation langfristig.</p>
 
 <h2>Stufe 1 — Kompatibilitäts-Layer (sofort)</h2>
@@ -2342,7 +2445,7 @@ Wir reagieren nicht auf jede Konkurrenz-Bewegung. Reagieren ist die Falle. Verti
 <!-- ============= 10 ROADMAP ============= -->
 <section id="roadmap" class="section">
 
-<h1><span class="num">Kapitel 10 · Roadmap</span>Pfad &amp; Erfolgs-Marker</h1>
+<h1><span class="num">Kapitel 11 · Roadmap</span>Pfad &amp; Erfolgs-Marker</h1>
 <p class="lead">Quartalsweise Bauplan für 2026 und 2027 mit konkreten Coding- und Marketing-Aufgaben. Jährliche Erfolgs-Marker 2026-2032.</p>
 
 <h2>Quartalsplan 2026</h2>
@@ -2442,10 +2545,342 @@ Wir reagieren nicht auf jede Konkurrenz-Bewegung. Reagieren ist die Falle. Verti
 
 </section>
 
-<!-- ============= 11 RISIKEN ============= -->
+<!-- ============= 12 FAHRPLAN ============= -->
+<section id="fahrplan" class="section">
+
+<h1><span class="num">Kapitel 12 · Operativer Fahrplan</span>8 Wochen · 28. April – 22. Juni 2026</h1>
+<p class="lead">Konkrete wöchentliche Ziele und Tasks für die nächsten 8 Wochen. Jede Woche hat ein Hauptziel, drei Arbeitsstränge (Bauen, Marketing, Strategie) und ein klares Insta-Follower-Ziel.</p>
+
+<h2>Übersicht — wo wir hin wollen</h2>
+
+<div class="stats-grid">
+<div class="stat"><div class="stat-num">540 → 2.200</div><div class="stat-label">Insta-Follower in 8 Wochen</div></div>
+<div class="stat"><div class="stat-num">0 → 100%</div><div class="stat-label">Diebstahl-Flow live</div></div>
+<div class="stat"><div class="stat-num">0 → 9</div><div class="stat-label">Foundation-Posts veröffentlicht</div></div>
+<div class="stat"><div class="stat-num">0 → 1</div><div class="stat-label">Erste Werkstatt-Koop</div></div>
+</div>
+
+<p>Das Phase-1-Foundation-Ziel ist 2.200 Insta-Follower. Realistisch heißt das: pro Woche 200-250 neue Follower, mit Beschleunigung in den letzten Wochen, wenn Hashtag-Aktion und Co-Production-Reels greifen.</p>
+
+<h2>Tagesrhythmus — die Basis</h2>
+
+<p>Der 8-Wochen-Plan funktioniert nur, wenn der Tagesrhythmus stabil ist. Die folgenden Anker sind die operative Grundlage:</p>
+
+<table class="data-table">
+<thead><tr><th>Zeit</th><th>Aktivität</th><th>Dauer</th></tr></thead>
+<tbody>
+<tr><td><strong>06:30 – 07:00</strong></td><td>Insta-Check, ersten Comment-Block, Posts der Vortag-Stories prüfen</td><td>30 min</td></tr>
+<tr><td><strong>07:00 – 09:00</strong></td><td>Deep-Work-Block (Code, kein Slack, kein Insta)</td><td>2h</td></tr>
+<tr><td><strong>09:00 – 12:00</strong></td><td>Hauptarbeit am Wochen-Hauptziel</td><td>3h</td></tr>
+<tr><td><strong>12:00 – 13:00</strong></td><td>Mittagspause, körperlich (Fahrrad, Spaziergang, kein Bildschirm)</td><td>1h</td></tr>
+<tr><td><strong>13:00 – 16:00</strong></td><td>Hauptarbeit Teil 2, Strategie-Tasks</td><td>3h</td></tr>
+<tr><td><strong>16:00 – 16:30</strong></td><td>Insta-Tagesposting, Story-Update, DM-Bearbeitung</td><td>30 min</td></tr>
+<tr><td><strong>16:30 – 18:00</strong></td><td>Marketing-Tasks (LinkedIn, Content-Vorbereitung, Outreach)</td><td>1,5h</td></tr>
+<tr><td><strong>20:00 – 20:30</strong></td><td>Insta-Abend-Check, letzten Comment-Block, Tagesnotiz</td><td>30 min</td></tr>
+</tbody>
+</table>
+
+<p><strong>Wochenende:</strong> Samstag-Vormittag Strategie-Review, Sonntag frei. Sonntag-Abend kurze Wochenplanung (30 Minuten).</p>
+
+<h2>Woche 1 — 28. April – 4. Mai</h2>
+
+<div class="phase">
+<div class="phase-head"><span class="phase-when">Woche 1</span><span class="phase-name">Diebstahl-Flow Foundation &amp; Insta-Profil-Polish</span></div>
+<div class="phase-body">
+<p><strong>Wochen-Hauptziel:</strong> Diebstahl-Flow-Architektur final festgelegt, API-Contract dokumentiert, erste Backend-Tabelle gebaut. Insta-Bio &amp; Highlights polished.</p>
+<p><strong>Insta-Follower-Ziel:</strong> 600 (von 540 ausgehend, +60)</p>
+
+<h3>Bauen</h3>
+<ul class="checklist">
+<li>API-Contract für /api/theft-reports schreiben (Endpoints, Felder, Status-Machine)</li>
+<li>Backend-Tabelle theft_reports anlegen mit allen Pflichtfeldern</li>
+<li>OpenGeoDB einbinden für PLZ-zu-Bundesland-Mapping</li>
+<li>mPDF testen mit erstem Mock-PDF im bayrischen Format</li>
+</ul>
+
+<h3>Marketing</h3>
+<ul class="checklist">
+<li>Insta-Bio überarbeiten mit klarem Heimat-Positionierungs-Satz</li>
+<li>Highlight-Stories „Bike-Pass", „Werkstätten", „Über uns" anlegen</li>
+<li>Profilbild und Banner aktualisieren (DACH-Bike-Heimat-Aesthetic)</li>
+<li>Linkbaum (Linktree-Alternative) auf bikeley.com/links einrichten</li>
+</ul>
+
+<h3>Strategie</h3>
+<ul class="checklist">
+<li>LinkedIn-Profil-Audit: Headline, About, Featured-Section vorbereiten</li>
+<li>Liste von 30 LinkedIn-Personen bei Welle-1-Herstellern recherchieren (5 pro Hersteller)</li>
+</ul>
+</div>
+</div>
+
+<h2>Woche 2 — 5. Mai – 11. Mai</h2>
+
+<div class="phase">
+<div class="phase-head"><span class="phase-when">Woche 2</span><span class="phase-name">Diebstahl-PDF-Logik &amp; App-Flow-Mockups</span></div>
+<div class="phase-body">
+<p><strong>Wochen-Hauptziel:</strong> PDF-Generator funktioniert mit Test-Daten, App-Flow-Mockups in Figma fertig, erste 3 Foundation-Posts produziert.</p>
+<p><strong>Insta-Follower-Ziel:</strong> 700 (+100)</p>
+
+<h3>Bauen</h3>
+<ul class="checklist">
+<li>mPDF-Integration: Seite 1 (bayrisches Anzeige-Format) mit echten Test-Daten</li>
+<li>Postmark-Account einrichten, Test-Mails versenden, Reply-To-Mechanik testen</li>
+<li>App-Diebstahl-Flow in Figma mocken: 6-Schritt-Wizard mit Validierungen</li>
+<li>Bilder-Upload-Logik (3-5 Zusatzfotos optional) speccen</li>
+</ul>
+
+<h3>Marketing</h3>
+<ul class="checklist">
+<li>3 Foundation-Posts produzieren: „Was ist Bikeley", „Wer sind wir", „Bike-Pass-Demo"</li>
+<li>Erstes Karussell-Posting mit Save-Hook am Ende</li>
+<li>2 Stories pro Tag: Werkstatt-Realität, Bike-Pass-Walkthrough</li>
+</ul>
+
+<h3>Strategie</h3>
+<ul class="checklist">
+<li>LinkedIn-Profil veröffentlichen mit Featured-Section (1 Post zur Heimat-Vision)</li>
+<li>Stille Beobachtungs-Phase starten: Welle-1-Hersteller-Personen folgen</li>
+</ul>
+</div>
+</div>
+
+<h2>Woche 3 — 12. Mai – 18. Mai</h2>
+
+<div class="phase">
+<div class="phase-head"><span class="phase-when">Woche 3</span><span class="phase-name">Web-Diebstahl-Flow &amp; Foundation-Posts veröffentlichen</span></div>
+<div class="phase-body">
+<p><strong>Wochen-Hauptziel:</strong> Web-Version des Diebstahl-Flows läuft End-to-End, alle 9 Foundation-Posts veröffentlicht, Hersteller-Werkstatt-Mapping recherchiert.</p>
+<p><strong>Insta-Follower-Ziel:</strong> 850 (+150)</p>
+
+<h3>Bauen</h3>
+<ul class="checklist">
+<li>Web-Diebstahl-Flow End-to-End: Form → Validierung → PDF-Generierung → E-Mail-Versand</li>
+<li>FEIN-Code-Validierung einbauen (Format-Check, Eindeutigkeit)</li>
+<li>Status-Machine implementieren: draft → reported → police_filed → resolved</li>
+<li>Test-Account mit echten Daten durchlaufen</li>
+</ul>
+
+<h3>Marketing</h3>
+<ul class="checklist">
+<li>Foundation-Posts 4-9 produzieren und veröffentlichen (alle 2 Tage 1 Post)</li>
+<li>Themen: „Werkstatt-Realität DACH", „Diebstahl-Statistik DACH", „Bike-Pass-FAQ", „Versicherungs-Lücke", „Provider-Tier-Übersicht", „Heimat statt Plattform"</li>
+<li>Stories täglich, Engagement mit ersten Followern (Antworten auf DMs in unter 4h)</li>
+</ul>
+
+<h3>Strategie</h3>
+<ul class="checklist">
+<li>Werkstatt-Hersteller-Mapping: Welche Münchner Werkstätten sind „Magura zertifiziert"?</li>
+<li>Liste von 30 potenziellen ersten Werkstatt-Partnern in München erstellen</li>
+<li>LinkedIn: erste Kommentare unter Welle-1-Hersteller-Posts (1-2 pro Tag)</li>
+</ul>
+</div>
+</div>
+
+<h2>Woche 4 — 19. Mai – 25. Mai</h2>
+
+<div class="phase">
+<div class="phase-head"><span class="phase-when">Woche 4</span><span class="phase-name">Diebstahl-Flow Production &amp; Stripe-Setup</span></div>
+<div class="phase-body">
+<p><strong>Wochen-Hauptziel:</strong> Diebstahl-Flow ist live in Production, Stripe-Subscriptions für Plus-Tier eingerichtet, erste Werkstatt-Koop-Anfrage versendet.</p>
+<p><strong>Insta-Follower-Ziel:</strong> 1.000 (+150) — psychologische 1k-Marke</p>
+
+<h3>Bauen</h3>
+<ul class="checklist">
+<li>Diebstahl-Flow Production-Deploy mit Monitoring</li>
+<li>Stripe-Plus-Subscription einrichten (4,99€/Monat, kann 7-Tage-Trial haben)</li>
+<li>Erste Plus-Tier-Conversion-CTA im App- und Web-Flow einbauen</li>
+<li>Bug-Fixes aus Test-Phase</li>
+</ul>
+
+<h3>Marketing</h3>
+<ul class="checklist">
+<li>1k-Follower-Story als Meilenstein zelebrieren (Community-Dank-Post)</li>
+<li>Erstes Reel mit gescriptetem Hook (kein Talking-Head, sondern visuelle Geschichte)</li>
+<li>Cross-Post auf TikTok als Test (kein Account-Aufbau noch, nur Versuch)</li>
+</ul>
+
+<h3>Strategie</h3>
+<ul class="checklist">
+<li>Erste konkrete Werkstatt-Koop-Anfrage in München versenden (1-2 Werkstätten)</li>
+<li>LinkedIn: 5 Connection-Requests pro Tag mit personalisierter Notiz starten</li>
+<li>Versicherungs-Recherche: Wertgarantie-Ansprechpartner identifizieren</li>
+</ul>
+</div>
+</div>
+
+<h2>Woche 5 — 26. Mai – 1. Juni</h2>
+
+<div class="phase">
+<div class="phase-head"><span class="phase-when">Woche 5</span><span class="phase-name">Bike-Garage UX &amp; erste Co-Production</span></div>
+<div class="phase-body">
+<p><strong>Wochen-Hauptziel:</strong> Bike-Garage UX überarbeitet (Multiple Bikes, klare Service-Historie), erstes Co-Production-Reel mit Werkstatt im Kasten.</p>
+<p><strong>Insta-Follower-Ziel:</strong> 1.200 (+200)</p>
+
+<h3>Bauen</h3>
+<ul class="checklist">
+<li>Bike-Garage UX-Refactor: bessere Foto-Verwaltung, klarere Service-Historie</li>
+<li>Service-Erinnerungs-Logik konzipieren (was wird wann erinnert?)</li>
+<li>FEIN-Code-Suche-Funktion: Bike kann über FEIN-Code gefunden werden</li>
+</ul>
+
+<h3>Marketing</h3>
+<ul class="checklist">
+<li>Erstes Co-Production-Reel mit Werkstatt drehen (Tobi-Style: junger Werkstatt-Inhaber)</li>
+<li>Reel veröffentlichen mit Tag der Werkstatt — Cross-Promotion-Effekt nutzen</li>
+<li>Stories: Behind-the-Scenes von der Reel-Produktion</li>
+</ul>
+
+<h3>Strategie</h3>
+<ul class="checklist">
+<li>LinkedIn: bei warmen Connections erste Wert-Nachrichten versenden (kein Pitch, nur Frage)</li>
+<li>Werkstatt-Programm konzipieren: 90-Tage-Trial für die ersten 25 Werkstätten</li>
+<li>Wertgarantie-Erstkontakt vorbereiten (E-Mail-Entwurf, kein Versand)</li>
+</ul>
+</div>
+</div>
+
+<h2>Woche 6 — 2. Juni – 8. Juni</h2>
+
+<div class="phase">
+<div class="phase-head"><span class="phase-when">Woche 6</span><span class="phase-name">Service-Cron &amp; Werkstatt-Co-Production</span></div>
+<div class="phase-body">
+<p><strong>Wochen-Hauptziel:</strong> Automatisierte Service-Erinnerungs-Mails laufen (Cron-Job), zweites Co-Production-Reel veröffentlicht, erste Werkstatt-Trial-Anmeldung.</p>
+<p><strong>Insta-Follower-Ziel:</strong> 1.500 (+300)</p>
+
+<h3>Bauen</h3>
+<ul class="checklist">
+<li>Service-Erinnerungs-Cron-Job einrichten (täglich um 9 Uhr E-Mails versenden)</li>
+<li>E-Mail-Templates für Service-Erinnerungen schreiben (3 Stufen: 30, 14, 7 Tage)</li>
+<li>Customer-Hub-MVP für Werkstätten: Liste der eigenen Stammkunden</li>
+</ul>
+
+<h3>Marketing</h3>
+<ul class="checklist">
+<li>Zweites Co-Production-Reel mit anderer Werkstatt — anderer Stil (Service-Demo)</li>
+<li>Erstes Karussell-Posting zur Service-Erinnerungs-Funktion</li>
+<li>Stories: User-Testimonials sammeln (auch wenn klein)</li>
+</ul>
+
+<h3>Strategie</h3>
+<ul class="checklist">
+<li>Erste Werkstatt-Trial-Anmeldung abschließen (sollte Ergebnis von W4-Anfrage sein)</li>
+<li>Werkstatt-Trial-Onboarding-Dokument finalisieren</li>
+<li>LinkedIn: Welle-1-Hersteller weiter beobachten, gezielt 1 Post pro Tag kommentieren</li>
+</ul>
+</div>
+</div>
+
+<h2>Woche 7 — 9. Juni – 15. Juni</h2>
+
+<div class="phase">
+<div class="phase-head"><span class="phase-when">Woche 7</span><span class="phase-name">Polish &amp; LinkedIn-Soft-Pitch-Phase</span></div>
+<div class="phase-body">
+<p><strong>Wochen-Hauptziel:</strong> Diebstahl-Flow + Service-Cron + Bike-Garage poliert (Bug-Fixes, kleine UX-Verbesserungen), LinkedIn-Soft-Pitches starten bei warmen Connections.</p>
+<p><strong>Insta-Follower-Ziel:</strong> 1.800 (+300)</p>
+
+<h3>Bauen</h3>
+<ul class="checklist">
+<li>UX-Polish: Loading-States, Error-Messages, Empty-States überall verbessern</li>
+<li>Mobile-Responsiveness aller Web-Flows prüfen</li>
+<li>Performance-Optimierung: Page-Load unter 2 Sekunden bringen</li>
+</ul>
+
+<h3>Marketing</h3>
+<ul class="checklist">
+<li>Drittes Co-Production-Reel — diesmal mit Mechanikerin Lisa-Style (junge Frau in Werkstatt)</li>
+<li>#BikeleyMyBike-Aktion vorbereiten (Hashtag, Mechanik, Belohnung definieren)</li>
+<li>Erste Insta-Live-Session ankündigen für W8 (Q&amp;A zur Heimat-Vision)</li>
+</ul>
+
+<h3>Strategie</h3>
+<ul class="checklist">
+<li>LinkedIn: Bei 3-5 warmen Connections offene Fragen versenden („Wie geht ihr heute mit X um?")</li>
+<li>Erste Wertgarantie-E-Mail versenden (Erstkontakt, kein Pitch)</li>
+<li>Pilot-Konzept-PDF für Hersteller fertigstellen (für W9+ bereit)</li>
+</ul>
+</div>
+</div>
+
+<h2>Woche 8 — 16. Juni – 22. Juni</h2>
+
+<div class="phase">
+<div class="phase-head"><span class="phase-when">Woche 8</span><span class="phase-name">#BikeleyMyBike Launch &amp; Phase-1-Übergang</span></div>
+<div class="phase-body">
+<p><strong>Wochen-Hauptziel:</strong> Hashtag-Aktion #BikeleyMyBike live, Insta-Live-Session durchgeführt, ADFC-München-Erstkontakt vorbereitet (NICHT versendet), Rückblick auf 8 Wochen.</p>
+<p><strong>Insta-Follower-Ziel:</strong> 2.200 (+400) — Phase-1-Foundation-Ziel erreicht</p>
+
+<h3>Bauen</h3>
+<ul class="checklist">
+<li>#BikeleyMyBike-Landing-Page auf bikeley.com/mybike (zeigt alle Posts mit dem Hashtag)</li>
+<li>Backend-Polish: Database-Indexes optimieren, langsame Queries identifizieren</li>
+<li>Backup-System für User-Daten testen</li>
+</ul>
+
+<h3>Marketing</h3>
+<ul class="checklist">
+<li>#BikeleyMyBike offiziell launchen (großes Karussell-Posting + Reel)</li>
+<li>Insta-Live durchführen mit Q&amp;A zur Heimat-Vision (30-45 Minuten)</li>
+<li>2.200-Follower-Meilenstein zelebrieren (Community-Dank-Post)</li>
+</ul>
+
+<h3>Strategie</h3>
+<ul class="checklist">
+<li>ADFC-München-Erstkontakt für Codier-Aktion VORBEREITEN (E-Mail-Entwurf, NICHT versenden — kommt in Phase 2)</li>
+<li>8-Wochen-Rückblick: Was funktioniert, was nicht, was wird in den nächsten 8 Wochen anders</li>
+<li>Phase-2-Plan beginnen (Juni-Ende-Update der Roadmap)</li>
+</ul>
+</div>
+</div>
+
+<h2>Wochenrhythmus pro Wochentag</h2>
+
+<table class="data-table">
+<thead><tr><th>Tag</th><th>Hauptfokus</th><th>Standard-Tasks</th></tr></thead>
+<tbody>
+<tr><td><strong>Montag</strong></td><td>Wochen-Setup</td><td>Wochenziele schreiben, Posts der Woche planen, Code-Roadmap der Woche</td></tr>
+<tr><td><strong>Dienstag</strong></td><td>Deep-Coding</td><td>Größte Code-Tasks, keine Calls, kein Marketing-Content</td></tr>
+<tr><td><strong>Mittwoch</strong></td><td>Content-Production</td><td>Reel-Drehs, Karussell-Designs, Stories-Batches</td></tr>
+<tr><td><strong>Donnerstag</strong></td><td>Strategie &amp; Outreach</td><td>LinkedIn-Aktivität, Werkstatt-Anfragen, Hersteller-Beobachtung</td></tr>
+<tr><td><strong>Freitag</strong></td><td>Polish &amp; Veröffentlichung</td><td>Code-Review, Bug-Fixes, Wochen-Highlight veröffentlichen</td></tr>
+<tr><td><strong>Samstag</strong></td><td>Strategie-Review (Vormittag)</td><td>Was hat funktioniert, was nicht, Anpassung für nächste Woche</td></tr>
+<tr><td><strong>Sonntag</strong></td><td>Frei (bis 19 Uhr)</td><td>19:00 Wochenplanung Sonntag-Abend, dann frei</td></tr>
+</tbody>
+</table>
+
+<h2>Was passiert NICHT in diesen 8 Wochen</h2>
+
+<div class="box warn">
+<h3>Bewusste Auslassungen</h3>
+<p><strong>Kein Hersteller-Pitch.</strong> LinkedIn ist nur Beobachtung und stille Connection. Erste Pitches frühestens Q4 2026.</p>
+<p><strong>Kein ADFC-Versand.</strong> ADFC-Erstkontakt wird vorbereitet, aber erst in Phase 2 (Juli-August) versendet.</p>
+<p><strong>Keine Versicherungs-Verhandlung.</strong> Wertgarantie-Erstkontakt nur E-Mail, kein Termin in den 8 Wochen.</p>
+<p><strong>Keine größeren neuen Features.</strong> Nur Diebstahl-Flow + Service-Cron + Bike-Garage-Polish. Alles andere wartet.</p>
+<p><strong>Keine TikTok-Account-Aufbau.</strong> Cross-Posting als Test, kein eigener Aufbau.</p>
+</div>
+
+<h2>Was passiert nach Woche 8</h2>
+
+<p>Der Plan endet am 22. Juni 2026. Die nächste 8-Wochen-Periode (23. Juni – 17. August) wird in Woche 8 geplant, basierend auf den Lessons-Learned. Wahrscheinliche Schwerpunkte:</p>
+
+<ul class="checklist">
+<li><strong>Werkstatt-Akquise-Welle:</strong> Mit dem aktuellen User-Stand erste 10-15 Werkstatt-Provider gewinnen</li>
+<li><strong>Wertgarantie-Verhandlungen:</strong> Auf Basis der ersten E-Mail-Antworten in konkrete Gespräche gehen</li>
+<li><strong>Community-Layer-Vertiefung:</strong> Lokale Gruppen, Touren-Funktion, Bike-of-the-Week launchen</li>
+<li><strong>ADFC-Codier-Aktion:</strong> Erste gemeinsame Aktion in München organisieren</li>
+</ul>
+
+<div class="callout">
+Acht Wochen sind kurz. Acht Wochen sind genug für die Foundation. Was nach acht Wochen steht, ist die Basis für alles, was in den nächsten zwei Jahren kommt.
+<span class="callout-attr">Operativer Schluss-Gedanke</span>
+</div>
+
+</section>
+
+<!-- ============= 13 RISIKEN ============= -->
 <section id="risks" class="section">
 
-<h1><span class="num">Kapitel 11 · Risiken</span>Risiken &amp; offene Themen</h1>
+<h1><span class="num">Kapitel 13 · Risiken</span>Risiken &amp; offene Themen</h1>
 <p class="lead">Strukturelle Risiken, operative Engpässe, kritische Annahmen — bewusst transparent dargestellt.</p>
 
 <h2>Strukturelle Risiken</h2>
